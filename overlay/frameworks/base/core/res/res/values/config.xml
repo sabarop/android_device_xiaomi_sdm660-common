@@ -339,4 +339,8 @@
          The duplication is necessary, because this information is used before the features are
          available to the system.-->
     <bool name="config_freeformWindowManagement">true</bool>
+
+    <!-- True if the device supports Sustained Performance Mode -->
+    <bool name="config_sustainedPerformanceModeSupported">true</bool>
+
 </resources>
