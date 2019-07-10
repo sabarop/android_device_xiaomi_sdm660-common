@@ -561,6 +561,10 @@ on property:sys.boot_completed=1
     write /dev/cpuset/system-background/cpus 0-3
     write /dev/cpuset/restricted/cpus 0-3
 
+    # Back to default VM settings
+    write /proc/sys/vm/dirty_expire_centisecs 3000
+    write /proc/sys/vm/dirty_background_ratio 10
+
 # MIUI camera flag
 on property:sys.camera.miui.apk=*
     setprop vendor.camera.miui.apk ${sys.camera.miui.apk}
