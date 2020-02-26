@@ -159,6 +159,9 @@ debug.sf.auto_latch_unsignaled=0
 # FS-verity
 ro.apk_verity.mode=2
 
+# Fastbootd
+ro.fastbootd.available=true
+
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
