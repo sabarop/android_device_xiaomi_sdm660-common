@@ -466,6 +466,7 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor \
     android.hardware.power-service.pixel-libperfmgr \
+    android.hardware.power.stats@1.0-service.sdm660 \
     libqti-perfd-client
 
 # sendhint utility
