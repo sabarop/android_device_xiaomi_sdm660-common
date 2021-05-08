@@ -113,6 +113,10 @@
     <string name="preset_extreme_amoled">진한 아몰레드 색감</string>
     <string name="preset_warm_amoled">따뜻한 아몰레드 색감</string>
     <string name="preset_hybrid_mamba">하이브리드 맘바</string>
+
+    <string name="hall_wakeup_title">플립 커버</string>
+    <string name="hall_title">플립 커버로 깨우기</string>
+    <string name="hall_wakeup_summary">플립 커버를 열어서 기기 깨우기</string>
     
     <!-- menu -->
     <string name="kcal_presets">@string/presets_dialog_title</string>

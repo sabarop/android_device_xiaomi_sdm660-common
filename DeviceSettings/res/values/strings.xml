@@ -133,5 +133,9 @@
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
     <string name="dirac_preset_bass_booster">Bass Booster</string>
+    
+    <string name="hall_wakeup_title">Flip Cover Wakeup</string>
+    <string name="hall_title">Enable Flip Cover Wakeup</string>
+    <string name="hall_wakeup_summary">Wakeup device via magnetic Flip Cover</string>
 
 </resources>
