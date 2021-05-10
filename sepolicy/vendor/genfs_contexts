@@ -63,6 +63,11 @@ genfscon sysfs /devices/platform/soc/soc:qcom,mincpubw                          
 genfscon sysfs /devices/platform/soc/soc:qcom,memlat-cpu0                                                                                            u:object_r:sysfs_devfreq:s0
 genfscon sysfs /devices/platform/soc/soc:qcom,memlat-cpu4                                                                                            u:object_r:sysfs_devfreq:s0
 
+# Powerstats
+genfscon debugfs /wlan0                               u:object_r:debugfs_wlan:s0
+genfscon debugfs /rpm_stats                           u:object_r:debugfs_rpm:s0
+genfscon debugfs /rpm_master_stats                    u:object_r:debugfs_rpm:s0
+
 # Touchpanel
 genfscon sysfs /touchpanel                                                                                                                           u:object_r:sysfs_touchpanel:s0
 
