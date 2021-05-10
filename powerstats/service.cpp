@@ -27,7 +27,6 @@
 #include <pixelpowerstats/GenericStateResidencyDataProvider.h>
 #include <pixelpowerstats/PowerStats.h>
 #include <pixelpowerstats/WlanStateResidencyDataProvider.h>
-#include "EaselStateResidencyDataProvider.h"
 
 using android::OK;
 using android::sp;
@@ -50,9 +49,6 @@ using android::hardware::google::pixel::powerstats::GenericStateResidencyDataPro
 using android::hardware::google::pixel::powerstats::PowerEntityConfig;
 using android::hardware::google::pixel::powerstats::StateResidencyConfig;
 using android::hardware::google::pixel::powerstats::WlanStateResidencyDataProvider;
-
-// Wahoo specific
-using android::device::google::wahoo::powerstats::EaselStateResidencyDataProvider;
 
 int main(int /* argc */, char ** /* argv */) {
     ALOGI("power.stats service 1.0 is starting.");
@@ -122,11 +118,6 @@ int main(int /* argc */, char ** /* argv */) {
                 new WlanStateResidencyDataProvider(wlanId, "/d/wlan0/power_stats");
         service->addStateResidencyDataProvider(wlanSdp);
     }
-
-    // Add Easel power entity
-    uint32_t easelId = service->addPowerEntity("Easel", PowerEntityType::SUBSYSTEM);
-    sp<EaselStateResidencyDataProvider> easelSdp = new EaselStateResidencyDataProvider(easelId);
-    service->addStateResidencyDataProvider(easelSdp);
 
     // Add Power Entities that require the Aidl data provider
     sp<AidlStateResidencyDataProvider> aidlSdp = new AidlStateResidencyDataProvider();
