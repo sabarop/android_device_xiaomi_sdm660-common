@@ -217,6 +217,10 @@ on boot
     # Turn on sleep modes
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
 
+    # GPU boost
+    chown system system /sys/class/kgsl/kgsl-3d0/min_pwrlevel
+    chmod 0660 /sys/class/kgsl/kgsl-3d0/min_pwrlevel
+
 #Create folder dump yuv images while debugging
     mkdir /data/vendor/camera 0770 camera camera
 
