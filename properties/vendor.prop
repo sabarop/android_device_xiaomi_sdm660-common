@@ -168,6 +168,7 @@ ro.hardware.vulkan=adreno
 vendor.opengles.version=196610
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
+persist.sys.sf.native_mode=1
 
 # Media
 debug.stagefright.omx_default_rank.sw-audio=1
