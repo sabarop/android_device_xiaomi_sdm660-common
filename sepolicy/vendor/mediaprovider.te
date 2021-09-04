@@ -1,1 +1,2 @@
 allow mediaprovider blkio_dev:dir search;
+binder_call(mediaprovider, gpuservice)
