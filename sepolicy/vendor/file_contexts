@@ -17,19 +17,27 @@
 # Executables
 /vendor/bin/sh                                                                                                              u:object_r:vendor_shell_exec:s0
 
-# Fingerprint
+# Goodix Fingerprint
+/data/misc/gf_data(/.*)?                                                                                                    u:object_r:fingerprint_data_file:s0
+/data/misc/goodix(/.*)?                                                                                                     u:object_r:fingerprint_data_file:s0
+/persist/data/gf*                                                                                                           u:object_r:fingerprint_data_file:s0
 /data/gf_data(/.*)?                                                                                                         u:object_r:fingerprintd_data_file:s0
-/data/vendor/fpc(/.*)?                                                                                                      u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/gf_data(/.*)?                                                                                                  u:object_r:fingerprint_vendor_data_file:s0
 /data/vendor/goodix(/.*)?                                                                                                   u:object_r:fingerprint_vendor_data_file:s0
 /dev/goodix_fp                                                                                                              u:object_r:fingerprint_device:s0
+
+# FPC Fingerprint
+/data/vendor/fpc(/.*)?                                                                                                      u:object_r:fingerprint_vendor_data_file:s0
+/(mnt/vendor)/persist/fpc(/.*)?                                                                                             u:object_r:persist_fingerprint_file:s0
+/sys/devices/soc/soc:fpc1020(/.*)?                                                                                          u:object_r:fingerprint_sysfs:s0
+/sys/bus/platform/devices/soc:fingerprint_fpc(/.*)?                                                                         u:object_r:fingerprint_sysfs:s0
 
 # Firmware
 /firmware                                                                                                                   u:object_r:firmware_file:s0
 /bt_firmware                                                                                                                u:object_r:bt_firmware_file:s0
 
 # Hall Switch
-/sys/module/hall_e7s/parameters(/.*)?                                                                                        u:object_r:hall_dev:s0
+/sys/module/hall_e7s/parameters(/.*)?                                                                                       u:object_r:hall_dev:s0
 
 # Hexagon DSP-side executable needed for Halide operation
 # This is labeled as public_adsprpcd_file as it needs to be read by apps
