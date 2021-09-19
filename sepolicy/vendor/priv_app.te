@@ -1,0 +1,4 @@
+allow priv_app sysfs_graphics:file { open read };
+allow priv_app vendor_apex_file:file { getattr open read };
+allow priv_app blkio_dev:dir search;
+

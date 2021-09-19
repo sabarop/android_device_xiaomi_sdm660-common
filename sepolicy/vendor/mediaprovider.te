@@ -1,0 +1,1 @@
+allow mediaprovider blkio_dev:dir search;

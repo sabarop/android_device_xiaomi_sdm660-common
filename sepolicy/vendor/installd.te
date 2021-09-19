@@ -1,0 +1,2 @@
+allow installd blkio_dev:dir search;
+
