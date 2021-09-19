@@ -241,10 +241,9 @@ PRODUCT_PROPERTY_OVERRIDES += \
     persist.vendor.radio.data_con_rprt=1 \
     persist.vendor.radio.rat_on=combine \
     persist.vendor.radio.procedure_bytes=SKIP \
-    persist.radio.multisim.config=dsds \
     ro.telephony.iwlan_operation_mode=legacy \
     ro.vendor.use_data_netmgrd=true \
-    ro.telephony.default_network=22,22 \
+    ro.telephony.default_network=9,9 \
     vendor.rild.libpath=/vendor/lib64/libril-qc-hal-qmi.so \
     persist.vendor.radio.add_power_save=1
 
