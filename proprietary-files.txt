@@ -783,9 +783,6 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|939193852a791072058e87
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|25517caf74691b812320b46b477a3f4161cc1bcf
 
 # Sensors - from LA.UM.8.2.r1-07500-sdm660.0
-product/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|92142d25b6eaf6976e17e726ab70536534648459
-product/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|a6486bb8506902bbe2a4b743000e3e91ab93246a
-vendor/bin/sensors.qti|b0e298dfa67ca3e5910de2b281f9db285c2b1da3
 vendor/lib/hw/activity_recognition.sdm660.so|47c588e1bdb357f31721171dc1d6a781c743bd64
 vendor/lib/libsensor1.so|b1b0dcb45432e51fabffe595010f35a017c7a3fd
 vendor/lib/libsensor_reg.so|170c40b9b7d48c922cd3ca1a552a34311ee79799
