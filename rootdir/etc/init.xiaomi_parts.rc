@@ -15,21 +15,21 @@
 #
 
 on boot
-    # Haptic strength
+# XiaomiParts
     chown system system /sys/devices/virtual/timed_output/vibrator/vtg_level
     chmod 0660 /sys/devices/virtual/timed_output/vibrator/vtg_level
-    
-    # Hall_e7s
+
+# Folio Daemon
     chown system system /sys/module/hall_e7s/parameters/hall_toggle
     chmod 0660 /sys/module/hall_e7s/parameters/hall_toggle
     
-    # FPS
+# FPS
     chown system system /sys/devices/virtual/graphics/fb0/measured_fps
     chmod 0660 /sys/devices/virtual/graphics/fb0/measured_fps
     chown system system /sys/class/graphics/fb0/measured_fps
     chmod 0660 /sys/class/graphics/fb0/measured_fps
-    
-    # Audio Amplification
+
+# Audio Amplification
     chown system system /sys/kernel/sound_control/headphone_gain
     chown system system /sys/kernel/sound_control/mic_gain
     chmod 0660 /sys/kernel/sound_control/headphone_gain
