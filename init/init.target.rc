@@ -69,6 +69,13 @@ on post-fs
     start vendor.qseecomd
     wait_for_prop vendor.sys.listeners.registered true
 
+on late-init
+    # Start services for bootanim
+    start surfaceflinger
+    start bootanim
+    start vendor.hwcomposer-2-3
+    start vendor.qti.hardware.display.allocator
+
 on post-fs-data
     mkdir /data/vendor/tombstones/modem 0771 system system
     mkdir /data/vendor/tombstones/lpass 0771 system system
