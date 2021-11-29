@@ -1,1 +1,2 @@
 allow init sysfs_info:file { open read };
+allow init apex_metadata_file:lnk_file read;
