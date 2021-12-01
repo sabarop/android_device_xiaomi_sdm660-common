@@ -1,5 +1,8 @@
 allow untrusted_app sysfs_battery_supply:dir { search };
 allow untrusted_app zygote:unix_stream_socket getopt;
+allow untrusted_app_27 zygote:unix_stream_socket getopt;
+allow untrusted_app_29 zygote:unix_stream_socket getopt;
+
 dontaudit untrusted_app virtual_ab_prop:file { read };
 
 dontaudit untrusted_app_27 app_data_file:file { execute  execute_no_trans };
