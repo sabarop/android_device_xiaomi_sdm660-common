@@ -201,7 +201,6 @@ ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
 
 # Rendering
-debug.egl.hw=1
 debug.enable.sglscale=1
 debug.sf.recomputecrop=0
 
@@ -229,7 +228,6 @@ debug.sf.early.sf.duration=15666666
 debug.sf.early.app.duration=13666666
 debug.sf.earlyGl.sf.duration=15666666
 debug.sf.earlyGl.app.duration=13666666
-debug.sf.hw=1
 debug.sf.enable_egl_image_tracker=true
 debug.sf.enable_hwc_vds=0
 debug.sf.enable_transaction_tracing=false
