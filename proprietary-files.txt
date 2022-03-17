@@ -577,6 +577,9 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0.so|25517caf74691b812320b46b477a3f4161c
 # Radio - IMS - from mojito
 vendor/lib64/lib-imsvtcore.so|47d945bf976134fdb57b4f44dd73a1347f2bf421
 
+# Radio - IMS - from motorola/nio_retcn/nio: 11/RRN31.Q3-1-11-6/f81cc:user/release-keys
+vendor/lib64/deviceInfoServiceModule.so|c7d4021528f3a43320d0f109a9ed5f765a6a92a2vt
+
 # Soter - from lavender
 vendor/app/SoterService/SoterService.apk|a906b956cff77c2a1bcb26d8a74ecd386b50eeb2
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|4f7e3c8a6cde9efefd8b9bf440fb1ed442e21fd3
