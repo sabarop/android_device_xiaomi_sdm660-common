@@ -4,7 +4,8 @@
  *
  * SPDX-License-Identifier: Apache-2.0
  */
-#define LOG_TAG "android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sdm660"
+
+#define LOG_TAG "android.hardware.biometrics.fingerprint@2.3-service.xiaomi_sdm660"
 
 #include <hardware/hw_auth_token.h>
 
@@ -12,7 +13,6 @@
 #include <hardware/fingerprint.h>
 #include "BiometricsFingerprint.h"
 
-#include <cutils/properties.h>
 #include <inttypes.h>
 #include <unistd.h>
 
@@ -20,7 +20,7 @@ namespace android {
 namespace hardware {
 namespace biometrics {
 namespace fingerprint {
-namespace V2_1 {
+namespace V2_3 {
 namespace implementation {
 
 // Supported fingerprint HAL version
@@ -195,16 +195,24 @@ Return<RequestStatus> BiometricsFingerprint::authenticate(uint64_t operationId,
     return ErrorFilter(mDevice->authenticate(mDevice, operationId, gid));
 }
 
+Return<bool> BiometricsFingerprint::isUdfps(uint32_t /*sensorId*/) {
+    return false;
+}
+
+Return<void> BiometricsFingerprint::onFingerDown(uint32_t /*x*/, uint32_t /*y*/, float /*minor*/,
+                                                 float /*major*/) {
+    return Void();
+}
+
+Return<void> BiometricsFingerprint::onFingerUp() {
+    return Void();
+}
+
 IBiometricsFingerprint* BiometricsFingerprint::getInstance() {
     if (!sInstance) {
       sInstance = new BiometricsFingerprint();
     }
     return sInstance;
-}
-
-void setFpVendorProp(const char *fp_vendor) {
-    property_set("persist.vendor.sys.fp.vendor", fp_vendor);
-    property_set("ro.boot.fpsensor", fp_vendor);
 }
 
 fingerprint_device_t* getDeviceForVendor(const char *class_name)
@@ -259,7 +267,6 @@ fingerprint_device_t* getFingerprintDevice()
     if (fp_device == nullptr) {
         ALOGE("Failed to load fpc fingerprint module");
     } else {
-        setFpVendorProp("fpc");
         return fp_device;
     }
 
@@ -267,11 +274,8 @@ fingerprint_device_t* getFingerprintDevice()
     if (fp_device == nullptr) {
         ALOGE("Failed to load goodix fingerprint module");
     } else {
-        setFpVendorProp("goodix");
         return fp_device;
     }
-
-    setFpVendorProp("none");
 
     return nullptr;
 }
@@ -388,7 +392,7 @@ void BiometricsFingerprint::notify(const fingerprint_msg_t *msg) {
 }
 
 } // namespace implementation
-}  // namespace V2_1
+}  // namespace V2_3
 }  // namespace fingerprint
 }  // namespace biometrics
 }  // namespace hardware
