@@ -3,6 +3,13 @@
 // SPDX-License-Identifier: Apache-2.0
 //
 
+prebuilt_etc {
+    name: "fstab.zram",
+    src: "fstab.zram",
+    vendor: true,
+    ramdisk_available: true,
+}
+
 cc_library_static {
     name: "libinit_sdm660",
     recovery_available: true,
