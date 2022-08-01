@@ -64,6 +64,9 @@ BOARD_HAS_QCA_BT_SOC := "cherokee"
 BLUETOOTH_HCI_USE_MCT := true
 QCOM_BT_USE_SMD_TTY := true
 
+# Board stuff
+BOARD_EGL_CFG := $(COMMON_PATH)/configs/egl/egl.cfg
+
 # Bootloader
 TARGET_BOOTLOADER_BOARD_NAME := sdm660
 TARGET_NO_BOOTLOADER := true
