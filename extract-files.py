@@ -44,11 +44,6 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
-    'vendor/bin/mlipayd@1.1': blob_fixup()
-        .remove_needed('vendor.xiaomi.hardware.mtdservice@1.0.so'),
-    ('vendor/lib64/libmlipay.so','vendor/lib64/libmlipay@1.1.so'): blob_fixup()
-        .remove_needed('vendor.xiaomi.hardware.mtdservice@1.0.so')
-        .binary_regex_replace(b'/system/etc/firmware', b'/vendor/firmware\x00\x00\x00\x00'),
     ('vendor/lib64/hw/consumerir.lirc.sdm660.so', 'consumerir.spi.sdm660.so'): blob_fixup()
         .fix_soname(),
     'vendor/bin/pm-service': blob_fixup()
