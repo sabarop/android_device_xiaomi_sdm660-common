@@ -186,5 +186,10 @@ ro.vendor.sensors.mot_detect=true
 ro.soc.manufacturer=QTI
 ro.soc.model=SDM660
 
+# USB
+vendor.usb.rmnet.func.name=rmnet_bam
+vendor.usb.rmnet.inst.name=rmnet
+vendor.usb.rndis.func.name=rndis_bam
+
 # Time
 persist.vendor.delta_time.enable=true
