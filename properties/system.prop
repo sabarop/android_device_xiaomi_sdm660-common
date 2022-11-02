@@ -20,11 +20,6 @@ ro.surface_flinger.supports_background_blur=1
 # Brightness
 sys.brightness.disable_gamma_conversion=true
 
-# Camera
-persist.vendor.camera.privapp.list=org.codeaurora.snapcam
-camera.aux.packagelist=com.google.android.GoogleCamera,com.android.camera,org.codeaurora.snapcam
-vendor.camera.aux.packagelist=com.android.camera,org.lineageos.aperture,org.lineageos.aperture.dev
-
 # CNE
 persist.vendor.cne.feature=1
 
