@@ -175,7 +175,6 @@ ro.com.android.dataroaming=false
 
 # QCOM
 persist.vendor.qcomsysd.enabled=1
-ro.vendor.perf.scroll_opt=true
 
 # Radio
 persist.dbg.volte_avail_ovr=1
