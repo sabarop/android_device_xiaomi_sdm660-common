@@ -280,6 +280,10 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     android.hardware.lights-service.xiaomi_sdm660
 
+# Lineage Health
+PRODUCT_PACKAGES += \
+    vendor.lineage.health-service.default
+
 # LiveDisplay native
 PRODUCT_PACKAGES += \
     vendor.lineage.livedisplay@2.0-service-sdm \
