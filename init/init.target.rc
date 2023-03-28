@@ -580,12 +580,12 @@ on property:sys.boot_completed=1
     write /proc/sys/kernel/sched_child_runs_first 1
 
     # Setup EAS tunables
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 4000
-    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 16000
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu0/cpufreq/schedutil/down_rate_limit_us 20000
     write /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq 1017600
 
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 4000
-    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 16000
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/up_rate_limit_us 500
+    write /sys/devices/system/cpu/cpu4/cpufreq/schedutil/down_rate_limit_us 10000
     write /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq 902400
 
     # Back to default VM settings
