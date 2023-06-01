@@ -26,6 +26,11 @@
 * OR OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN
 * IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 */
+/*
+ * Changes from Qualcomm Innovation Center are provided under the following license:
+ * Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+ * SPDX-License-Identifier: BSD-3-Clause-Clear
+ */
 
 #ifndef QSERVICEUTILS_H
 #define QSERVICEUTILS_H
@@ -39,9 +44,8 @@
 // ----------------------------------------------------------------------------
 inline android::sp<qService::IQService> getBinder() {
     android::sp<android::IServiceManager> sm = android::defaultServiceManager();
-    android::sp<qService::IQService> binder =
-            android::interface_cast<qService::IQService>
-            (sm->getService(android::String16("display.qservice")));
+    android::sp<qService::IQService> binder = android::interface_cast<qService::IQService>(
+        sm->checkService(android::String16("display.qservice")));
     if (binder == NULL) {
         ALOGE("%s: invalid binder object", __FUNCTION__);
     }
