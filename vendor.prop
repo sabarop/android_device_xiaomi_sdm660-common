@@ -184,6 +184,11 @@ ro.vendor.sensors.mot_detect=true
 ro.soc.manufacturer=Qualcomm
 ro.soc.model=SDM660
 
+# Suspend properties
+suspend.short_suspend_threshold_millis=2000
+suspend.max_sleep_time_millis=40000
+suspend.short_suspend_backoff_enabled=true
+
 # USB
 vendor.usb.rmnet.func.name=rmnet_bam
 vendor.usb.rmnet.inst.name=rmnet
