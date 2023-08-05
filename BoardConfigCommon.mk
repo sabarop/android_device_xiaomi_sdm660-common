@@ -134,6 +134,9 @@ ifeq ($(filter clover,$(TARGET_DEVICE)),)
 TARGET_VENDOR_PROP += $(COMMON_PATH)/vendor-dsds.prop
 endif
 
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := $(COMMON_PATH)
+
 # SELinux
 SELINUX_IGNORE_NEVERALLOWS := true
 include device/qcom/sepolicy-legacy-um/SEPolicy.mk
