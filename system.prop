@@ -34,6 +34,9 @@ persist.device_config.mglru_native.lru_gen_config=core
 # Netflix
 ro.netflix.bsp_rev=Q660-13149-1
 
+# Multi-Gen LRU
+persist.device_config.mglru_native.lru_gen_config=core
+
 # Radio
 DEVICE_PROVISIONED=1
 ril.subscription.types=NV,RUIM
