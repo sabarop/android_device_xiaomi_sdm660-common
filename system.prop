@@ -27,6 +27,9 @@ persist.log.tag.b/223498680=S
 persist.log.tag.TrafficStats=S
 persist.log.tag.ContrastColorUtil=S
 
+# Multi-Gen LRU
+persist.device_config.mglru_native.lru_gen_config=core
+
 # Netflix
 ro.netflix.bsp_rev=Q660-13149-1
 
