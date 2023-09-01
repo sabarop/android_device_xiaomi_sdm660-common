@@ -187,7 +187,9 @@ BatteryListenerImpl::~BatteryListenerImpl()
         }
     }
     mDone = true;
-    mThread->join();
+    if (NULL !=  mThread) {
+        mThread->join();
+    }
 }
 
 void BatteryListenerImpl::serviceDied(uint64_t cookie __unused,
@@ -202,7 +204,9 @@ void BatteryListenerImpl::serviceDied(uint64_t cookie __unused,
         ALOGI("health service died, reinit");
         mDone = true;
     }
-    mThread->join();
+    if (NULL !=  mThread) {
+        mThread->join();
+    }
     std::lock_guard<std::mutex> _l(mLock);
     init();
 }
