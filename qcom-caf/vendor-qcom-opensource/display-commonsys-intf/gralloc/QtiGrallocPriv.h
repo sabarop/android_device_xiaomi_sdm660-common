@@ -152,7 +152,7 @@ struct private_handle_t : public native_handle_t {
 #ifndef GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE
   unsigned int reserved_size;
 #endif
-#ifdef GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE
+#ifndef GRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE
   unsigned int custom_content_md_reserved_size;
 #endif
   static const int kNumFds = 2;
@@ -190,7 +190,7 @@ struct private_handle_t : public native_handle_t {
 #ifndef GRALLOC_HANDLE_HAS_NO_RESERVED_SIZE
         ,reserved_size(0)
 #endif
-#ifdef GRALLOC_HANDLE_HAS_CUSTOM_CONTENT_MD_RESERVED_SIZE
+#ifndef GRALLOC_HANDLE_HAS_NO_CUSTOM_CONTENT_MD_RESERVED_SIZE
         ,custom_content_md_reserved_size(0)
 #endif
 #ifdef GRALLOC_HANDLE_HAS_UBWCP_FORMAT
