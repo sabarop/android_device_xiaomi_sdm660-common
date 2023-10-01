@@ -288,6 +288,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
+    fstab.zram \
     init.class_main.sh \
     init.goodix.sh \
     init.qcom.post_boot.sh \
