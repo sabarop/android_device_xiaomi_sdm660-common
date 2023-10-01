@@ -282,6 +282,7 @@ PRODUCT_PACKAGES += \
 
 # Init
 PRODUCT_PACKAGES += \
+    fstab.zram \
     init.class_main.sh \
     init.goodix.sh \
     init.msm.usb.configfs.rc \
