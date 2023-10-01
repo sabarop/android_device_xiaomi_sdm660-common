@@ -140,6 +140,10 @@ on init
     # Change permissions for /dev/diag
     chmod 0666 /dev/diag
 
+    # ZRAM setup
+    write /sys/block/zram0/comp_algorithm lz4
+    write /proc/sys/vm/page-cluster 0
+
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
     symlink /dev/block/platform/soc/${ro.boot.bootdevice} /dev/block/bootdevice
@@ -554,7 +558,8 @@ on property:sys.camera.miui.apk=*
     setprop vendor.camera.miui.apk ${sys.camera.miui.apk}
 
 on property:sys.boot_completed=1
-    write /proc/sys/vm/page-cluster 0
+    # Enable ZRAM on boot_complete
+    swapon_all /vendor/etc/fstab.zram
     write /proc/sys/vm/swappiness 60
     write /sys/block/zram0/comp_algorithm lz4
     swapon_all /vendor/etc/fstab.qcom
