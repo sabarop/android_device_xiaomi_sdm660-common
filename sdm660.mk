@@ -228,6 +228,7 @@ PRODUCT_PACKAGES += \
 $(call soong_config_set,libinit,vendor_init_lib,//$(COMMON_PATH):libinit_sdm660)
 
 PRODUCT_PACKAGES += \
+    fstab.zram \
     init.class_main.sh \
     init.goodix.sh \
     init.qcom.post_boot.sh \
