@@ -422,6 +422,11 @@ PRODUCT_USE_DYNAMIC_PARTITIONS := true
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/partitions/flash_super_dummy.sh:install/bin/flash_super_dummy.sh
 
+PRODUCT_PACKAGES += \
+    e2fsck_ramdisk \
+    tune2fs_ramdisk \
+    resize2fs_ramdisk
+
 # Permissions
 PRODUCT_COPY_FILES += \
     frameworks/native/data/etc/android.hardware.audio.low_latency.xml:$(TARGET_COPY_OUT_VENDOR)/etc/permissions/android.hardware.audio.low_latency.xml \
