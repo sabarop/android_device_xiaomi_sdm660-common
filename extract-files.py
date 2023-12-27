@@ -117,6 +117,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/init/android.hardware.drm-service.widevine.rc': blob_fixup()
+        .regex_replace('writepid /dev/cpuset/foreground/tasks', 'task_profiles ProcessCapacityHigh'),
     'vendor/lib/soundfx/libdirac.so': blob_fixup()
         .add_needed('liglog.so'),
     ('vendor/lib64/hw/consumerir.lirc.sdm660.so', 'consumerir.spi.sdm660.so'): blob_fixup()
