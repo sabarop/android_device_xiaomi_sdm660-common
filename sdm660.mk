@@ -197,7 +197,7 @@ PRODUCT_PACKAGES += \
 
 # DeviceDoze
 PRODUCT_PACKAGES += \
-    DeviceDoze
+    XiaomiDoze
 
 # Display Device Config
 PRODUCT_COPY_FILES += \
