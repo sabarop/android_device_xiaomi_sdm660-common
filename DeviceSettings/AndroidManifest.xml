@@ -104,6 +104,7 @@
 
         <service
             android:name=".FPSTileService"
+            android:exported="true"
             android:icon="@drawable/ic_fps_info"
             android:label="@string/fps_info_title"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
