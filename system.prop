@@ -27,6 +27,9 @@ video.disable.ubwc=1
 # Fwk detect
 ro.vendor.qti.va_aosp.support=1
 
+# Filesystem
+fs_mgr.overlayfs.prefer_cache_backing_storage=true
+
 # Media
 media.aac_51_output_enabled=true
 media.stagefright.enable-aac=true
