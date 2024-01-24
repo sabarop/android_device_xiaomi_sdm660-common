@@ -25,7 +25,7 @@
     </hal>
     <hal format="aidl" optional="true">
         <name>android.hardware.bluetooth.audio</name>
-        <version>1-2</version>
+        <version>3</version>
         <interface>
             <name>IBluetoothAudioProviderFactory</name>
             <instance>default</instance>
@@ -42,6 +42,14 @@
     <hal format="hidl" optional="true">
         <name>android.hardware.cas</name>
         <version>1.0-2</version>
+        <interface>
+            <name>IMediaCasService</name>
+            <instance>default</instance>
+        </interface>
+    </hal>
+    <hal format="aidl" optional="true">
+        <name>android.hardware.cas</name>
+        <version>1</version>
         <interface>
             <name>IMediaCasService</name>
             <instance>default</instance>
@@ -99,9 +107,9 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal format="aidl" optional="true">
         <name>android.hardware.health</name>
-        <version>2.0-1</version>
+        <version>1</version>
         <interface>
             <name>IHealth</name>
             <instance>default</instance>
@@ -204,9 +212,9 @@
             <instance>default</instance>
         </interface>
     </hal>
-    <hal format="hidl" optional="true">
+    <hal format="aidl" optional="true">
         <name>android.hardware.wifi</name>
-        <version>1.0-6</version>
+        <version>1</version>
         <interface>
             <name>IWifi</name>
             <instance>default</instance>
