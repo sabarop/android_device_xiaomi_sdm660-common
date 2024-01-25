@@ -40,6 +40,8 @@ genfscon sysfs /devices/platform/soc/soc:goodix_fp/wakeup_enable                
 genfscon sysfs /devices/virtual/graphics/fb0                                                                                                         u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/virtual/graphics/fb1                                                                                                         u:object_r:sysfs_graphics:s0
 genfscon sysfs /devices/virtual/graphics/fb2                                                                                                         u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon2/name                                                                       u:object_r:sysfs_graphics:s0
+genfscon sysfs /devices/platform/soc/soc:qcom,msm-ext-disp/extcon/extcon3/name                                                                       u:object_r:sysfs_graphics:s0
 
 # LED
 genfscon sysfs /devices/platform/soc/800f000.qcom,spmi/spmi-0/spmi0-03/800f000.qcom,spmi:qcom,pm660l@3:qcom,leds@d000/leds/button-backlight          u:object_r:sysfs_graphics:s0
@@ -60,11 +62,16 @@ genfscon proc /sys/kernel/sched_energy_aware                                    
 genfscon sysfs /touchpanel                                                                                                                           u:object_r:sysfs_touchpanel:s0
 
 # Wakeup
+genfscon sysfs /devices/platform/soc/c176000.i2c/i2c-2/2-000c/c176000.i2c:qcom,smb1355@c:qcom,smb1355-charger@1000/power_supply/parallel/wakeup      u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/c178000.i2c/i2c-4/4-0062/wakeup/wakeup                                                                          u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/soc:fingerprint_fpc/wakeup                                                                                      u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:fpc1020/wakeup                                                                                              u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:goodix_fp/wakeup                                                                                            u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/soc:hall_switch/wakeup                                                                                          u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/ca0c000.qcom,cci/ca0c000.qcom,cci:qcom,camera@0/video4linux/video2/wakeup                                       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/ca0c000.qcom,cci/ca0c000.qcom,cci:qcom,camera@1/video4linux/video3/wakeup                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/ca0c000.qcom,cci/ca0c000.qcom,cci:qcom,camera@2/video4linux/video2/wakeup                                       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/platform/soc/ca0c000.qcom,cci/ca0c000.qcom,cci:qcom,camera@2/video4linux/video4/wakeup                                       u:object_r:sysfs_wakeup:s0
+genfscon sysfs /devices/platform/soc/ca0c000.qcom,cci/ca0c000.qcom,cci:qcom,camera@3/video4linux/video4/wakeup                                       u:object_r:sysfs_wakeup:s0
 genfscon sysfs /devices/virtual/input/input1/wakeup                                                                                                  u:object_r:sysfs_wakeup:s0
 genfscon sysfs /kernel/fast_charge/force_fast_charge            u:object_r:sysfs_fcharge:s0
