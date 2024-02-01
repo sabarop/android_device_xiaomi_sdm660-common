@@ -5,13 +5,14 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
+        "1843200",
         "1747200",
+        "1536000",
+        "1401600",
         "1113600",
         "902400",
-        "1113601",
-        "1401600",
-        "1536000",
-        "1747201"
+        "633600",
+        "300000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -21,10 +22,14 @@
       "Path": "/sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
-        "633599",
-        "902400",
+        "1843200",
+        "1747200",
+        "1536000",
         "1401600",
-        "633600"
+        "1113600",
+        "902400",
+        "633600",
+        "300000"
       ],
       "ResetOnInit": true
     },
@@ -33,15 +38,13 @@
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq",
       "Values": [
         "9999999",
+        "2457600",
+        "2150400",
         "1958400",
         "1747200",
-        "9999998",
         "1401600",
         "1113600",
-        "1401601",
-        "1747201",
-        "1958401",
-        "2150400"
+        "300000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -51,10 +54,12 @@
       "Path": "/sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq",
       "Values": [
         "9999999",
+        "2457600",
+        "2150400",
         "1958400",
         "1747200",
-        "299999",
         "1401600",
+        "1113600",
         "300000"
       ],
       "ResetOnInit": true
@@ -64,7 +69,10 @@
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
       "Values": [
         "750000000",
-        "647000000"
+        "700000000",
+        "647000000",
+        "588000000",
+        "465000000"
       ],
       "DefaultIndex": 0,
       "ResetOnInit": true
@@ -73,10 +81,10 @@
       "Name": "GPUMinFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/min_freq",
       "Values": [
-        "750000000",
         "647000000",
         "588000000",
-        "465000000"
+        "465000000",
+        "370000000"
       ],
       "ResetOnInit": true
     },
@@ -266,7 +274,7 @@
       "PowerHint": "FIXED_PERFORMANCE",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "750000000"
+      "Value": "647000000"
     },
     {
       "PowerHint": "Flipendo",
