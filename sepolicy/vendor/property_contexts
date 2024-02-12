@@ -98,6 +98,10 @@ sys.post_boot.parsed                    u:object_r:vendor_mpctl_prop:s0
 vendor.powerhal.                        u:object_r:vendor_power_prop:s0
 vendor.powerhal.audio                   u:object_r:vendor_power_prop:s0
 
+# Radio
+ro.vendor.ril.svlte1x                   u:object_r:vendor_radio_prop:s0
+ro.vendor.ril.svdo                      u:object_r:vendor_radio_prop:s0
+
 # RIL
 ro.build.software.version               u:object_r:telephony_status_prop:s0
 ro.product.mod_device                   u:object_r:telephony_status_prop:s0
