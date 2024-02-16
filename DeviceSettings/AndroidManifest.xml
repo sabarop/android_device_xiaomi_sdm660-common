@@ -74,6 +74,7 @@
 
         <service
             android:name=".PerformanceTileService"
+            android:exported="true"
             android:icon="@drawable/thermal_balance"
             android:label="@string/thermal_balance"
             android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
