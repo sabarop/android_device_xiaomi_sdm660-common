@@ -25,7 +25,6 @@ persist.vendor.camera.privapp.list=org.codeaurora.snapcam
 camera.aux.packagelist=com.google.android.GoogleCamera,com.android.camera,org.codeaurora.snapcam
 
 # Charger
-ro.charger.enable_suspend=true
 ro.charger.disable_init_blank=true
 
 # CNE
