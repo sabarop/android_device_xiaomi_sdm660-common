@@ -707,8 +707,6 @@ service esepmdaemon /system/vendor/bin/esepmdaemon
     group nfc
 
 on charger
-    setprop persist.sys.usb.config mass_storage
-
     # Notification LED
     chown system system /sys/class/leds/red/brightness
     write /sys/class/leds/red/brightness 255
