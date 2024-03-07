@@ -6,6 +6,8 @@
 
 -include vendor/lineage-priv/keys/keys.mk
 
+$(call inherit-product, $(SRC_TARGET_DIR)/product/non_ab_device.mk)
+
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
     $(LOCAL_PATH)/overlay \
