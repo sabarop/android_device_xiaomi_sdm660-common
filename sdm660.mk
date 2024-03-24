@@ -321,10 +321,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
     $(call find-copy-subdir-files,*,$(COMMON_PATH)/configs/keylayout/,$(TARGET_COPY_OUT_VENDOR)/usr/keylayout)
 
-# Keystore
-PRODUCT_PACKAGES += \
-    android.system.keystore2
-
 # Lights
 PRODUCT_PACKAGES += \
     android.hardware.light-service.xiaomi
