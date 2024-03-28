@@ -82,7 +82,16 @@
       "Path": "/sys/class/kgsl/kgsl-3d0/idle_timer",
       "Values": [
         "10000",
-        "64"
+        "80"
+      ],
+      "ResetOnInit": true
+    },
+    {
+      "Name": "TASchedtuneBoost",
+      "Path": "/dev/stune/top-app/schedtune.boost",
+      "Values": [
+        "5",
+        "1"
       ],
       "ResetOnInit": true
     },
@@ -101,33 +110,6 @@
       "Values": [
         "0",
         "20"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "KernelBatterySaver",
-      "Path": "/sys/module/battery_saver/parameters/enabled",
-      "Values": [
-        "Y",
-        "N"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "UClampForegroundBoost",
-      "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
-      "Values": [
-        "30",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
-      "Name": "UClampTopAppBoost",
-      "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
-      "Values": [
-        "65",
-        "0"
       ],
       "ResetOnInit": true
     },
@@ -183,6 +165,12 @@
     },
     {
       "PowerHint": "INTERACTION",
+      "Node": "TASchedtuneBoost",
+      "Duration": 0,
+      "Value": "5"
+    },
+    {
+      "PowerHint": "INTERACTION",
       "Node": "CPUBWHystTriggerCount",
       "Duration": 0,
       "Value": "0"
@@ -196,62 +184,50 @@
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMaxFreq",
-      "Duration": 6000,
+      "Duration": 5000,
       "Value": "9999999"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBigClusterMinFreq",
-      "Duration": 6000,
+      "Duration": 5000,
       "Value": "9999999"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPULittleClusterMinFreq",
-      "Duration": 6000,
+      "Duration": 5000,
       "Value": "9999999"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBWHystTriggerCount",
-      "Duration": 6000,
+      "Duration": 5000,
       "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "CPUBWHistMemory",
-      "Duration": 6000,
+      "Duration": 5000,
       "Value": "0"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "GPUForceClkOn",
-      "Duration": 6000,
+      "Duration": 5000,
       "Value": "1"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "GPUForceRailOn",
-      "Duration": 6000,
+      "Duration": 5000,
       "Value": "1"
     },
     {
       "PowerHint": "LAUNCH",
       "Node": "GPUIdleTimer",
-      "Duration": 6000,
+      "Duration": 5000,
       "Value": "10000"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "UClampForegroundBoost",
-      "Duration": 6000,
-      "Value": "30"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "UClampTopAppBoost",
-      "Duration": 6000,
-      "Value": "65"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
@@ -263,19 +239,13 @@
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMinFreq",
       "Duration": 0,
-      "Value": "647000000"
+      "Value": "465000000"
     },
     {
       "PowerHint": "EXPENSIVE_RENDERING",
       "Node": "GPUMaxFreq",
       "Duration": 0,
       "Value": "647000000"
-    },
-    {
-      "PowerHint": "LOW_POWER",
-      "Node": "KernelBatterySaver",
-      "Duration": 0,
-      "Value": "Y"
     }
   ]
 }
