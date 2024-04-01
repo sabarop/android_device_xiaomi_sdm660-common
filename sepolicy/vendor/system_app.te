@@ -20,6 +20,12 @@ allow system_app zygote:unix_stream_socket { getopt };
 allow system_app sysfs_thermal:file rw_file_perms;
 allow system_app sysfs_thermal:dir search;
 
+binder_call(system_app, hal_audio_default)
+binder_call(system_app, hal_health_default)
+binder_call(system_app, hal_memtrack_default)
+binder_call(system_app, hal_power_default)
+binder_call(system_app, hal_radio_default)
+
 # neverallow and harmless
 dontaudit system_app time_daemon:unix_stream_socket { connectto };
 
