@@ -178,6 +178,9 @@ static Error dataspaceToColorMetadata(Dataspace dataspace, ColorMetaData *color_
     case (uint32_t)Dataspace::TRANSFER_HLG:
       out.transfer = Transfer_HLG;
       break;
+    case (uint32_t)Dataspace::TRANSFER_ST2084:
+      out.transfer = Transfer_SMPTE_ST2084;
+      break;
     default:
       return Error::UNSUPPORTED;
       /*
