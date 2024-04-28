@@ -1,4 +1,5 @@
 # jasmine package version: V11.0.28.0.QDIMIXM, unless stated otherwise
+# lavender package version: V12.5.3.0.QFGCNXM, unless stated otherwise
 
 # ADSP - from jasmine
 vendor/bin/adsprpcd|0cdd541ee0a365c5dccd0613e495611f4d0f6607
@@ -566,10 +567,8 @@ vendor/lib64/vendor.qti.imsrtpservice@2.0.so|fdc13f23a021c98bd8f8ebb1169b2b5841f
 vendor/lib64/vendor.qti.imsrtpservice@2.1-service-Impl.so|0fb9dae5a902c89fc0467c7215772f837408cdcd
 vendor/lib64/vendor.qti.imsrtpservice@2.1.so|7b227f1a007619dcae8d541eabe99eb5581d226d
 
-# Soter - from jason V12.0.1.0.PCHCNXM
-app/SoterService/SoterService.apk|c6c6063f83588db6c572779624458a4d1f094213
-
-# Soter - from jasmine
+# Soter - from lavender
+vendor/app/SoterService/SoterService.apk|a906b956cff77c2a1bcb26d8a74ecd386b50eeb2
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|4f7e3c8a6cde9efefd8b9bf440fb1ed442e21fd3
 vendor/etc/init/vendor.qti.hardware.soter@1.0-service.rc|76447a61ad5529949365eeb7e8ca000e48bd28ae
 vendor/lib64/hw/vendor.qti.hardware.soter@1.0-impl.so|9cf774301dfb59173cc2a6871ff851ea6b546f39
