@@ -348,11 +348,16 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
-    android.hardware.power-service-qti \
-    vendor.qti.hardware.perf@2.0.vendor
+    android.hardware.power-service.xiaomi-libperfmgr \
+    android.hardware.power.stats@1.0-service.mock \
+    libqti-perfd-client
 
 PRODUCT_COPY_FILES += \
-    $(LOCAL_PATH)/configs/perf/perf-profile0.conf:$(TARGET_COPY_OUT_VENDOR)/etc/perf/perf-profile0.conf
+    $(LOCAL_PATH)/configs/powerhint.json:$(TARGET_COPY_OUT_VENDOR)/etc/powerhint.json
+
+PRODUCT_SOONG_NAMESPACES += \
+    hardware/google/interfaces \
+    hardware/google/pixel
 
 # Protobuf
 PRODUCT_PACKAGES += \

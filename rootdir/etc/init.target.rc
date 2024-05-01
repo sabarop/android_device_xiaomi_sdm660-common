@@ -27,14 +27,45 @@
 #
 #
 
+on early-init
+    # Disable EAS
+    write /proc/sys/kernel/sched_energy_aware 0
+
 on init
-    write /dev/stune/foreground/schedtune.sched_boost_no_override 1
-    write /dev/stune/top-app/schedtune.sched_boost_no_override 1
-    write /dev/stune/schedtune.colocate 0
-    write /dev/stune/background/schedtune.colocate 0
-    write /dev/stune/system-background/schedtune.colocate 0
-    write /dev/stune/foreground/schedtune.colocate 0
-    write /dev/stune/top-app/schedtune.colocate 1
+    write /dev/stune/foreground/schedtune.prefer_idle 1
+    write /dev/stune/top-app/schedtune.boost 5
+    write /dev/stune/top-app/schedtune.prefer_idle 1
+
+    # Setup permission for Power HAL
+    chown system system /dev/cpu_dma_latency
+    chown system system /dev/stune/top-app/schedtune.boost
+    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chown system system /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chown system system /sys/class/kgsl/kgsl-3d0/force_rail_on
+    chown system system /sys/class/kgsl/kgsl-3d0/force_clk_on
+    chown system system /sys/class/kgsl/kgsl-3d0/idle_timer
+    chown system system /sys/class/devfreq/soc:qcom,cpubw/min_freq
+    chown system system /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
+    chown system system /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    chown system system /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+    chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+    chown system system /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
+
+    chmod 0664 /dev/cpu_dma_latency
+    chmod 0664 /dev/stune/top-app/schedtune.boost
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/min_freq
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/devfreq/max_freq
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/force_rail_on
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/force_clk_on
+    chmod 0664 /sys/class/kgsl/kgsl-3d0/idle_timer
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpubw/min_freq
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hyst_trigger_count
+    chmod 0664 /sys/class/devfreq/soc:qcom,cpubw/bw_hwmon/hist_memory
+    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpu0/cpufreq/scaling_min_freq
+    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_max_freq
+    chmod 0664 /sys/devices/system/cpu/cpu4/cpufreq/scaling_min_freq
 
 on fs
     wait /dev/block/platform/soc/${ro.boot.bootdevice}
@@ -118,6 +149,10 @@ on boot
     # Touchpanel
     chown system system /sys/touchpanel/double_tap
 
+    chmod 0664 /sys/touchpanel/capacitive_keys
+    chmod 0664 /sys/touchpanel/double_tap
+    chmod 0664 /sys/touchpanel/reversed_keys
+
 #Peripheral manager
 service vendor.per_mgr /system/vendor/bin/pm-service
     class core
@@ -191,12 +226,6 @@ service vendor.cdsprpcd /vendor/bin/cdsprpcd
 #    chown system drmrpc /sys/devices/f9966000.i2c/i2c-1/1-0020/secure_touch_enable
 #    chown system drmrpc /sys/devices/f9966000.i2c/i2c-1/1-0020/secure_touch
 
-service energy-awareness /system/vendor/bin/energy-awareness
-    class main
-    user system
-    group system
-    oneshot
-
 service vendor.pd_mapper /system/vendor/bin/pd-mapper
      class core
 
@@ -206,6 +235,10 @@ service ppd /system/vendor/bin/mm-pp-dpps
     group system graphics
     socket pps stream 0660 system system
     disabled
+
+on property:sys.boot_completed=1
+    # Enable PowerHAL hint processing
+    setprop vendor.powerhal.init 1
 
 on property:init.svc.surfaceflinger=stopped
     stop ppd
@@ -237,3 +270,7 @@ service vendor.hvdcp_opti /system/vendor/bin/hvdcp_opti
      class main
      user root
      group system wakelock
+
+on property:sys.boot_completed=1
+# Enable EAS
+    write /proc/sys/kernel/sched_energy_aware 1
