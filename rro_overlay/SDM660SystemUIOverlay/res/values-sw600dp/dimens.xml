@@ -23,4 +23,7 @@
     <!-- Width for the spacer, used between QS tiles. -->
     <dimen name="qs_quick_tile_space_width">0dp</dimen>
 
+    <!-- Disable bluetooth by default -->
+    <bool name="def_bluetooth_on">false</bool>
+
 </resources>
