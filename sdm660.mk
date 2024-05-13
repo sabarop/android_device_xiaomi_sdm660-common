@@ -408,22 +408,10 @@ PRODUCT_PACKAGES += \
 
 # Overlays
 DEVICE_PACKAGE_OVERLAYS += \
-    $(COMMON_PATH)/overlay
+    $(COMMON_PATH)/overlay \
+    $(COMMON_PATH)/overlay-lineage
 
-PRODUCT_PACKAGES += \
-    SDM660CarrierConfigOverlay \
-    SDM660DialerOverlay \
-    SDM660FrameworksOverlay \
-    SDM660RILFrameworksOverlay \
-    SDM660RILSettingsOverlay \
-    SDM660SettingsOverlay \
-    SDM660SettingsProviderOverlay \
-    SDM660SystemUIOverlay \
-    SDM660TelephonyOverlay \
-    SDM660WifiOverlay
-
-# RRO configuration
-TARGET_USES_RRO := true
+PRODUCT_ENFORCE_RRO_TARGETS := *
 
 # Partitions
 PRODUCT_PACKAGES += \
@@ -643,6 +631,7 @@ PRODUCT_PACKAGES += \
     hostapd_cli \
     libwifi-hal-qcom \
     libwpa_client \
+    WifiOverlay \
     wpa_supplicant \
     wpa_supplicant.conf
 

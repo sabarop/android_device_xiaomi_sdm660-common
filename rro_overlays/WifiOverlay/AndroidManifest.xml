@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2021 The Android Open Source Project
+<!-- Copyright (C) 2019 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,13 +13,16 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-
-<resources>
-    <string-array name="configs_base">
-        <!-- ART heap compaction for cached apps -->
-        <item>activity_manager/use_compaction=true</item>
-
-        <!-- Enable seperated notification/ring volume sliders in UI -->
-        <item>systemui/volume_separate_notification=true</item>
-    </string-array>
-</resources>
+<!-- Pixel specific wifi overlays -->
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    coreApp="true"
+    package="com.android.wifi.resources.xiaomi_sdm660"
+    android:versionCode="1"
+    android:versionName="1.0">
+    <application android:hasCode="false" android:allowBackup="false"/>
+    <overlay
+      android:targetPackage="com.android.wifi.resources"
+      android:targetName="WifiCustomization"
+      android:isStatic="true"
+      android:priority="0"/>
+</manifest>
