@@ -378,10 +378,6 @@ PRODUCT_PACKAGES += \
     vendor_dsp_mountpoint \
     vendor_firmware_mnt_mountpoint
 
-# Perf
-PRODUCT_PACKAGES += \
-    libqti-perfd-client
-
 # Preopt critical applications
 PRODUCT_DEXPREOPT_SPEED_APPS += \
     SettingsGoogle \
@@ -390,7 +386,8 @@ PRODUCT_DEXPREOPT_SPEED_APPS += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
-    android.hardware.power-service.xiaomi-libperfmgr
+    android.hardware.power-service.lineage-libperfmgr \
+    libqti-perfd-client
 
 ifeq ($(filter tulip whyred,$(TARGET_DEVICE)),)
 PRODUCT_COPY_FILES += \
@@ -402,7 +399,9 @@ endif
 
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
-    hardware/google/pixel
+    hardware/google/pixel \
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common/libqti-perfd-client
 
 # Public libraries
 PRODUCT_COPY_FILES += \
