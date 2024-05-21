@@ -348,7 +348,7 @@ PRODUCT_PACKAGES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.2.vendor \
-    android.hardware.power-service.xiaomi-libperfmgr \
+    android.hardware.power-service.lineage-libperfmgr \
     android.hardware.power.stats@1.0-service.mock \
     libqti-perfd-client
 
@@ -357,7 +357,9 @@ PRODUCT_COPY_FILES += \
 
 PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
-    hardware/google/pixel
+    hardware/google/pixel \
+    hardware/lineage/interfaces/power-libperfmgr \
+    hardware/qcom-caf/common/libqti-perfd-client
 
 # Protobuf
 PRODUCT_PACKAGES += \
