@@ -150,6 +150,10 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     XiaomiDoze
 
+# Device settings
+PRODUCT_PACKAGES += \
+    XiaomiDolby
+
 # Dex
 PRODUCT_DEX_PREOPT_DEFAULT_COMPILER_FILTER := verify
 
