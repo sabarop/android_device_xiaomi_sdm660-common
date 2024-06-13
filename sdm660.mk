@@ -81,6 +81,7 @@ PRODUCT_PACKAGES += \
     audio.usbv2.default \
     liba2dpoffload \
     libaudio-resampler \
+    libaudioroute.vendor \
     libhdmiedid \
     libhfp \
     libsndmonitor \
@@ -135,6 +136,13 @@ PRODUCT_PACKAGES += \
     android.hardware.camera.provider@2.4-impl \
     android.hardware.camera.provider@2.4-service \
     android.hardware.camera.provider@2.6 \
+    libcamera_metadata.vendor \
+    libexif.vendor \
+    libion.vendor \
+    libjpeg.vendor \
+    liblz4.vendor \
+    libutilscallstack.vendor \
+    libyuv.vendor \
     vendor.qti.hardware.camera.device@1.0 \
     vendor.qti.hardware.camera.device@1.0.vendor
 
@@ -215,6 +223,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hardware.gatekeeper@1.0.vendor \
     android.hardware.keymaster@4.1.vendor \
+    libion.vendor
 
 # Freeform Multiwindow
 PRODUCT_COPY_FILES += \
@@ -239,6 +248,7 @@ PRODUCT_PACKAGES += \
     android.hardware.gnss.measurement_corrections@1.1.vendor \
     android.hardware.gnss.visibility_control@1.0.vendor \
     libbatching \
+    libcurl.vendor \
     libgeofencing \
     libgnss \
     libwifi-hal-ctrl
@@ -272,6 +282,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     android.hidl.base@1.0 \
     android.hidl.base@1.0.vendor \
+    libhidlmemory.vendor \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
@@ -409,6 +420,7 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
+    libstagefright_softomx_plugin.vendor \
     libstagefrighthw
 
 # Overlays
@@ -505,7 +517,9 @@ PRODUCT_COPY_FILES += \
 # QMI
 $(call inherit-product, external/json-c/Android.configure.mk)
 PRODUCT_PACKAGES += \
+    libcrypto_utils.vendor \
     libjson \
+    libjsoncpp.vendor \
     libqti_vndfwk_detect \
     libqti_vndfwk_detect.vendor \
     libvndfwk_detect_jni.qti \
@@ -519,7 +533,10 @@ PRODUCT_PACKAGES += \
     android.hardware.radio.config@1.3.vendor \
     android.hardware.radio@1.6.vendor \
     android.hardware.radio.deprecated@1.0.vendor \
-    android.hardware.secure_element@1.2.vendor 
+    android.hardware.secure_element@1.2.vendor \
+    libnetutils.vendor \
+    libsqlite.vendor \
+    libssl.vendor
 
 # RIL
 PRODUCT_PACKAGES += \
@@ -555,6 +572,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.sensorservice@1.0.vendor \
     android.hardware.sensors@1.0-impl-xiaomi \
     android.hardware.sensors@1.0-service \
+    libpower.vendor \
     libsensorndkbridge
 
 # Sensor Config
@@ -628,6 +646,7 @@ PRODUCT_PACKAGES += \
     hostapd \
     hostapd_cli \
     libwifi-hal-qcom \
+    libwifi-system-iface.vendor \
     libwpa_client \
     WifiOverlay \
     wpa_supplicant \
