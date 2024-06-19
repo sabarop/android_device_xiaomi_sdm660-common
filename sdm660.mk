@@ -544,6 +544,7 @@ PRODUCT_PACKAGES += \
     extphonelib-product \
     extphonelib.xml \
     extphonelib_product.xml \
+    android.hardware.radio-service.compat \
     ims-ext-common \
     ims_ext_common.xml \
     librmnetctl \
