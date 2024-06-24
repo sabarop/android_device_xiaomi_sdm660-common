@@ -217,8 +217,10 @@ persist.sys.binary_xml=false
 persist.vendor.delta_time.enable=true
 
 # USB
+sys.usb.mtp.batchcancel=1
 vendor.usb.rmnet.inst.name=rmnet
 vendor.usb.rndis.func.name=rndis_bam
+vendor.usb.use_ffs_mtp=1
 vendor.usb.use_gadget_hal=1
 
 # Zygote
