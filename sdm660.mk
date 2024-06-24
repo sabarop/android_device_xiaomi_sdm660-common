@@ -124,6 +124,10 @@ PRODUCT_PACKAGES += \
     libpng.vendor:32 \
     vendor.qti.hardware.camera.device@1.0:64
 
+# Configstore
+PRODUCT_PACKAGES += \
+    disable_configstore
+
 # Consumer IR
 ifeq ($(BOARD_HAVE_IR),true)
 PRODUCT_PACKAGES += \
