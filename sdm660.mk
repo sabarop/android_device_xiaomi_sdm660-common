@@ -18,6 +18,9 @@ $(call inherit-product-if-exists, build/target/product/embedded.mk)
 # Disable deprecated sdcardfs, enable casefold, projid
 $(call inherit-product, $(SRC_TARGET_DIR)/product/emulated_storage.mk)
 
+# Add common definitions for Qualcomm
+$(call inherit-product, hardware/qcom-caf/common/common.mk)
+
 # Enable updating of APEXes
 ifeq ($(ENABLE_APEX), true)
 TARGET_SUPPORTS_UPDATABLE_APEX := true
