@@ -1,5 +1,0 @@
-runtime_resource_overlay {
-    name: "DisableChargingRippleOverlay",
-    theme: "DisableChargingRippleOverlay",
-    product_specific: true
-}
