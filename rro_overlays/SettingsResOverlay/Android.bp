@@ -7,6 +7,5 @@
 runtime_resource_overlay {
     name: "SettingsSDM660Overlay",
     theme: "SettingsSDM660Overlay",
-    sdk_version: "current",
     vendor: true,
 }

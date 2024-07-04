@@ -7,6 +7,5 @@
 runtime_resource_overlay {
     name: "CellBroadcastReceiverSDM660Overlay",
     theme: "CellBroadcastReceiverSDM660Overlay",
-    sdk_version: "current",
     vendor: true
 }

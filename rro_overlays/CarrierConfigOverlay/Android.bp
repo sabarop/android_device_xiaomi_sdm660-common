@@ -7,7 +7,6 @@
 runtime_resource_overlay {
     name: "CarrierConfigSDM660Overlay",
     theme: "CarrierConfigSDM660Overlay",
-    sdk_version: "current",
     vendor: true,
     aaptflags: ["--keep-raw-values"],
 }
