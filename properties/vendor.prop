@@ -176,8 +176,6 @@ debug.hwui.target_cpu_time_percent=30
 ro.incremental.enable=1
 
 # Media
-debug.stagefright.omx_default_rank.sw-audio=1
-debug.stagefright.omx_default_rank=0
 vidc.enc.dcvs.extra-buff-count=2
 
 # Misc
