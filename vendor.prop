@@ -219,6 +219,7 @@ persist.vendor.delta_time.enable=true
 # USB
 vendor.usb.rmnet.inst.name=rmnet
 vendor.usb.rndis.func.name=rndis_bam
+vendor.usb.use_gadget_hal=1
 
 # Zygote
 zygote.critical_window.minute=10
