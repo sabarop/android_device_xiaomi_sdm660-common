@@ -33,103 +33,76 @@
 baseband=`getprop ro.baseband`
 sgltecsfb=`getprop persist.vendor.radio.sglte_csfb`
 datamode=`getprop persist.vendor.data.mode`
-qcrild_status=true
+low_ram=`getprop ro.config.low_ram`
+hw_type=`getprop ro.hardware.type`
 
 case "$baseband" in
     "apq" | "sda" | "qcs" )
     setprop ro.vendor.radio.noril yes
     stop vendor.ril-daemon
     stop vendor.qcrild
+    stop vendor.qcrild2
+    stop vendor.qcrild3
 esac
 
 case "$baseband" in
     "msm" | "csfb" | "svlte2a" | "mdm" | "mdm2" | "sglte" | "sglte2" | "dsda2" | "unknown" | "dsda3" | "sdm" | "sdx" | "sm6")
 
-    # For older modem packages launch ril-daemon.
-    if [ -f /vendor/firmware_mnt/verinfo/ver_info.txt ]; then
-        modem=`cat /vendor/firmware_mnt/verinfo/ver_info.txt |
-                sed -n 's/^[^:]*modem[^:]*:[[:blank:]]*//p' |
-                sed 's/.*MPSS.\(.*\)/\1/g' | cut -d \. -f 1`
-        if [ "$modem" = "AT" ]; then
-            version=`cat /vendor/firmware_mnt/verinfo/ver_info.txt |
-                    sed -n 's/^[^:]*modem[^:]*:[[:blank:]]*//p' |
-                    sed 's/.*AT.\(.*\)/\1/g' | cut -d \- -f 1`
-            if [ ! -z $version ]; then
-                if [ "$version" \< "3.1" ]; then
-                    qcrild_status=false
-                fi
-            fi
-        elif [ "$modem" = "TA" ]; then
-            version=`cat /vendor/firmware_mnt/verinfo/ver_info.txt |
-                    sed -n 's/^[^:]*modem[^:]*:[[:blank:]]*//p' |
-                    sed 's/.*TA.\(.*\)/\1/g' | cut -d \- -f 1`
-            if [ ! -z $version ]; then
-                if [ "$version" \< "3.0" ]; then
-                    qcrild_status=false
-                fi
-            fi
-        elif [ "$modem" = "JO" ]; then
-            version=`cat /vendor/firmware_mnt/verinfo/ver_info.txt |
-                    sed -n 's/^[^:]*modem[^:]*:[[:blank:]]*//p' |
-                    sed 's/.*JO.\(.*\)/\1/g' | cut -d \- -f 1`
-            if [ ! -z $version ]; then
-                if [ "$version" \< "3.2" ]; then
-                    qcrild_status=false
-                fi
-            fi
-        elif [ "$modem" = "TH" ]; then
-            qcrild_status=false
-        fi
+    # start qcrild only for targets on which modem is present
+    # modemvalue 0x0 indicates Modem online
+    # modemvalue 0x1 indicates Modem IP is not functional or disabled
+    # modemvalue 0x2 indicates Modem offline
+    modemvalue="0x0"
+    if [ -f /sys/devices/soc0/modem ]; then
+        modemvalue=`cat /sys/devices/soc0/modem`
     fi
 
-    if [ "$qcrild_status" = "true" ]; then
-        # Make sure both rild, qcrild are not running at same time.
-        # This is possible with vanilla aosp system image.
-        stop vendor.ril-daemon
-
+    if [ $modemvalue != "0x1" ] && [ $modemvalue != "0x2" ]; then
         start vendor.qcrild
+
+        case "$baseband" in
+            "sglte" | "sglte2" )
+              if [ "x$sgltecsfb" = "xtrue" ]; then
+                  setprop persist.vendor.radio.voice.modem.index 0
+              fi
+            ;;
+        esac
+
+        multisim=`getprop persist.radio.multisim.config`
+
+        if [ "$multisim" = "dsds" ] || [ "$multisim" = "dsda" ]; then
+            start vendor.qcrild2
+        elif [ "$multisim" = "tsts" ]; then
+            start vendor.qcrild2
+            start vendor.qcrild3
+        fi
+
+        case "$datamode" in
+            "tethered")
+                if [ "$hw_type" != "automotive" ]; then
+                  start vendor.dataqti
+                fi
+                if [ "$low_ram" != "true" ]; then
+                  start vendor.dataadpl
+                fi
+                ;;
+            "concurrent")
+                if [ "$hw_type" != "automotive" ]; then
+                  start vendor.dataqti
+                fi
+                if [ "$low_ram" != "true" ]; then
+                  start vendor.dataadpl
+                fi
+                ;;
+            *)
+                ;;
+        esac
     else
-        start vendor.ril-daemon
+        setprop ro.vendor.radio.noril yes
+        stop vendor.qcrild
+        stop vendor.qcrild2
+        stop vendor.qcrild3
     fi
-
-    case "$baseband" in
-        "sglte" | "sglte2" )
-          if [ "x$sgltecsfb" = "xtrue" ]; then
-              setprop persist.vendor.radio.voice.modem.index 0
-          fi
-        ;;
-    esac
-
-    multisim=`getprop persist.radio.multisim.config`
-
-    if [ "$multisim" = "dsds" ] || [ "$multisim" = "dsda" ]; then
-        if [ "$qcrild_status" = "true" ]; then
-          start vendor.qcrild2
-        else
-          start vendor.ril-daemon2
-        fi
-    elif [ "$multisim" = "tsts" ]; then
-        if [ "$qcrild_status" = "true" ]; then
-          start vendor.qcrild2
-          start vendor.qcrild3
-        else
-          start vendor.ril-daemon2
-          start vendor.ril-daemon3
-        fi
-    fi
-
-    case "$datamode" in
-        "tethered")
-            start vendor.dataqti
-            start vendor.dataadpl
-            ;;
-        "concurrent")
-            start vendor.dataqti
-            start vendor.dataadpl
-            ;;
-        *)
-            ;;
-    esac
 esac
 
 #

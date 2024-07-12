@@ -1,6 +1,6 @@
-#!/vendor/bin/sh
+#! /vendor/bin/sh
 
-# Copyright (c) 2012-2013,2016,2018-2020 The Linux Foundation. All rights reserved.
+# Copyright (c) 2012-2013,2016,2018-2021 The Linux Foundation. All rights reserved.
 #
 # Redistribution and use in source and binary forms, with or without
 # modification, are permitted provided that the following conditions are met:
@@ -26,6 +26,9 @@
 # OTHERWISE) ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF
 # ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #
+# Changes from Qualcomm Innovation Center are provided under the following license:
+# Copyright (c) 2023 Qualcomm Innovation Center, Inc. All rights reserved.
+# SPDX-License-Identifier: BSD-3-Clause-Clear
 
 export PATH=/vendor/bin
 
@@ -68,27 +71,6 @@ else
     log -t DRM_BOOT -p w "file: '$vbfile' or perms doesn't exist"
 fi
 
-function set_density_by_fb() {
-    #put default density based on width
-    if [ -z $fb_width ]; then
-        setprop vendor.display.lcd_density 320
-    else
-        if [ $fb_width -ge 1600 ]; then
-           setprop vendor.display.lcd_density 640
-        elif [ $fb_width -ge 1440 ]; then
-           setprop vendor.display.lcd_density 560
-        elif [ $fb_width -ge 1080 ]; then
-           setprop vendor.display.lcd_density 480
-        elif [ $fb_width -ge 720 ]; then
-           setprop vendor.display.lcd_density 320 #for 720X1280 resolution
-        elif [ $fb_width -ge 480 ]; then
-            setprop vendor.display.lcd_density 240 #for 480X854 QRD resolution
-        else
-            setprop vendor.display.lcd_density 160
-        fi
-    fi
-}
-
 target=`getprop ro.board.platform`
 case "$target" in
     "msm7630_surf" | "msm7630_1x" | "msm7630_fusion")
@@ -120,9 +102,6 @@ case "$target" in
                  if [ $sku_ver -eq 1 ]; then
                      setprop vendor.media.target.version 2
                  fi
-                 ;;
-             355|369|377|384)
-                 setprop vendor.chre.enabled 0
                  ;;
              *)
          esac
@@ -314,7 +293,6 @@ case "$target" in
     "kona")
         case "$soc_hwplatform" in
             *)
-                setprop vendor.media.target_variant "_kona"
                 if [ $fb_width -le 1600 ]; then
                     setprop vendor.display.lcd_density 560
                 else
@@ -367,9 +345,11 @@ case "$target" in
                 setprop vendor.display.enhance_idle_time 1
                 setprop vendor.netflix.bsp_rev ""
                 ;;
-            *)
-                # default case is for bengal
-                setprop vendor.netflix.bsp_rev "Q6115-31409-1"
+            518|561|586)
+                setprop vendor.media.target.version 3
+                ;;
+            585)
+                setprop vendor.media.target.version 4
                 ;;
         esac
         ;;
@@ -401,9 +381,9 @@ case "$target" in
                     setprop vendor.media.target.version 1
                 fi
                 ;;
-    #Set property to differentiate SDM660, sdm636 & SDM455
+    #Set property to differentiate SDM660 & SDM455
     #SOC ID for SDM455 is 385
-    "sdm660" | "sdm636")
+    "sdm660")
         case "$soc_hwplatform" in
             *)
                 if [ $fb_width -le 1600 ]; then
@@ -425,7 +405,7 @@ esac
 case "$target" in
        "msm8937")
           case "$soc_hwid" in
-              386|354|353|303)
+              386|354|353|303|436)
                  # enable qrtr-ns service for kernel 4.14 or above
                  KernelVersionStr=`cat /proc/sys/kernel/osrelease`
                  KernelVersionS=${KernelVersionStr:2:2}
@@ -434,21 +414,15 @@ case "$target" in
 
                  if [ $KernelVersionA -ge 4 ] && [ $KernelVersionB -ge 14 ]; then
                      setprop init.svc.vendor.qrtrns.enable 1
+                     setprop ro.sf.disable_triple_buffer 1
                  fi
                  ;;
            esac
            ;;
  esac
 
-#set default lcd density
-#Since lcd density has read only
-#property, it will not overwrite previous set
-#property if any target is setting forcefully.
-set_density_by_fb
-
-
 # set Lilliput LCD density for ADP
-product=`getprop ro.build.product`
+product=`getprop ro.board.platform`
 
 case "$product" in
         "msmnile_au")
@@ -483,6 +457,15 @@ case "$product" in
         *)
         ;;
 esac
+
+case "$product" in
+        "msmnile_gvmgh")
+         setprop vendor.display.lcd_density 160
+         ;;
+        *)
+        ;;
+esac
+
 # Setup display nodes & permissions
 # HDMI can be fb1 or fb2
 # Loop through the sysfs nodes and determine
