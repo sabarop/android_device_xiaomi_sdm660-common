@@ -127,6 +127,8 @@ BOARD_QTI_DYNAMIC_PARTITIONS_SIZE := $(shell expr $(BOARD_SUPER_PARTITION_SIZE) 
 
 # Partitions - reserved size
 -include vendor/lineage/config/BoardConfigReservedSize.mk
+$(foreach p, $(call to-upper, $(TREBLE_PARTITIONS)), \
+    $(eval BOARD_$(p)IMAGE_PARTITION_RESERVED_SIZE := 30720000))
 
 BOARD_ROOT_EXTRA_SYMLINKS := \
     /vendor/dsp:/dsp \
