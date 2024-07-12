@@ -1,10 +1,6 @@
 # Amplifier
 /(vendor|system/vendor)/bin/tinymix                                                                                               u:object_r:vendor_tinyalsa_exec:s0
 
-# Biometric
-/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi_sdm660                             u:object_r:hal_fingerprint_sdm660_exec:s0
-/(vendor|system/vendor)/bin/init\.goodix\.sh                                                                                      u:object_r:hal_fingerprint_sdm660_exec:s0
-
 # Block
 /sys/devices/platform/soc/c0c4000.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/mq/0/nr_tags(/.*)?                                  u:object_r:sysfs_emmc_host:s0
 
@@ -25,6 +21,7 @@
 /vendor/bin/sh                                                                                                                    u:object_r:vendor_shell_exec:s0
 
 # Fingerprint
+/(vendor|system/vendor)/bin/hw/android\.hardware\.biometrics\.fingerprint@2\.3-service\.xiaomi_sdm660                             u:object_r:hal_fingerprint_default_exec:s0
 /data/gf_data(/.*)?                                                                                                               u:object_r:fingerprintd_data_file:s0
 /data/gf_data/auth_ratio_database.db                                                                                              u:object_r:fingerprintd_data_file:s0
 /data/vendor/fpc(/.*)?                                                                                                            u:object_r:fingerprint_vendor_data_file:s0
