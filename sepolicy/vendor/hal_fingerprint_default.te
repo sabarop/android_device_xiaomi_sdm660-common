@@ -34,3 +34,5 @@ allow hal_fingerprint_default kcal_dev:file { open getattr read };
 allow hal_fingerprint_default system_data_file:file getattr;
 
 dontaudit hal_fingerprint_default storage_file:dir search;
+
+allow hal_fingerprint_default rootfs:dir { read };

@@ -1,3 +1,2 @@
-allow platform_app zygote:unix_stream_socket { getopt };
-
-get_prop(platform_app, exported_camera_prop)
+allow platform_app platform_app:dir write;
+allow platform_app zygote:unix_stream_socket getopt;

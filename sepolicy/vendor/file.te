@@ -1,10 +1,18 @@
 type ir_dev_file, file_type;
+type proc_sysctl_schedboost, proc_type, fs_type;
 type public_adsprpcd_file, file_type;
 type sysfs_fingerprint, fs_type, sysfs_type;
+type sysfs_msm_subsys, sysfs_type, fs_type;
+type sysfs_rpm, sysfs_type, fs_type;
+type sysfs_system_sleep_stats, sysfs_type, fs_type;
 type sysfs_touchpanel, fs_type, sysfs_type;
-type sysfs_emmc_host, fs_type, sysfs_type;
 type thermal_data_file, file_type, data_file_type;
-type sysfs_info, fs_type, sysfs_type;
+
+# Battery Saver
+type sysfs_battery_saver, fs_type, sysfs_type;
+
+# blkio
+type blkio, file_type;
 
 # DeviceSettings
 type sysfs_fpsinfo, sysfs_type, fs_type;
@@ -26,12 +34,3 @@ type kcal_dev, sysfs_type, fs_type;
 
 # Sockets
 type audio_socket, file_type;
-
-# Battery Saver
-type sysfs_battery_saver, fs_type, sysfs_type;
-
-# PowerHAL
-type proc_sched_energy_aware, proc_type, fs_type;
-
-# Data files
-type per_boot_file, file_type, data_file_type, core_data_file_type;

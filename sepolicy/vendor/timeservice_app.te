@@ -1,1 +1,1 @@
-allow timeservice_app zygote:unix_stream_socket { getopt };
+allow timeservice_app zygote:unix_stream_socket getopt;

@@ -1,1 +1,1 @@
-allow permissioncontroller_app zygote:unix_stream_socket { getopt };
+allow permissioncontroller_app zygote:unix_stream_socket getopt;
