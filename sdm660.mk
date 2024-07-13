@@ -302,7 +302,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.zram \
     init.class_main.sh \
-    init.msm.usb.configfs.rc \
     init.fingerprint.rc \
     init.qcom.power.rc \
     init.qcom.post_boot.sh \
