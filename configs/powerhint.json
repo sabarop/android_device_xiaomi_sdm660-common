@@ -156,7 +156,7 @@
     },
     {
       "Name": "DoubleTapToWake",
-      "Path": "/proc/touchscreen/enable_dt2w",
+      "Path": "/sys/touchpanel/double_tap",
       "Values": [
         "0",
         "1"
