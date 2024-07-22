@@ -159,6 +159,10 @@ vendor.video.disable.ubwc=1
 debug.sf.auto_latch_unsignaled=0
 ro.surface_flinger.enable_frame_rate_override=false
 
+# EGL - Blobcache configuration
+ro.egl.blobcache.multifile=true
+ro.egl.blobcache.multifile_limit=33554432
+
 # FS-verity
 ro.apk_verity.mode=2
 
