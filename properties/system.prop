@@ -48,9 +48,6 @@ debug.hwui.renderer=opengl
 # DPM
 persist.vendor.dpm.loglevel=0
 
-# Filesystem
-fs_mgr.overlayfs.prefer_cache_backing_storage=true
-
 # Fling
 ro.min.fling_velocity=160
 ro.max.fling_velocity=20000
