@@ -152,7 +152,7 @@ ro.lmk.use_minfree_levels=true
 ro.lmk.use_psi=false
 
 # Media
-media.stagefright.thumbnail.prefer_hw_codecs=true
+persist.vendor.camera.dual.isp.sync=0
 vendor.vidc.dec.enable.downscalar=1
 vendor.vidc.enc.disable_bframes=1
 vendor.vidc.enc.disable.pq=true
