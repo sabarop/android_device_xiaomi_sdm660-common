@@ -181,5 +181,8 @@ vendor.usb.rndis.func.name=rndis_bam
 # Time
 persist.vendor.delta_time.enable=true
 
+# USB
+vendor.usb.diag.func.name=diag
+
 # Zygote
 zygote.critical_window.minute=10
