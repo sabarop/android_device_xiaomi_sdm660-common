@@ -351,8 +351,11 @@ PRODUCT_PACKAGES += \
 
 # OMX
 PRODUCT_PACKAGES += \
+    android.hardware.media.omx@1.0.vendor \
+    android.hardware.media.omx@1.0-service \
     libc2dcolorconvert \
     libhypv_intercept \
+    libmedia_omx.vendor \
     libmm-omxcore \
     libOmxCore \
     libOmxAacEnc \
@@ -362,7 +365,18 @@ PRODUCT_PACKAGES += \
     libOmxQcelp13Enc \
     libOmxVdec \
     libOmxVenc \
+    libOmxVidcCommon \
+    libstagefright_amrnb_common.vendor \
+    libstagefright_bufferpool@2.0.1.vendor \
+    libstagefright_bufferqueue_helper.vendor \
+    libstagefright_enc_common.vendor \
+    libstagefright_flacdec.vendor \
+    libstagefright_foundation.vendor \
+    libstagefright_omx.vendor \
+    libstagefright_omx_utils.vendor \
+    libstagefright_softomx.vendor \
     libstagefright_softomx_plugin.vendor \
+    libstagefright_xmlparser.vendor \
     libstagefrighthw
 
 # Power
