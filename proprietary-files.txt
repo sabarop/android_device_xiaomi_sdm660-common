@@ -696,32 +696,8 @@ system_ext/lib64/libmmosal.so|43e0618b504500c348d974426eed3b234818a744
 system_ext/lib64/libmmparser_lite.so|b544304421692c25220ac01957a73cfd9931d8e7
 
 # Media - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
-vendor/lib/libdsd2pcm.so|7f17a4d46f2090665b8d0c6b2d7ade526d3dc266
-vendor/lib/libI420colorconvert.so|0c57e3ca47b175cb0530db2095c4f6e8c20fec55
-vendor/lib/libOmxAacDec.so|7da342254d04ebf1d38b9a19a67cc3b063f9d7b8
-vendor/lib/libOmxAlacDec.so|61709ae602dc78efb51a224eef159715d93eb694
-vendor/lib/libOmxAmrDec.so|fb64a1fc1e9a88dddb11d881b7d5ad57e48578b6
-vendor/lib/libOmxAmrwbplusDec.so|d94d32f0ff0a57c77ee3db1b591b69d1e565327a
-vendor/lib/libOmxApeDec.so|9ca846c49acfb1728600e0ccb1c8ed481217d3eb
-vendor/lib/libOmxDsdDec.so|0538854ab9308887d5fe34c5e0bd7d634d393b30
-vendor/lib/libOmxEvrcDec.so|c7f2409dd9c22ac4872fd88288f32b1a22e6c0f6
-vendor/lib/libOmxG711Dec.so|200e5266e2258c07e28f1e7d3858cc239e6e9e6b
-vendor/lib/libOmxQcelp13Dec.so|c3c66b571f2ef44197fc88f6800745c39e7db87b
-vendor/lib/libOmxWmaDec.so|90f78772f70f2d5a46712f95d1a53cfedffb9c63
-vendor/lib/libmm-color-convertor.so|851a07d27c73bb0ccbdcadfc67799feb5919008a
 vendor/lib/vendor.qti.hardware.vpp@1.1.so|2bf8de06341b625390e6fa0c5d83cee94ac1692d
 vendor/lib/vendor.qti.hardware.vpp@1.2.so|5c43141629cf99c648d7a01f0412b5599e3c9158
-vendor/lib64/libI420colorconvert.so|71c6e9f585c8596e17e48ddd1c574cfc23b1f286
-vendor/lib64/libOmxAacDec.so|20a3dbe83fbc2f0e4e21f78fe14c7dac8d27f245
-vendor/lib64/libOmxAlacDec.so|047d75640ea1ffeb18e51c9c4216d5008d324118
-vendor/lib64/libOmxAmrDec.so|56fc14e4b30dcf86f980818894bca232c6dc50b1
-vendor/lib64/libOmxAmrwbplusDec.so|8377cd4298b8925be4c2bdf949777ef36b2c0566
-vendor/lib64/libOmxApeDec.so|99ecd798f6c525a24f58052ba323733fbcaf0324
-vendor/lib64/libOmxEvrcDec.so|f541c39d1b8dbc1dd1e43ced01f2761041efc6b5
-vendor/lib64/libOmxG711Dec.so|c4d2cb6da661336aae7b582b6713371912cdeb87
-vendor/lib64/libOmxQcelp13Dec.so|87981f2285e2e89819160e86f1d48b2f7ea67b3e
-vendor/lib64/libOmxWmaDec.so|df9e51469a58a06d7061cc5557e039a2451fdf41
-vendor/lib64/libmm-color-convertor.so|ac5678150b202a041ec55b5db63408a345cdb67e
 vendor/lib64/vendor.qti.hardware.vpp@1.1.so|e555e7ccd61ca8456121775d66324ce71666c8be
 vendor/lib64/vendor.qti.hardware.vpp@1.2.so|00d45c3fec03e73946ade43933f452652d8d4f6b
 
