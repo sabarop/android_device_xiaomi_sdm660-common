@@ -371,6 +371,12 @@ PRODUCT_PACKAGES += \
     FrameworksBaseSDM660OverlayEvolution \
     SettingsOverlaySDM660Evolution
 
+# Partitions
+PRODUCT_PACKAGES += \
+    vendor_bt_firmware_mountpoint \
+    vendor_dsp_mountpoint \
+    vendor_firmware_mnt_mountpoint
+
 # Perf
 PRODUCT_PACKAGES += \
     libqti-perfd-client
