@@ -414,7 +414,7 @@ PRODUCT_PACKAGES += \
     SDM660WifiOverlay
 
 # RRO configuration
-TARGET_USES_RRO := true
+PRODUCT_ENFORCE_RRO_TARGETS := *
     
 # Partitions
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
@@ -676,3 +676,5 @@ PRODUCT_PACKAGES += \
 # Sign build
 -include vendor/lineage-priv/keys/keys.mk
 
+# Vendor Extra
+-include vendor/extra/product.mk
