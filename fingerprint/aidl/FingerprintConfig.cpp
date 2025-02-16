@@ -13,7 +13,7 @@
 
 #include <fingerprint.sysprop.h>
 
-using namespace ::android::fingerprint::lineage;
+using namespace ::android::fingerprint::xiaomi_sdm660;
 
 namespace aidl::android::hardware::biometrics::fingerprint {
 
