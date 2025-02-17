@@ -193,7 +193,7 @@ PRODUCT_RETROFIT_DYNAMIC_PARTITIONS := true
 
 # Fingerprint
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.3-service.xiaomi
+    android.hardware.biometrics.fingerprint-service.xiaomi_sdm660
 
 # Fastbootd
 PRODUCT_PACKAGES += \
@@ -271,7 +271,6 @@ PRODUCT_PACKAGES += \
     init.qcom.sh
 
 PRODUCT_PACKAGES += \
-    init.fingerprint.rc \
     init.qcom.power.rc \
     init.qcom.rc \
     init.recovery.qcom.rc \
