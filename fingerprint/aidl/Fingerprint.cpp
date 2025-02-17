@@ -8,6 +8,7 @@
 #include "Fingerprint.h"
 
 #include <android-base/properties.h>
+#include <cutils/properties.h>
 #include <fingerprint.sysprop.h>
 #include <util/Util.h>
 
@@ -62,11 +63,11 @@ Fingerprint::~Fingerprint() {
     mDevice = nullptr;
 }
 
-fingerprint_device_t* Fingerprint::openHal() {
+fingerprint_device_t* getDeviceForVendor(const char* class_name) {
     int err;
     const hw_module_t* hw_mdl = nullptr;
     ALOGD("Opening fingerprint hal library...");
-    if (0 != (err = hw_get_module(FINGERPRINT_HARDWARE_MODULE_ID, &hw_mdl))) {
+    if (0 != (err = hw_get_module_by_class(FINGERPRINT_HARDWARE_MODULE_ID, class_name, &hw_mdl))) {
         ALOGE("Can't open fingerprint HW Module, error: %d", err);
         return nullptr;
     }
@@ -97,11 +98,28 @@ fingerprint_device_t* Fingerprint::openHal() {
 
     fingerprint_device_t* fp_device = reinterpret_cast<fingerprint_device_t*>(device);
 
+    /* Fingerprint::notify is a private member function
     if (0 != (err = fp_device->set_notify(fp_device, Fingerprint::notify))) {
         ALOGE("Can't register fingerprint module callback, error: %d", err);
         return nullptr;
     }
+    */
 
+    return fp_device;
+}
+
+fingerprint_device_t* Fingerprint::openHal() {
+    int err;
+    fingerprint_device_t* fp_device = getDeviceForVendor("fpc");
+    if (0 != (err = fp_device->set_notify(fp_device, Fingerprint::notify))) {
+        ALOGE("Can't register fingerprint module callback, error: %d", err);
+        fp_device = nullptr;
+    }
+    if (fp_device != nullptr) {
+        property_set("persist.vendor.sys.fp.vendor", "fpc");
+    } else {
+        property_set("persist.vendor.sys.fp.vendor", "none");
+    }
     return fp_device;
 }
 
