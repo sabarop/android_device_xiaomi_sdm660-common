@@ -90,9 +90,6 @@ vendor/lib64/libqtigef.so|de0024eed15f7ba45968e435971730230a643dc3
 system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
 system_ext/framework/audiosphere.jar|57adb7d614e210cf2097394962805267b51e3739
 
-# Audio FX modules - from google/cheetah/cheetah:15/AP3A.241005.015
-vendor/lib/soundfx/libspatialaudio.so|1b574e25db97b76b712ddffda6da42c3c5c5df6e
-
 # Audio FX modules - from Zebra/helios/helios:14/14-32-12.00-UG-U00-STD-HEL-04/15:user/release-keys
 vendor/lib/soundfx/libasphere.so|376a8e4740eda57dc825995fbd495f5d8442e691
 vendor/lib/soundfx/libqcbassboost.so|a3ecfc814cc1b79b35efdef6567b06fde0d346d1
