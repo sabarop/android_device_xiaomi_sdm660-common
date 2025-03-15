@@ -1,67 +1,48 @@
 #!/bin/bash
 #
-# Copyright (C) 2020 Paranoid Android
-#
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#      http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
+# SPDX-FileCopyrightText: 2016 The CyanogenMod Project
+# SPDX-FileCopyrightText: 2017-2024 The LineageOS Project
+# SPDX-License-Identifier: Apache-2.0
 #
 
 set -e
 
-DEVICE_COMMON=sdm660-common
-GUARDED_DEVICES_COMMON="clover jasmine_sprout jason lavender platina tulip wayne whyred"
-VENDOR=xiaomi
-
 # Load extract_utils and do some sanity checks
-COMMON_DIR="${BASH_SOURCE%/*}"
-if [[ ! -d "$COMMON_DIR" ]]; then COMMON_DIR="$PWD"; fi
+MY_DIR="${BASH_SOURCE%/*}"
+if [[ ! -d "${MY_DIR}" ]]; then MY_DIR="${PWD}"; fi
 
-if [[ -z "$DEVICE_DIR" ]]; then
-    DEVICE_DIR="${COMMON_DIR}/../${DEVICE}"
-fi
+ANDROID_ROOT="${MY_DIR}/../../.."
 
-ROOT="$COMMON_DIR"/../../..
-
-HELPER="$ROOT"/tools/extract-utils/extract_utils.sh
-if [ ! -f "$HELPER" ]; then
-    echo "Unable to find helper script at $HELPER"
+HELPER="${ANDROID_ROOT}/tools/extract-utils/extract_utils.sh"
+if [ ! -f "${HELPER}" ]; then
+    echo "Unable to find helper script at ${HELPER}"
     exit 1
 fi
-. "$HELPER"
+source "${HELPER}"
 
-# Initialize the common helper
-setup_vendor "$DEVICE_COMMON" "$VENDOR" "$ROOT" true
+# Initialize the helper for common
+setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true
 
-if ([[ "$ONLY_DEVICE" = "false" ]] || [[ -z "$ONLY_DEVICE" ]]) && [[ -s "${COMMON_DIR}"/proprietary-files.txt ]]; then
-    # Copyright headers and guards
-    write_headers "$GUARDED_DEVICES_COMMON"
-    # The common blobs
-    write_makefiles "$COMMON_DIR"/proprietary-files.txt true
-    # Finish
-    write_footers
-fi
-if ([[ "$ONLY_COMMON" = "false" ]] || [[ -z "$ONLY_COMMON" ]]) && [[ -s "${DEVICE_DIR}"/proprietary-files.txt ]]; then
-    # Reinitialize the helper for device and write copyright headers and guards
-    DEVICE_COMMON="$DEVICE"
-    if [[ ! "$IS_COMMON" = "true" ]]; then
-        IS_COMMON=false
-        GUARDED_DEVICES=
-    fi
+# Warning headers and guards
+write_headers "clover jasmine_sprout jason lavender platina twolip wayne whyred"
+
+# The standard common blobs
+write_makefiles "${MY_DIR}/proprietary-files.txt"
+
+# Finish
+write_footers
+
+if [ -s "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt" ]; then
     # Reinitialize the helper for device
-    setup_vendor "$DEVICE" "$VENDOR" "$ROOT" "$IS_COMMON" "$CLEAN_VENDOR"
-    # Copyright headers and guards
-    write_headers "$GUARDED_DEVICES"
+    source "${MY_DIR}/../../${VENDOR}/${DEVICE}/setup-makefiles.sh"
+    setup_vendor "${DEVICE}" "${VENDOR}" "${ANDROID_ROOT}" false
+
+    # Warning headers and guards
+    write_headers
+
     # The standard device blobs
-    write_makefiles "${DEVICE_DIR}"/proprietary-files.txt true
-    # We are done!
+    write_makefiles "${MY_DIR}/../../${VENDOR}/${DEVICE}/proprietary-files.txt"
+
+    # Finish
     write_footers
 fi
