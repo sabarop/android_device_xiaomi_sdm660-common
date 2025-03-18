@@ -110,8 +110,7 @@ PRODUCT_PACKAGES += \
 
 # Biometrics
 PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint@2.1-service.xiaomi_sdm660 \
-    android.hardware.biometrics.fingerprint@2.1.vendor
+    android.hardware.biometrics.fingerprint-service.xiaomi
 
 # Bluetooth
 PRODUCT_PACKAGES += \
@@ -293,6 +292,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     fstab.zram \
     init.class_main.sh \
+    init.fingerprint.rc \
     init.goodix.sh \
     init.qcom.post_boot.sh \
     init.qcom.early_boot.sh \
