@@ -21,9 +21,6 @@
 
     <string name="display_title">Экран</string>
 
-    <!-- KCal -->
-    <string name="device_kcal_title">Калибрация цвета экрана</string>
-
     <!-- Ambient Display -->
     <string name="ambient_display">Индикация событий</string>
     <string name="advanced_doze_summary">Ambient экран</string>
@@ -90,30 +87,6 @@
     <string name="dirac_preset_metal">Металл</string>
 
     <!-- Audio amplification -->
-
-    <!-- kcal -->
-    <string name="advanced_settings_kcal">Калибрация цвета экрана</string>
-    <string name="cat_colormanagement">Настройки цвета</string>
-    <string name="cat_calibration">Калибрация экрана</string>
-
-    <string name="kcal_enabled">Включено</string>
-    <string name="kcal_disabled">Выключено</string>
-    <string name="set_on_boot">Включать при загрузке</string>
-    <string name="color_red">Красный</string>
-    <string name="color_green">Зелёный</string>
-    <string name="color_blue">Синий</string>
-    <string name="color_minimum">Минимум</string>
-    <string name="saturation">Насыщеность</string>
-    <string name="value">Экспозиция</string>
-    <string name="contrast">Контраст</string>
-    <string name="hue">Оттенок</string>
-    <string name="grayscale">Экран в оттенках серого</string>
-
-    <string name="presets_dialog_title">Выберите пресет</string>
-
-    <!-- menu -->
-    <string name="kcal_reset">Вернуть пресет по умолчанию</string>
-
     <!-- CustomSeekBarPreference -->
     <string name="edit_value">Введите новое значение</string>
     <string name="default_value">Значение по умолчанию</string>

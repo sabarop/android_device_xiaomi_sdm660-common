@@ -19,9 +19,6 @@
 
     <string name="display_title">画面</string>
 
-    <!-- KCal -->
-    <string name="device_kcal_title">画面の色補正</string>
-
     <!-- Ambient Display -->
     <string name="ambient_display">アンビエント画面</string>
     <string name="advanced_doze_summary">追加の設定アンビエント画面</string>
@@ -87,43 +84,7 @@
     <string name="dirac_preset_dance">ダンス</string>
     <string name="dirac_preset_metal">メタル</string>
 
-    <!-- kcal -->
-    <string name="advanced_settings_kcal">画面の色補正</string>
-    <string name="cat_colormanagement">色の設定</string>
-    <string name="cat_calibration">画面の補正</string>
-
-    <string name="kcal_enabled">ON</string>
-    <string name="kcal_disabled">OFF</string>
-    <string name="set_on_boot">起動時に設定</string>
-    <string name="color_red">赤</string>
-    <string name="color_green">緑</string>
-    <string name="color_blue">青</string>
-    <string name="color_minimum">最小</string>
-    <string name="saturation">彩度</string>
-    <string name="value">値</string>
-    <string name="contrast">コントラスト</string>
-    <string name="hue">色相</string>
-    <string name="grayscale">グレースケール画面</string>
-
-    <string name="presets_dialog_title">プリセットを選択</string>
-    <!-- Presets -->
-    <string name="preset_default">既定</string>
-    <string name="preset_version_1">バージョン 1</string>
-    <string name="preset_version_2">バージョン 2</string>
-    <string name="preset_version_3">バージョン 3</string>
-    <string name="preset_triluminous">トリルミナス</string>
-    <string name="preset_deep_black_white">深い黒と白</string>
-    <string name="preset_deep_natural">ディープナチュラル</string>
-    <string name="preset_cool_amoled">寒色 AMOLED</string>
-    <string name="preset_extreme_amoled">エクストリーム AMOLED</string>
-    <string name="preset_warm_amoled">暖色 AMOLED</string>
-    <string name="preset_hybrid_mamba">Hybrid Mamba</string>
-
     <!-- usb fastcharge -->
-
-    <!-- menu -->
-    <string name="kcal_presets" translatable="false">@string/presets_dialog_title</string>
-    <string name="kcal_reset">リセット</string>
 
     <!-- CustomSeekBarPreference -->
     <string name="edit_value">新しい値を選択して下さい</string>
