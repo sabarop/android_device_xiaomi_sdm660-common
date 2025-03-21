@@ -22,9 +22,6 @@
     <!-- Mi Note 3 Settings -->
     <string name="jason_pref_title">Ajustes del dispositivo</string>
     <string name="jason_pref_summary">Ajustes adicionales de Mi Note 3</string>
-     
-    <!-- KCal -->
-    <string name="device_kcal_title">Calibrar Color de Pantalla </string>
 
     <!-- Notification LED brightness -->
     <string name="notification_title">Notificación LED</string>
@@ -76,23 +73,6 @@
     <string name="dirac_preset_country">Country</string>
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
-
-    <string name="advanced_settings_kcal">Calibración del color de la pantalla</string>
-    <string name="cat_calibration">Calibración de pantalla</string>
-    <string name="kcal_enabled">Encendido</string>
-    <string name="set_on_boot">Aplicar al inicio</string>
-    <string name="kcal_disabled">Apagado</string>
-    <string name="color_red">Rojo</string>
-    <string name="color_green">Verde</string>
-    <string name="color_blue">Azul</string>
-    <string name="color_minimum">Mínimo</string>
-    <string name="saturation">Saturación</string>
-    <string name="value">Valor</string>
-    <string name="contrast">Contraste</string>
-    <string name="hue">Matiz</string>
-    <string name="cat_colormanagement">Ajustes de color</string>
-    <string name="kcal_reset">Reiniciar</string>
-    <string name="edit_value">ELija un nuevo valor</string>
 
     <!-- Presets -->
     <string name="presets_dialog_title">Seleccione ajuste preestablecido</string>

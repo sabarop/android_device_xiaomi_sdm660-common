@@ -19,9 +19,6 @@
 
     <string name="display_title">Pantalla</string>
 
-    <!-- KCal -->
-    <string name="device_kcal_title">Calibrar Color de Pantalla </string>
-
     <string name="vibration_title">Retroalimentación háptica</string>
     <string name="vibration_strength_title">Fuerza</string>
 

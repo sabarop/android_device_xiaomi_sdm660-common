@@ -23,9 +23,6 @@
     <string name="jason_pref_title">Configurações do Aparelho</string>
     <string name="jason_pref_summary">Configurações extras do Mi Note 3</string>
 
-    <!-- KCal -->
-    <string name="device_kcal_title">Calibração de cores da tela</string>
-
     <!-- Notification LED brightness -->
     <string name="notification_title">LED de notificação</string>
     <string name="notification_led_title">Brilho do LED de notificação</string>
@@ -82,24 +79,6 @@
     <string name="dirac_preset_dance">Dance</string>
     <string name="dirac_preset_metal">Metal</string>
 
-    <!-- kcal -->
-    <string name="advanced_settings_kcal">Calibração de cores da tela</string>
-    <string name="cat_colormanagement">Configurações de cor</string>
-    <string name="cat_calibration">Calibração da tela</string>
-
-    <string name="kcal_enabled">Ativado</string>
-    <string name="kcal_disabled">Desativado</string>
-    <string name="set_on_boot">Ativar ao inicializar</string>
-    <string name="color_red">Vermelho</string>
-    <string name="color_green">Verde</string>
-    <string name="color_blue">Azul</string>
-    <string name="color_minimum">Mínimo</string>
-    <string name="saturation">Saturação</string>
-    <string name="value">Valor</string>
-    <string name="contrast">Contraste</string>
-    <string name="hue">Matiz</string>
-    <string name="grayscale">Tela em escala de cinza</string>
-
     <string name="presets_dialog_title">Selecionar perfil</string>
     <!-- Presets -->
     <string name="preset_default">Padrão</string>
@@ -113,10 +92,6 @@
     <string name="preset_extreme_amoled">Amoled extremo</string>
     <string name="preset_warm_amoled">Amoled Quente</string>
     <string name="preset_hybrid_mamba">Mamba Híbrida</string>
-
-    <!-- menu -->
-    <string name="kcal_presets">@string/presets_dialog_title</string>
-    <string name="kcal_reset">Redefinir</string>
 
     <!-- CustomSeekBarPreference -->
     <string name="edit_value">Escolher novo valor</string>

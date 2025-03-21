@@ -39,7 +39,7 @@ on boot
     chmod 0660 /sys/class/leds/red/brightness
     chmod 0660 /sys/class/leds/red/max_brightness
 
-# KCal
+    # KCal
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_cont
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_enable
     chown system system /sys/devices/platform/kcal_ctrl.0/kcal_hue
