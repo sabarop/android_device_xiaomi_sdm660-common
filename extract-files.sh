@@ -65,6 +65,24 @@ if [ -z "${SRC}" ]; then
     SRC="adb"
 fi
 
+function blob_fixup() {
+    case "${1}" in
+        vendor/lib/soundfx/libdirac.so)
+            [ "$2" = "" ] && return 0
+           "${PATCHELF}" --add-needed "liglog.so" "${2}"
+            ;;
+        *)
+            return 1
+            ;;
+    esac
+
+    return 0
+}
+
+function blob_fixup_dry() {
+    blob_fixup "$1" ""
+}
+
 if [ -z "${ONLY_TARGET}" ]; then
     # Initialize the helper for common device
     setup_vendor "${DEVICE_COMMON}" "${VENDOR_COMMON:-$VENDOR}" "${ANDROID_ROOT}" true "${CLEAN_VENDOR}"

@@ -395,7 +395,7 @@ vendor/lib64/libdpmqmihal.so;DISABLE_DEPS|4e8ed4a61273d5023d4bab93077cf5d5e93508
 vendor/etc/diracmobile.config|88fa19095df9e256f0af510df266f749bf60e258
 vendor/etc/diracvdd.bin|f9b07ace60490649c44411504909c7bf8bc73d59
 vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
-vendor/lib/soundfx/libdirac.so;DISABLE_CHECKELF|f63826a905b520fa524e4c1b147be7cf65240953
+vendor/lib/soundfx/libdirac.so|921cce1c9776c3afa3288fe01b26440f280ab6b1
 
 # DRM - from Zebra/helios/helios:13/13-22-18.00-TG-U02-STD-HEL-04/84:user/release-keys
 vendor/bin/qseecomd|5333351a5f3a7ed85e9b6c7137a885bb115c7116
