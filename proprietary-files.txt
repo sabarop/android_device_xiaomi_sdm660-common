@@ -3,12 +3,13 @@ vendor/bin/adsprpcd|cff4409a0fd8788650c0aace2762abb041357e2a
 vendor/bin/loadalgo|1b921bf28fa22c6ad19c478d7df0159bc20e795c
 vendor/etc/init/vendor.qti.adsprpc-service.rc|54588df8e7da58c66838028d2284986b966c2d37
 vendor/lib/libadsp_default_listener.so|e3cfdff42fdb64882beba917367c9f3e423dff02
-vendor/lib/libadsp_hvx_callback_skel.so;DISABLE_DEPS|fd7f944d8235aaa617aa2906ed39406a623c012a
-vendor/lib/libadsp_hvx_stub.so;DISABLE_DEPS|212b0b8a693b85c54b8062c09599d08428ad73ae
+vendor/lib/libadsp_hvx_callback_skel.so|fd7f944d8235aaa617aa2906ed39406a623c012a
+vendor/lib/libadsp_hvx_stub.so|212b0b8a693b85c54b8062c09599d08428ad73ae
 vendor/lib/libadsprpc.so|ccb72c88c7e20d7aebebd9917f95e0bb1eef4b26
 vendor/lib/libfastcvadsp_stub.so|a662dc04efa8d3add8b7f0f7182c7c2bd389abeb
 vendor/lib/libfastcvopt.so|a427855a25216b6e55d6647ccc2c442f378e549d
 vendor/lib/libmdsprpc.so|5a38a2d023f3cccd30b37d9533125c98832b9571
+vendor/lib/libmmcamera_dbg.so|8fa153e1e49f2abfe6288a804a413cd3af01e665
 vendor/lib/libsdsprpc.so|492cee7cdb1a3e5d9cee4147759b198c9409da53
 vendor/lib64/libadsp_default_listener.so|93e1f400865f48514d5353e7b6dcaaf6b3cad2fc
 vendor/lib64/libadsprpc.so|b0503930aac6102e0242f0dc07ae089817f92352
@@ -16,6 +17,7 @@ vendor/lib64/libfastcvadsp_stub.so|cfcd3078ad1078f838d6b6e1aee89e44f4a5b41b
 vendor/lib64/libfastcvopt.so|a5f62c4d69493a9efc2a9d61c89d1d53c83061a5
 vendor/lib64/libloadalgo_stub.so|1d7008f428734d7c25b95d5fa29470e6775c17e3
 vendor/lib64/libmdsprpc.so|7c63c27e5549e02b1c5434fa114ab829bdee38e3
+vendor/lib64/libmmcamera_dbg.so|0ffd951e724b2d2979f4136660ce1e28e6b30118
 vendor/lib64/libsdsprpc.so|bbdf1ef1f78e1d4394953dc2b4e5c3e1f969094a
 
 # ADSP modules - Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
@@ -44,20 +46,22 @@ system_ext/etc/seccomp_policy/sxraux-arm.policy|0508c0d7bf078a26f4c37c4eac58b44b
 system_ext/lib/libbinauralrenderer_wrapper.qti.so|03495a4640b506e0511e4d9df007fc6901ac4c99
 system_ext/lib/libhoaeffects.qti.so|ffcd5bb7d93a7bbdc9da3495804280e373f7c91d
 system_ext/lib/libhoaeffects_csim.so|b2922de1a356849b58ff0c3e73c8c076dcffe5dd
-system_ext/lib/liblsmclient.so;DISABLE_DEPS|5e4013201d5358fdcd15dee13bd9185fc2ebe520
+system_ext/lib/liblsmclient.so|5e4013201d5358fdcd15dee13bd9185fc2ebe520
 system_ext/lib/libvr_amb_engine.so|69340f3af668f39a3f2b4f9314ca49ef8de7de2b
 system_ext/lib/libvr_object_engine.so|0563806dcb9f74461f030e23256eb2de9b6fe155
+system_ext/lib/vendor.qti.hardware.ListenSoundModel@1.0.so|cf14ac5d587d6c7c8a9c59c691bba9bf24974b4f
 system_ext/lib64/libbinauralrenderer_wrapper.qti.so|2172fcf906b4c3155450d3c3a37d6586c16f0901
 system_ext/lib64/libhoaeffects.qti.so|fda85e1b425059f6be8f7a8541b702230a9e5c65
 system_ext/lib64/libhoaeffects_csim.so|3eca122613a3af345493a242b6839466dd472ac0
-system_ext/lib64/liblsmclient.so;DISABLE_DEPS|6cd379c9112609a3bc4eef98a1ceff8ce40be22e
+system_ext/lib64/liblsmclient.so|6cd379c9112609a3bc4eef98a1ceff8ce40be22e
 system_ext/lib64/libqxrsplitauxservice.qti.so;DISABLE_DEPS|d246b337379710e3e3e6ae205d4d77caf48ed3f1
 system_ext/lib64/libvr_amb_engine.so|acb1fd360626b9f237adef0551d5ea31af58f347
 system_ext/lib64/libvr_object_engine.so|8e53cccb6e2c56032d5388f4151d29123d63f51c
+system_ext/lib64/vendor.qti.hardware.ListenSoundModel@1.0.so|27b3c4622216f2cd37604ffa79c9c90a7d7cb788
 system_ext/lib64/vendor.qti.hardware.qxr-V1-ndk_platform.so|baaa2cd20be6c86aff7734e9cbd13dbd10ba6177
 
 # Audio - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
-vendor/bin/audioflacapp;DISABLE_DEPS|ac0fd76083430736851da040b5547677ac7f4067
+vendor/bin/audioflacapp|ac0fd76083430736851da040b5547677ac7f4067
 vendor/lib/libacdb-fts.so|10a9d929616df9ec0e545563a2ca08c9bd814d5f
 vendor/lib/libacdbloader.so|080d3f49a528ad242fe46f07ea75f413489b4f83
 vendor/lib/libacdbrtac.so|522ba52f74e3a06e128f842fca6e8781613263e9
@@ -68,6 +72,7 @@ vendor/lib/libaudioalsa.so|edcf75fa53bd959defd18a6a16e0ec40fd42b014
 vendor/lib/libaudioconfigstore.so|02012b87f4d5907e0b640fa1c5b2e4312e725eee
 -vendor/lib/libaudioparsers.so|9f22defa83a7aea16d45e609579361e523f8b773
 vendor/lib/libdrc.so|1bfd492c38cfdea25beba3ed992d883b972fb9fb
+vendor/lib/libFlacSwDec.so|f47c030027988c49db1aa729df2982d844539277
 vendor/lib/libqtigef.so|c803dd2eea97a720f5ae20c5d37bc0f37a96c7a5
 vendor/lib/libsurround_3mic_proc.so|e1464999b2a48e1489dba10969106ad08fac6479
 vendor/lib64/libacdb-fts.so|b41c2a37bc046e9c7e6764a2271882ed1415c491
@@ -78,6 +83,7 @@ vendor/lib64/libaudcal.so|5a2fec1304afe9eacb87fbca87a8121fda45ffb7
 vendor/lib64/libaudioalsa.so|5385e8c57f69fe27e7b640aee08b5b2b00d70b86
 vendor/lib64/libaudioconfigstore.so|7a3a9fbe350039a4b803395bc39ca635cf651a01
 -vendor/lib64/libaudioparsers.so|506b43e9d5c18e5eeaa18cc734324f0138d7e9cc
+vendor/lib64/libFlacSwDec.so|3b2798cf7ab8a5e5d515a5a2489a7e77ba2ee62a
 vendor/lib64/libqtigef.so|de0024eed15f7ba45968e435971730230a643dc3
 
 # Audio FX modules - from LA.QSSI.15.0.r1-10500-qssi.0
@@ -122,6 +128,9 @@ vendor/lib64/hw/com.dsi.ant@1.0-impl.so|d81c62439958c309c34bc96bf63232fa3a6481b5
 # Bluetooth - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
 vendor/bin/hw/android.hardware.bluetooth@1.0-service-qti|5fb0c2184b062039281282baf6543f6bea56a9a8
 vendor/etc/init/android.hardware.bluetooth@1.0-service-qti.rc|f4ee3b2da2b08647447869ade86ec63f7340accc
+vendor/lib/hw/android.hardware.bluetooth@1.0-impl-qti.so|d8ee3888c7aaacb12b118d10ac3d0bc6f78765db
+vendor/lib/libbtnv.so|b7dc0ed695ff5a83c3ee5d50349181d7090a0868
+vendor/lib/libsoc_helper.so|d9c1953248a5314df0d7a210a647f9b59c6802c5
 vendor/lib64/hw/android.hardware.bluetooth@1.0-impl-qti.so|b179e3b745a2666eeac3e37661963e0578adb7d8
 vendor/lib64/libbtnv.so|d412e0511c79599cdb010a18f97111e0283759e8
 vendor/lib64/libsoc_helper.so|4f00ed77a590817651ea3eb9c93d987ef15bf9e7
@@ -130,9 +139,9 @@ vendor/lib64/libsoc_helper.so|4f00ed77a590817651ea3eb9c93d987ef15bf9e7
 vendor/lib/hw/audio.bluetooth_qti.default.so|b0e7b61f6e134288dfbed2452fc66a4c4f65947e
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|5843d263fea458697d835432cbabc658dd814504
 vendor/lib/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so|e8439789fc7aa31abd1c83f70be2ed62ce56b002
-vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so;DISABLE_DEPS|bb5804705ae45b89ffbdfa35669098fd373faf4e
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so;DISABLE_DEPS|b49f9357c0caaa816b134310e0f83a70b109a392
-vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so;DISABLE_DEPS|1382705def805808233d21a1964f3d4b9af9c62a
+vendor/lib/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|bb5804705ae45b89ffbdfa35669098fd373faf4e
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|b49f9357c0caaa816b134310e0f83a70b109a392
+vendor/lib/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|1382705def805808233d21a1964f3d4b9af9c62a
 vendor/lib/btaudio_offload_if.so|a069cee50d368153b597f4f53483559764d77f37
 vendor/lib/libbluetooth_audio_session_qti.so|2e5e552bef57aea5fd0d4a514413d4a229b95b09
 vendor/lib/libbluetooth_audio_session_qti_2_1.so|88eda2215254242ffba3ed9298a010aace098db9
@@ -142,9 +151,9 @@ vendor/lib/vendor.qti.hardware.bluetooth_sar@1.1.so|53b56ba1084e50be1f40a2df44e3
 vendor/lib64/hw/audio.bluetooth_qti.default.so|1458f85994525344d886e6043f47d6709ec06791
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.0-impl.so|3e7eb5dfcd0da9c10b34e7052d73cf4cbcbbf90b
 vendor/lib64/hw/vendor.qti.hardware.bluetooth_audio@2.1-impl.so|0637f96125a036b24b920787be85d2a8d5cbc349
-vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so;DISABLE_DEPS|a24970b670e52e3df882a36b957caa81a17f1e90
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so;DISABLE_DEPS|6d0a838e5aa52773b068f2800b01943a6ae5b209
-vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so;DISABLE_DEPS|b25aaa4a7ce7cf72e67de3725d3c8b09aaa5e09e
+vendor/lib64/hw/vendor.qti.hardware.bluetooth_sar@1.1-impl.so|a24970b670e52e3df882a36b957caa81a17f1e90
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@1.0-impl.so|6d0a838e5aa52773b068f2800b01943a6ae5b209
+vendor/lib64/hw/vendor.qti.hardware.btconfigstore@2.0-impl.so|b25aaa4a7ce7cf72e67de3725d3c8b09aaa5e09e
 vendor/lib64/btaudio_offload_if.so|ee409b24dbdbe165375ca54dbae41c24a2b53682
 vendor/lib64/libbluetooth_audio_session_qti.so|fc8e91294bc64a4cc3980ec94a25c62b0a85a4a1
 vendor/lib64/libbluetooth_audio_session_qti_2_1.so|44777b2f5345044ccf1fd5beac5825e9b6935ea2
@@ -249,8 +258,8 @@ system_ext/lib64/vendor.qti.data.factory@2.4.so|fc1151e2b15dab902426172ee328599d
 system_ext/lib64/vendor.qti.data.factory@2.5.so|222e33c229144bc845f1be89df129427fbf8c073
 system_ext/lib64/vendor.qti.data.factory@2.6.so|8161d08e117a4e675bb4fc55a943621a6ccdd5bb
 system_ext/lib64/vendor.qti.data.factory@2.7.so|cec0bdc1be4c41c206a764bf2da463e49f546ea9
-system_ext/lib64/vendor.qti.data.factory@2.8.so;DISABLE_DEPS|607a254369b2079ca9353315c0eba3ebda601579
-system_ext/lib64/vendor.qti.data.factoryservice-V1-ndk.so;DISABLE_DEPS|54b0e2cf52ffdbf20468ce87e2cbc204ad07d032
+system_ext/lib64/vendor.qti.data.factory@2.8.so|607a254369b2079ca9353315c0eba3ebda601579
+system_ext/lib64/vendor.qti.data.factoryservice-V1-ndk.so|54b0e2cf52ffdbf20468ce87e2cbc204ad07d032
 system_ext/lib64/vendor.qti.data.mwqem@1.0.so|8643bfb5b09d6956f41d40afd503131dccc42597
 system_ext/lib64/vendor.qti.data.mwqemaidlservice-V1-ndk.so|294e545d5c0f0f931dfa8ad42c170d9b080d2d8f
 system_ext/lib64/vendor.qti.data.slm@1.0.so|8753b13fd78cf6acfaa559b68c159190a68d8bc9
@@ -289,6 +298,8 @@ system_ext/lib64/vendor.qti.hardware.slmadapter@1.0.so|46b0e7c971f804a25204e010f
 system_ext/lib64/vendor.qti.latency@2.0.so|6516832f09d939d65b30a3ac087c7f15dc392a27
 system_ext/lib64/vendor.qti.latency@2.1.so|47b88efd60fcfeaca8dbeec4f2345a8d38f2c6d0
 system_ext/lib64/vendor.qti.latency@2.2.so|2f68bd1486748794a3e270d95918d935ed307d05
+system_ext/lib64/vendor.qti.latency@2.3.so|4f0daa6ac8cb8738723360072321cd277248aa38
+system_ext/lib64/vendor.qti.latencyaidlservice-V1-ndk.so|f52f6d169d13dde90582fbde4c9ac727d03b8eaa
 
 # CNE - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
 vendor/app/CneApp/CneApp.apk;REQUIRED=CneApp.libvndfwk_detect_jni.qti_symlink|0704c1bf2b3cc685bdefc937e815a2d480c151c5
@@ -387,9 +398,8 @@ system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|158a598891636edcd4a90cfbec65
 vendor/bin/dpmQmiMgr|13a5010588993c121614ec5bb1e76e2ae7931b79
 vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
 vendor/lib/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor|bcc4e1a938bebdc86b3399dc6efae9c845af0d67
-vendor/lib/libdpmqmihal.so;DISABLE_DEPS|1dd28e528354ddfdcecd96263d36c80c251c9f83
 vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor|cea24c38d54e75c3a03cdfc4b5f65a9c1f37813d
-vendor/lib64/libdpmqmihal.so;DISABLE_DEPS|4e8ed4a61273d5023d4bab93077cf5d5e93508dc
+vendor/lib64/libdpmqmihal.so|4e8ed4a61273d5023d4bab93077cf5d5e93508dc
 
 # Dirac - from jasmine QKQ1.190910.002 V11.0.23.0.QDIMIXM
 vendor/etc/diracmobile.config|88fa19095df9e256f0af510df266f749bf60e258
@@ -400,8 +410,9 @@ vendor/lib/soundfx/libdirac.so|921cce1c9776c3afa3288fe01b26440f280ab6b1
 # DRM - from Zebra/helios/helios:13/13-22-18.00-TG-U02-STD-HEL-04/84:user/release-keys
 vendor/bin/qseecomd|5333351a5f3a7ed85e9b6c7137a885bb115c7116
 vendor/etc/gpfspath_oem_config.xml|7aeade35b0bbe27530f6aca8c1ed5192a7acf59d
+vendor/lib/libGPreqcancel_svc.so|261a5ff1e6fef17bb2146ef05e6030713360a330
 vendor/lib/libQSEEComAPI.so|9b9da7d1ad2465cf5411f59b2a2f9413a1694b58
-vendor/lib/libsdedrm.so;DISABLE_DEPS|92b0c1666bbe574c94bcdb72a79555014a54ab25
+vendor/lib/libsdedrm.so|92b0c1666bbe574c94bcdb72a79555014a54ab25
 vendor/lib64/libGPQTEEC_vendor.so|12228f69dfa3f6c02236e1053c617da34c0d5580
 vendor/lib64/libGPreqcancel.so|b4540426976608f8e72e863a34fbee03a08f8fc3
 vendor/lib64/libGPreqcancel_svc.so|fdeb8d658b8817ed921d7197b2f6326e56de0ffc
@@ -413,7 +424,7 @@ vendor/lib64/libdrmfs.so|40e0ea780e85a17a6f9f1a184828c2e8f2283b87
 vendor/lib64/libdrmtime.so|5876ac16062d1d97e38a061adb93b2a56f1699b9
 vendor/lib64/libqisl.so|4b6cb5542193e758067a3b5819cc4a6b76bf87cf
 vendor/lib64/librpmb.so|f0c24388e57432f43fbeb2cce492fc9f2be9ba26
-vendor/lib64/libsdedrm.so;DISABLE_DEPS|be509d66c8cd05ca273e7097bb1b7819aecd7304
+vendor/lib64/libsdedrm.so|be509d66c8cd05ca273e7097bb1b7819aecd7304
 vendor/lib64/libsecureui.so|f83a88c11e35b3e373034faa44dc0ce36608a3fe
 vendor/lib64/libsecureui_svcsock.so|f3f13a8d9426359b921960167978f241367ae6ff
 vendor/lib64/libsi.so|de8345b2c87e8fe445df0c6acc6fcc3496f6f79c
@@ -424,10 +435,10 @@ vendor/lib64/libtzdrmgenprov.so|a6125df0edfc780796cc231141ae46b57da45020
 # DRM (Qualcomm Trusted Execution Enviroment) - from Zebra/helios/helios:13/13-32-14.00-TG-U02-STD-HEL-04/163:user/release-keys
 vendor/bin/hw/vendor.qti.hardware.qteeconnector@1.0-service|f291f50f5c28bd2b240253ea4105c2e9aee60304
 vendor/etc/init/vendor.qti.hardware.qteeconnector@1.0-service.rc|c966350ee67d3a7c73ca7184e3725264025d16f5
-vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so;DISABLE_DEPS|70fca712b8677ece544daa4fd8244ddf30df0373
+vendor/lib/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|70fca712b8677ece544daa4fd8244ddf30df0373
 vendor/lib/libQTEEConnector_vendor.so|fe7ff5d8731718973df5936ba6b166290e6d9bbe
 vendor/lib/vendor.qti.hardware.qteeconnector@1.0.so|3276a5c89d9ea5f463279da966b048ffc51e1d30
-vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so;DISABLE_DEPS|d7b4c4b3ed51bf8da576a306eb66d09195821afb
+vendor/lib64/hw/vendor.qti.hardware.qteeconnector@1.0-impl.so|d7b4c4b3ed51bf8da576a306eb66d09195821afb
 vendor/lib64/libQTEEConnector_vendor.so|cbe06ac3abdb8282cbff401a763905ccee10ce0b
 vendor/lib64/vendor.qti.hardware.qteeconnector@1.0.so|fab8de6637f2af981a071706e5bf1ff64a3338ad
 
@@ -497,6 +508,7 @@ vendor/bin/xtwifi-inet-agent|10f16bc92e7a1e4d790c4234c05807f2fe125212
 vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
 -vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
+vendor/lib/libminksocket.so|8e5a3ea8e8747fddc7cc4a2848e92d5922d2e3e6
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|792db15c090187e5d697d8014f1e831fc5327b30
 vendor/lib64/libasn1cper.so|79f8155e2d0a7241eb23dc923b97feed76ebd19e
 vendor/lib64/libasn1crt.so|3fe827ad2a5ca3cf6665eec9476499c409b02cec
@@ -620,16 +632,16 @@ vendor/lib64/vendor.display.postproc@1.0.so|408b4edd234e9da45ab55d64950af8b58ca5
 system/lib/libsdm-disp-apis.so|369c71b84355d1775cec271b19283721dbfbac63
 system/lib64/libsdm-disp-apis.so|2de535884bb057c6c1bc3fae8a59e79516d908df
 vendor/lib/libqseed3.so|87b37fefb7609474f9d1730c6c6a23c681046fe3
-vendor/lib/libsdm-color.so;DISABLE_DEPS|408b3a458834a30ed316f50d8bb662b29f16f73e
-vendor/lib/libsdm-diag.so;DISABLE_DEPS|a83a801ba72e7f94533ba8340f8ebe51f6d4b941
--vendor/lib/libsdm-disp-vndapis.so;DISABLE_DEPS|16ea053728a1bf0fc6c285c8cf193dcaa9cc6ffc
-vendor/lib/libsdmextension.so;DISABLE_DEPS||b97d77474f5991d3d038b9633c6ccfda67f3e1ec
+vendor/lib/libsdm-color.so|408b3a458834a30ed316f50d8bb662b29f16f73e
+vendor/lib/libsdm-diag.so|a83a801ba72e7f94533ba8340f8ebe51f6d4b941
+-vendor/lib/libsdm-disp-vndapis.so|16ea053728a1bf0fc6c285c8cf193dcaa9cc6ffc
+vendor/lib/libsdmextension.so|b97d77474f5991d3d038b9633c6ccfda67f3e1ec
 vendor/lib/libtinyxml2_1.so|dfe3efe3a6e5ad5beb6e4e9adb02eef475b421a7
 vendor/lib64/libqseed3.so|0a81db5fc5b762a8fd246dfccd69014662fe35eb
-vendor/lib64/libsdm-color.so;DISABLE_DEPS|8c997688894a6373787e1eabbb62f719bbb632b4
-vendor/lib64/libsdm-diag.so;DISABLE_DEPS|1b27bcbdba062afc1d414b30c1efcd08ac4140cf
--vendor/lib64/libsdm-disp-vndapis.so;DISABLE_DEPS|c8408b9e8d9ee4cf82eb0c0000fb348848ff3c55
-vendor/lib64/libsdmextension.so;DISABLE_DEPS||9a4342e9417fd7cee2eb4d34c55762c4de6811ae
+vendor/lib64/libsdm-color.so|8c997688894a6373787e1eabbb62f719bbb632b4
+vendor/lib64/libsdm-diag.so|1b27bcbdba062afc1d414b30c1efcd08ac4140cf
+-vendor/lib64/libsdm-disp-vndapis.so|c8408b9e8d9ee4cf82eb0c0000fb348848ff3c55
+vendor/lib64/libsdmextension.so|9a4342e9417fd7cee2eb4d34c55762c4de6811ae
 vendor/lib64/libtinyxml2_1.so|5bdb5c7785f90ad4ebaa7085a4f83d86567331f9
 
 # Graphics (Vulkan) - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
@@ -676,10 +688,14 @@ vendor/lib64/libgcs.so|da63fb393414a8d1eec06a7c9b9facab2f13c322
 vendor/lib64/libmulawdec.so|09a7c865d2097fa7b35d009bf66b9f0519e7c57e
 
 # Media - from LA.QSSI.15.0.r1-13300-qssi.0
-system_ext/lib/extractors/libmmparserextractor.so;DISABLE_DEPS|2053835e8eaaea8c9302ba892598135b6789e15f
+system_ext/lib/extractors/libmmparserextractor.so|2053835e8eaaea8c9302ba892598135b6789e15f
 system_ext/lib/libavenhancements.so;DISABLE_CHECKELF|1f2155fdd1ab065b58b13ac4b0111b8d7932a8a0
-system_ext/lib64/extractors/libmmparserextractor.so;DISABLE_DEPS|fd22a2bc8f956911b05e938ed7fa7f7cd008baac
+system_ext/lib/libmmosal.so|8b1b39e2381cfd84178a278734cfddbcf73ecba4
+system_ext/lib/libmmparser_lite.so|dcae561fbcbca192143661425c8d24c02c88c60b
+system_ext/lib64/extractors/libmmparserextractor.so|fd22a2bc8f956911b05e938ed7fa7f7cd008baac
 system_ext/lib64/libavenhancements.so;DISABLE_CHECKELF|8abd5f469db832c5691be02b9eb222108753a9af
+system_ext/lib64/libmmosal.so|43e0618b504500c348d974426eed3b234818a744
+system_ext/lib64/libmmparser_lite.so|b544304421692c25220ac01957a73cfd9931d8e7
 
 # Media - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
 vendor/lib/libdsd2pcm.so|7f17a4d46f2090665b8d0c6b2d7ade526d3dc266
@@ -736,7 +752,8 @@ vendor/lib/libdiag.so|692bc966dfd91498a2ccbfbb11152bba05e44c4e
 vendor/lib/libdsutils.so|93b4946d86aa5bc8345c46420290a953a00851e6
 vendor/lib/libidl.so|49a2d6bd5c91e52a1ce10f64ccb45c152c7b6a82
 vendor/lib/libmdmdetect.so|4605f4badf8aaafbb2f64d7623b4355eb1a50093
-vendor/lib/libminkdescriptor.so;DISABLE_DEPS|841a6200fc788d4bad1388ae1da2c70a2bf937ba
+vendor/lib/libminkdescriptor.so|841a6200fc788d4bad1388ae1da2c70a2bf937ba
+vendor/lib/libnative-api.so|5a7fee4a97e541328a8fd7fc9d078a95fb7a1b32
 vendor/lib/libqcci_legacy.so|b26995e35162bcbad1e5ae59e70ae3067d754c78
 vendor/lib/libqdi.so|ff123242640e9ddbeaea30668ebfb5468ded305e
 vendor/lib/libqdp.so|aa552afeb9abcf2e6b11e05c3a7a762d7667da28
@@ -753,7 +770,8 @@ vendor/lib64/libdiag.so|2a3ddc294baf1da4132ae00e83d2e4a806c2a568
 vendor/lib64/libdsutils.so|b0a83086f74ff8a47e98bdce2fa216151d2c29f2
 vendor/lib64/libidl.so|278a7c6bcd86b18413b6fdc393413ad46f1ead69
 vendor/lib64/libmdmdetect.so|174cab27824c53eec11642e062623686e0e67d12
-vendor/lib64/libminkdescriptor.so;DISABLE_DEPS|94737055154ce5ac2f823528c714f9fa271ad6a0
+vendor/lib64/libminkdescriptor.so|94737055154ce5ac2f823528c714f9fa271ad6a0
+vendor/lib64/libnative-api.so|2204faedcbc3f23d0b5a744274aa4867a4c3215b
 vendor/lib64/libqcci_legacy.so|4a1197ff3e9cdcfc27ee3b692ea72a0890215df1
 vendor/lib64/libqdi.so|3c02ef11c717e84a388d9045cde934bdf23fac61
 vendor/lib64/libqdp.so|c88448d55ba349b376f527c05a4e723fcce90119
@@ -839,6 +857,7 @@ vendor/etc/init/qcrild.rc|320b644319182f96e494ea30de26cb52b448f592
 vendor/etc/init/vendor.qti.rmt_storage.rc|bc212c6353c2ded44ae4d759605fbbe55aa4fa3f
 vendor/etc/init/vendor.qti.tftp.rc|b27f188cbffba470a4510d50e46ff7c8446c22cb
 vendor/lib/vendor.qti.hardware.mwqemadapter@1.0.so;MODULE_SUFFIX=_vendor|c1b25322484a0d450d205a7eeffc6258bfddc9c0
+vendor/lib/libqrtr.so|df397c0e144dde033759402c1928bcd958cdf260
 vendor/lib64/libconfigdb.so|4588957364a36adbd71deeb21a50dc230f464892
 vendor/lib64/libdsi_netctrl.so|ee7ca27e24c6edc642ef1aac47382cff537775ee
 vendor/lib64/liblqe.so|b51a79d2d1532bc6db741423391966484cb4c26d
