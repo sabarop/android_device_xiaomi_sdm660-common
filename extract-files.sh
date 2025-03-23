@@ -71,6 +71,14 @@ function blob_fixup() {
             [ "$2" = "" ] && return 0
            "${PATCHELF}" --add-needed "liglog.so" "${2}"
             ;;
+        vendor/lib64/hw/consumerir.default.so)
+            [ "$2" = "" ] && return 0
+           "${PATCHELF}" --set-soname "consumerir.lirc.sdm660.so" "consumerir.default.so" "${2}"
+            ;;
+        vendor/lib64/hw/consumerir.default.so)
+            [ "$2" = "" ] && return 0
+           "${PATCHELF}" --set-soname "consumerir.spi.sdm660.so" "consumerir.default.so" "${2}"
+            ;;
         *)
             return 1
             ;;
