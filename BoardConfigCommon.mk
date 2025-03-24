@@ -99,6 +99,11 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
 DEVICE_FRAMEWORK_MANIFEST_FILE := $(COMMON_PATH)/framework_manifest.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
 DEVICE_MATRIX_FILE += hardware/qcom-caf/common/compatibility_matrix.xml
+ifeq ($(filter clover,$(TARGET_DEVICE)),)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest-ds.xml
+else
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest-ss.xml
+endif
 
 # HWUI
 HWUI_COMPILE_FOR_PERF := true
