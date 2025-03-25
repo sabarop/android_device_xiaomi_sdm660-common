@@ -689,11 +689,9 @@ vendor/lib64/libmulawdec.so|09a7c865d2097fa7b35d009bf66b9f0519e7c57e
 
 # Media - from LA.QSSI.15.0.r1-13300-qssi.0
 system_ext/lib/extractors/libmmparserextractor.so|2053835e8eaaea8c9302ba892598135b6789e15f
-system_ext/lib/libavenhancements.so;DISABLE_CHECKELF|1f2155fdd1ab065b58b13ac4b0111b8d7932a8a0
 system_ext/lib/libmmosal.so|8b1b39e2381cfd84178a278734cfddbcf73ecba4
 system_ext/lib/libmmparser_lite.so|dcae561fbcbca192143661425c8d24c02c88c60b
 system_ext/lib64/extractors/libmmparserextractor.so|fd22a2bc8f956911b05e938ed7fa7f7cd008baac
-system_ext/lib64/libavenhancements.so;DISABLE_CHECKELF|8abd5f469db832c5691be02b9eb222108753a9af
 system_ext/lib64/libmmosal.so|43e0618b504500c348d974426eed3b234818a744
 system_ext/lib64/libmmparser_lite.so|b544304421692c25220ac01957a73cfd9931d8e7
 
