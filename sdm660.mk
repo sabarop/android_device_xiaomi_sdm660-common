@@ -670,14 +670,6 @@ PRODUCT_COPY_FILES += \
 PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink
 
-ifeq ($(WLAN_MAC_SYMLINK),true)
-PRODUCT_PACKAGES += \
-    firmware_wlan_mac.bin_symlink
-else
-PRODUCT_PACKAGES += \
-    firmware_wlan_mac.clover_symlink
-endif
-
 # DeviceSettings
 PRODUCT_PACKAGES += \
     DeviceSettings
