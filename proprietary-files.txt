@@ -70,7 +70,7 @@ vendor/lib/libadm.so|05a0611a064dafc0a9e47337cca5a780cea6de8a
 vendor/lib/libaudcal.so|8e5e3bf2f39b4abaedd643c261972b7f68a545dc
 vendor/lib/libaudioalsa.so|edcf75fa53bd959defd18a6a16e0ec40fd42b014
 vendor/lib/libaudioconfigstore.so|02012b87f4d5907e0b640fa1c5b2e4312e725eee
--vendor/lib/libaudioparsers.so|9f22defa83a7aea16d45e609579361e523f8b773
+vendor/lib/libaudioparsers.so|9f22defa83a7aea16d45e609579361e523f8b773
 vendor/lib/libdrc.so|1bfd492c38cfdea25beba3ed992d883b972fb9fb
 vendor/lib/libFlacSwDec.so|f47c030027988c49db1aa729df2982d844539277
 vendor/lib/libqtigef.so|c803dd2eea97a720f5ae20c5d37bc0f37a96c7a5
@@ -82,13 +82,13 @@ vendor/lib64/libadiertac.so|1fb475ed2bdd4f828ab7e64c9dc05327ff262939
 vendor/lib64/libaudcal.so|5a2fec1304afe9eacb87fbca87a8121fda45ffb7
 vendor/lib64/libaudioalsa.so|5385e8c57f69fe27e7b640aee08b5b2b00d70b86
 vendor/lib64/libaudioconfigstore.so|7a3a9fbe350039a4b803395bc39ca635cf651a01
--vendor/lib64/libaudioparsers.so|506b43e9d5c18e5eeaa18cc734324f0138d7e9cc
+vendor/lib64/libaudioparsers.so|506b43e9d5c18e5eeaa18cc734324f0138d7e9cc
 vendor/lib64/libFlacSwDec.so|3b2798cf7ab8a5e5d515a5a2489a7e77ba2ee62a
 vendor/lib64/libqtigef.so|de0024eed15f7ba45968e435971730230a643dc3
 
 # Audio FX modules - from LA.QSSI.15.0.r1-10500-qssi.0
 system_ext/etc/permissions/audiosphere.xml|015ad7be4921039238bfa3d34d052d752453e49c
--system_ext/framework/audiosphere.jar|53ca88f91715ffc503d1298d22fcdb3cc5f5b57b
+system_ext/framework/audiosphere.jar|53ca88f91715ffc503d1298d22fcdb3cc5f5b57b
 
 # Audio FX modules - from google/cheetah/cheetah:15/AP3A.241005.015
 vendor/lib/soundfx/libspatialaudio.so|1b574e25db97b76b712ddffda6da42c3c5c5df6e
@@ -109,7 +109,7 @@ vendor/lib64/soundfx/libshoebox.so|c88c36d90d3a54dea8e3ef08114598942810ac28
 vendor/lib/soundfx/libmisoundfx.so|569ee2df586e95116b79cfb3d89429f2032a7a76
 
 # Alarm - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
--product/app/PowerOffAlarm/PowerOffAlarm.apk|ec6d75f8cb6c075906a36147a307775a8a9ae856
+product/app/PowerOffAlarm/PowerOffAlarm.apk|ec6d75f8cb6c075906a36147a307775a8a9ae856
 system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|2cff0d9993e6f51e7095f43eb71014eea7cd4ea2
 system_ext/lib64/vendor.qti.hardware.alarm@1.0.so|11b9429eb2e612809d9c707ee4c634c783eb5d77
 vendor/bin/hw/vendor.qti.hardware.alarm@1.0-service|e0f7f753052162654541516c90983be7f520dbe2
@@ -162,7 +162,7 @@ vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|475311f05f103b23654253e1dc
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|f191bd8bb067e57a06af89ce2f9a9ea703bb2516
 
 # Capability Configstore - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
--system_ext/framework/vendor.qti.hardware.capabilityconfigstore-V1.0-java.jar|17968ba47efae893689efba17b9d75a8b22bc68c
+system_ext/framework/vendor.qti.hardware.capabilityconfigstore-V1.0-java.jar|17968ba47efae893689efba17b9d75a8b22bc68c
 vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|a24eb9dbb746b62bcb40e438cf0063dad6ca5f87
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
 vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|d73d79009877d54a7f9014d3e0fdc41339b07ef1
@@ -171,11 +171,11 @@ vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|d73d790098
 vendor/bin/cdsprpcd|258702b84c4496e7021c1d24d20794f6d2fedc11
 vendor/etc/init/vendor.qti.cdsprpc-service.rc|36772b70216796e8ef19376d9c6a81ee9ffff549
 vendor/lib/libcdsp_default_listener.so|a6d2f3139eb94edb58eb8c97af85f8236bdedbfb
--vendor/lib/libcdsprpc.so|72c4150d4358b335d2b88ccb5ca34e23d08ee238
+vendor/lib/libcdsprpc.so|72c4150d4358b335d2b88ccb5ca34e23d08ee238
 vendor/lib/libfastrpc_utf_stub.so|ad1b79fc1ce0534d4d9c491ba67532d76ef4d508
 vendor/lib/libsysmon_cdsp_skel.so|636f834df2e62cbd6fd6c2bf3040a3272ca72714
 vendor/lib64/libcdsp_default_listener.so|fdd9893e7e95a98ec953ac32d3a2a5918b28ef82
--vendor/lib64/libcdsprpc.so|4688f68c303a4def9c01549621f223283fc8ca12
+vendor/lib64/libcdsprpc.so|4688f68c303a4def9c01549621f223283fc8ca12
 vendor/lib64/libfastrpc_utf_stub.so|5455994d24e197a444ced928f45a8fdb5a8f711e
 vendor/lib64/libsysmon_cdsp_skel.so|d84cc18b220ece72091fc366903a2d24bfdd2bba
 
@@ -239,11 +239,11 @@ system_ext/framework/vendor.qti.latencyaidlservice-V1-java.jar|faffb1f678e30057d
 system_ext/framework/vendor.qti.latency-V2.0-java.jar|0fdfcb692c89064e7721860b537fee76ca3023e3
 system_ext/framework/vendor.qti.latency-V2.1-java.jar|3ace261d205a669cf2096da5848210b41d2f5e6e
 system_ext/framework/vendor.qti.latency-V2.2-java.jar|8f942efdbc7ce9ee925998b1e710da5962657c70
--system_ext/lib64/com.quicinc.cne.api@1.0.so|150a4819462e8f132782d61ed4ca0eb3c5ddf22c
--system_ext/lib64/com.quicinc.cne.api@1.1.so|bffea88e16e04022e4d114ccbf08228422cfbaf4
--system_ext/lib64/com.quicinc.cne.constants@1.0.so|7b257656c7f907e06d7ed07a417880006aca9769
--system_ext/lib64/com.quicinc.cne.constants@2.0.so|e03264e8440eccec38abc11c7a8e6858fd531eb8
--system_ext/lib64/com.quicinc.cne.constants@2.1.so|a28f8fb0305c7c1b72e036058eb6d0f8aed7528a
+system_ext/lib64/com.quicinc.cne.api@1.0.so|150a4819462e8f132782d61ed4ca0eb3c5ddf22c
+system_ext/lib64/com.quicinc.cne.api@1.1.so|bffea88e16e04022e4d114ccbf08228422cfbaf4
+system_ext/lib64/com.quicinc.cne.constants@1.0.so|7b257656c7f907e06d7ed07a417880006aca9769
+system_ext/lib64/com.quicinc.cne.constants@2.0.so|e03264e8440eccec38abc11c7a8e6858fd531eb8
+system_ext/lib64/com.quicinc.cne.constants@2.1.so|a28f8fb0305c7c1b72e036058eb6d0f8aed7528a
 system_ext/lib64/com.quicinc.cne.server@1.0.so|790cf057e05c1ba5a12b31bef3900819493d757e
 system_ext/lib64/com.quicinc.cne.server@2.0.so|73c914d5e9a1820b2077b41099243654d38c18c4
 system_ext/lib64/com.quicinc.cne.server@2.1.so|1525d38f036316eff684044767b4dee56ceb8b14
@@ -507,7 +507,7 @@ vendor/bin/xtwifi-client|4311f16dcf4105152ae86c4ed9031fd65b1563f3
 vendor/bin/xtwifi-inet-agent|10f16bc92e7a1e4d790c4234c05807f2fe125212
 vendor/etc/cacert_location.pem|0789bf799c7e45d352a83e2f79ddb0cea86db85b
 vendor/etc/xtra_root_cert.pem|f55a31ec4d9cf8ce2724acadecf00c779f8767db
--vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
+vendor/etc/vintf/manifest/vendor.qti.gnss@4.0-service.xml|6514b13f55abc0acc28e004c35ff93fb972d61a9
 vendor/lib/libminksocket.so|8e5a3ea8e8747fddc7cc4a2848e92d5922d2e3e6
 vendor/lib64/hw/vendor.qti.gnss@4.0-impl.so|792db15c090187e5d697d8014f1e831fc5327b30
 vendor/lib64/libasn1cper.so|79f8155e2d0a7241eb23dc923b97feed76ebd19e
@@ -581,7 +581,7 @@ vendor/lib/libgpudataproducer.so|a0e6988854846363fe40c7ccfc3353c09a25d17c
 vendor/lib/libgsl.so|ac60cdedd871e7c7d3e9480bad67f9b30fa9f264
 vendor/lib/libllvm-glnext.so|821440a54f02c2ed401f0ac646475cb6e8fc171f
 vendor/lib/libllvm-qcom.so|8fd3c7d00f8ead582722be57a997ff25ef50558a
--vendor/lib/libOpenCL.so|b2cf8b9102129029c56bbeaf6a3e4728c2ca6a57
+vendor/lib/libOpenCL.so|b2cf8b9102129029c56bbeaf6a3e4728c2ca6a57
 vendor/lib/librs_adreno.so|53c5e960452f14958e6893241995d1a42e576823
 vendor/lib/libVkLayer_q3dtools.so|fc2e7f99efb17245202d500be0df0bc5eb19b23e
 vendor/lib64/egl/eglSubDriverAndroid.so|52cc62010df3eabdd440fc756e2c4abee35dabeb
@@ -598,7 +598,7 @@ vendor/lib64/libgpudataproducer.so|d94dab3cf584dde69c0fe22ac85266c0da9eac85
 vendor/lib64/libgsl.so|d39c92144b3bde0a15be1a0c9599ee957e3f79c0
 vendor/lib64/libllvm-glnext.so|b7f8cb7a5ab0056322cecce80172aff7c3decf0c
 vendor/lib64/libllvm-qcom.so|b55e4fbe013caee2357f77397be052db5d9e4484
--vendor/lib64/libOpenCL.so|c37467e36804a74722059a36e3dce3a7befb7f2f
+vendor/lib64/libOpenCL.so|c37467e36804a74722059a36e3dce3a7befb7f2f
 vendor/lib64/librs_adreno.so|3f8bccf5b5907cebc0d4edb2e804dc3f57fdf8eb
 vendor/lib64/libVkLayer_q3dtools.so|46d0b3b271d3f9c18f56f309cafb7630ce418f3a
 
@@ -634,13 +634,13 @@ system/lib64/libsdm-disp-apis.so|2de535884bb057c6c1bc3fae8a59e79516d908df
 vendor/lib/libqseed3.so|87b37fefb7609474f9d1730c6c6a23c681046fe3
 vendor/lib/libsdm-color.so|408b3a458834a30ed316f50d8bb662b29f16f73e
 vendor/lib/libsdm-diag.so|a83a801ba72e7f94533ba8340f8ebe51f6d4b941
--vendor/lib/libsdm-disp-vndapis.so|16ea053728a1bf0fc6c285c8cf193dcaa9cc6ffc
+vendor/lib/libsdm-disp-vndapis.so|16ea053728a1bf0fc6c285c8cf193dcaa9cc6ffc
 vendor/lib/libsdmextension.so|b97d77474f5991d3d038b9633c6ccfda67f3e1ec
 vendor/lib/libtinyxml2_1.so|dfe3efe3a6e5ad5beb6e4e9adb02eef475b421a7
 vendor/lib64/libqseed3.so|0a81db5fc5b762a8fd246dfccd69014662fe35eb
 vendor/lib64/libsdm-color.so|8c997688894a6373787e1eabbb62f719bbb632b4
 vendor/lib64/libsdm-diag.so|1b27bcbdba062afc1d414b30c1efcd08ac4140cf
--vendor/lib64/libsdm-disp-vndapis.so|c8408b9e8d9ee4cf82eb0c0000fb348848ff3c55
+vendor/lib64/libsdm-disp-vndapis.so|c8408b9e8d9ee4cf82eb0c0000fb348848ff3c55
 vendor/lib64/libsdmextension.so|9a4342e9417fd7cee2eb4d34c55762c4de6811ae
 vendor/lib64/libtinyxml2_1.so|5bdb5c7785f90ad4ebaa7085a4f83d86567331f9
 
@@ -1071,7 +1071,7 @@ vendor/lib64/vendor.qti.hardware.scve.objecttracker@1.0.so|bb3563c0f8d18718d8619
 vendor/lib64/vendor.qti.hardware.scve.panorama@1.0.so|105680edfe7d9112e643d2a1943bef6666a7a25e
 
 # Sensors - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
--system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar|7d3ced4d98684a31ec03deed9a032610288cb981
+system_ext/framework/vendor.qti.hardware.sensorscalibrate-V1.0-java.jar|7d3ced4d98684a31ec03deed9a032610288cb981
 system_ext/lib/vendor.qti.hardware.sensorscalibrate@1.0.so|ffb01ad86f9eae493da866486942feea9307a599
 system_ext/lib64/vendor.qti.hardware.sensorscalibrate@1.0.so|02c43bd1edeaae7c04c9c1d382fc91fc3da5fb00
 vendor/bin/sensors.qti|18756fe3c3f3741630c7428823081310f692a9f3
@@ -1095,13 +1095,13 @@ vendor/lib64/vendor.qti.hardware.soter@1.0.so|0d49d2eb7e0a2caee1ff41c13d220cc042
 # Thermal - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
 vendor/bin/thermal-engine|bfa8ea6463ca21b36f1830a9bdb96b7b40768c6d
 vendor/etc/init/init_thermal-engine.rc|a0310f09da9f09c67e110607b73aec9f9f981c4c
--vendor/lib/libthermalclient.so|c95984e29617243ae7ce7f7da01663e6b0c87e94
--vendor/lib64/libthermalclient.so|4be5c7fd77a30758716a2ab65aae70fa60639177
+vendor/lib/libthermalclient.so|c95984e29617243ae7ce7f7da01663e6b0c87e94
+vendor/lib64/libthermalclient.so|4be5c7fd77a30758716a2ab65aae70fa60639177
 
 # Time services - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
--vendor/app/TimeService/TimeService.apk|7a30697354bbaeefd9c79cd84d14e0e3e06006df
--vendor/lib/libtime_genoff.so|e5e9b096c81cb0b96e064a8873d7c72d0ae17079
--vendor/lib64/libtime_genoff.so|1c2de2c94be03bba76cfcf56637037e680d1785d
+vendor/app/TimeService/TimeService.apk|7a30697354bbaeefd9c79cd84d14e0e3e06006df
+vendor/lib/libtime_genoff.so|e5e9b096c81cb0b96e064a8873d7c72d0ae17079
+vendor/lib64/libtime_genoff.so|1c2de2c94be03bba76cfcf56637037e680d1785d
 vendor/bin/time_daemon|22bc64c60ba3c60ae91b1dbd68eed75eff6e12e3
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 
