@@ -173,6 +173,7 @@ PRODUCT_PACKAGES += \
     android.frameworks.displayservice@1.0.vendor \
     android.frameworks.displayservice@1.0 \
     libdisplayconfig \
+    libdrmutils \
     libgralloc.qti \
     libqdMetaData \
     libqdMetaData.system \
