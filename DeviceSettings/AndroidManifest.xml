@@ -61,6 +61,16 @@
                 android:resource="@string/advanced_settings_summary" />
         </activity>
 
+        <activity
+            android:name=".kcal.KcalSettingsActivity"
+            android:exported="true"
+            android:label="@string/kcal_settings_title">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
         <service
             android:name=".PerformanceTileService"
             android:icon="@drawable/thermal_balance"

@@ -116,6 +116,16 @@
                 android:targetClass="com.advanced.settings.doze.DozeSettingsActivity"
                 android:targetPackage="com.advanced.settings.doze" />
         </Preference>
+        <Preference
+            android:key="kcal_settings"
+            android:icon="@drawable/ic_kcal"
+            android:title="@string/kcal_settings_title"
+            android:summary="@string/kcal_settings_summary">
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="org.lineageos.settings.device.kcal.KcalSettingsActivity"
+                android:targetPackage="org.lineageos.settings.device.kcal" />
+        </Preference>
         <org.lineageos.settings.device.preferences.SecureSettingSwitchPreference
             android:key="fps_info"
             android:icon="@drawable/ic_fps_info"
