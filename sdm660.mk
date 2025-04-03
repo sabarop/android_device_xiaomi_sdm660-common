@@ -607,6 +607,11 @@ PRODUCT_PROPERTY_OVERRIDES += \
     ro.audio.spatializer_transaural_enabled_default=false \
     persist.vendor.audio.spatializer.speaker_enabled=true
 
+# Spatial Audio: Enable virtualization effect for the ordinary sound output (More immersiveness)
+PRODUCT_PROPERTY_OVERRIDES += \
+    ro.audio.monitorRotation=true \
+    ro.audio.stereo_spatialization_enabled=true
+
 # Speed profile services and wifi-service to reduce RAM and storage
 PRODUCT_SYSTEM_SERVER_COMPILER_FILTER := speed-profile
 PRODUCT_USE_PROFILE_FOR_BOOT_IMAGE := true
