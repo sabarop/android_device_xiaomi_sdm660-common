@@ -118,7 +118,7 @@ void vendor_load_persist_properties() {
                                  "ro.product.vendor.name", "clover");
         ReadFileToString(hw_id_file, &hw_device);
         if (hw_device.find("NT51021_BOE_BOE10") != std::string::npos) {
-            property_override("persist.sys.fp.vendor", "fpc");
+            //property_override("persist.sys.fp.vendor", "fpc");
             property_override("ro.board.variant", "d9p");
             property_override("vendor.display.lcd_density", "265");
             property_override_triple("ro.product.model", "ro.product.system.model",
@@ -151,7 +151,7 @@ void vendor_load_persist_properties() {
                               "/vendor/etc/acdbdata/adsp_avs_config.acdb");
 
         } else {
-            property_override("persist.sys.fp.vendor", "none");
+            //property_override("persist.sys.fp.vendor", "none");
             property_override("ro.board.variant", "d9");
             property_override("vendor.display.lcd_density", "320");
             property_override_triple("ro.product.model", "ro.product.system.model",
