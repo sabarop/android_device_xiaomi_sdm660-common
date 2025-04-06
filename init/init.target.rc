@@ -210,6 +210,9 @@ on boot
     chown system system /persist/speccfg/vendor_persist.prop
     chown system system /persist/speccfg/submask
     chown system system /persist/speccfg/partition
+
+    # Optimize vfs cache pressure
+    write /proc/sys/vm/vfs_cache_pressure 40
     
     # Turn on sleep modes
     write /sys/module/lpm_levels/parameters/sleep_disabled 0
