@@ -81,7 +81,7 @@ public class DeviceSettings extends PreferenceFragment implements
     public static final String PREF_THERMAL = "thermal";
     public static final String THERMAL_PATH = "/sys/devices/virtual/thermal/thermal_message/sconfig";
 
-    private static final String DEVICE_DOZE_PACKAGE_NAME = "com.advanced.settings.doze";
+    private static final String DEVICE_DOZE_PACKAGE_NAME = "org.lineageos.settings.doze";
 
     private static final String DEVICE_JASON_PACKAGE_NAME = "org.lineageos.settings.devicex";
     private static final String PREF_DEVICE_JASON = "device_jason";
