@@ -67,10 +67,6 @@ fi
 
 function blob_fixup() {
     case "${1}" in
-        vendor/lib/soundfx/libdirac.so)
-            [ "$2" = "" ] && return 0
-           "${PATCHELF}" --add-needed "liglog.so" "${2}"
-            ;;
         vendor/lib64/hw/consumerir.default.so)
             [ "$2" = "" ] && return 0
            "${PATCHELF}" --set-soname "consumerir.lirc.sdm660.so" "consumerir.default.so" "${2}"
