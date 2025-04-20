@@ -62,9 +62,6 @@ public class BootReceiver extends BroadcastReceiver {
         FileUtils.setValue(DeviceSettings.THERMAL_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_THERMAL, 0));
 
-        // Dirac
-        context.startService(new Intent(context, DiracService.class));
-
         // USB Fastcharge
         FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_USB_FASTCHARGE, 0));
