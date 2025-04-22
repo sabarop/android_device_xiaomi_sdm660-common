@@ -8,7 +8,6 @@ android_app {
     name: "XiaomiDoze",
 
     srcs: ["src/**/*.java"],
-    resource_dirs: ["res"],
     certificate: "platform",
     platform_apis: true,
     privileged: true,
