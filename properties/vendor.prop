@@ -111,8 +111,6 @@ persist.vendor.qcom.bluetooth.soc=cherokee
 persist.vendor.qcom.bluetooth.scram.enabled=true
 ro.bluetooth.a2dp_offload.supported=true
 ro.vendor.fm.use_audio_session=true
-ro.audio.spatializer_enabled=true
-persist.vendor.audio.spatializer.speaker_enabled=true
 
 # Camera
 vendor.camera.aux.packageblacklist=com.discord
