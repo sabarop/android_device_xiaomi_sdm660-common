@@ -23,6 +23,9 @@ $(call inherit-product, hardware/qcom-caf/common/common.mk)
 $(call inherit-product, vendor/xiaomi/sdm660-common/sdm660-common-vendor.mk)
 $(call inherit-product-if-exists, vendor/xiaomi/MiuiCamera/config.mk)
 
+#Dolby
+$(call inherit-product, vendor/sony/dolby/setup.mk)
+
 # Common Tree Path
 COMMON_PATH := device/xiaomi/sdm660-common
 
