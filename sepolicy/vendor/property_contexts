@@ -75,6 +75,7 @@ ro.hardware.chipname                    u:object_r:exported_default_prop:s0
 ro.board.variant                        u:object_r:exported_default_prop:s0
 ro.hwversion                            u:object_r:exported_default_prop:s0
 persist.vendor.slm.enable               u:object_r:exported_default_prop:s0
+ro.config.device.                       u:object_r:exported_default_prop:s0
 
 # Wcnss
 vendor.wlan.bdf.path                    u:object_r:vendor_wcnss_service_prop:s0
