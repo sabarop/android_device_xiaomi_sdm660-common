@@ -29,9 +29,6 @@ $(call inherit-product, vendor/sony/dolby/setup.mk)
 # Common Tree Path
 COMMON_PATH := device/xiaomi/sdm660-common
 
-# UFFD GC
-OVERRIDE_ENABLE_UFFD_GC := false
-
 # A/B
 ifeq ($(ENABLE_AB), true)
 AB_OTA_POSTINSTALL_CONFIG += \
