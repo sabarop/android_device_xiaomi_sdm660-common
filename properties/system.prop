@@ -112,6 +112,7 @@ persist.log.tag.b/223498680=S
 persist.log.tag.TrafficStats=S
 persist.log.tag.ContrastColorUtil=S
 persist.log.tag.OpenGLRenderer=S
+persist.log.tag.HWUI=S
 
 # Media
 media.aac_51_output_enabled=true
