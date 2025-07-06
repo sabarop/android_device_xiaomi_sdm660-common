@@ -276,7 +276,6 @@ PRODUCT_COPY_FILES += \
 
 # RIL
 PRODUCT_PACKAGES += \
-    android.hardware.radio-service.compat \
     rild
 
 PRODUCT_PACKAGES += \
