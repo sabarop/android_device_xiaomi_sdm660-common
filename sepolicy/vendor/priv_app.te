@@ -1,2 +1,6 @@
 allow priv_app sysfs_graphics:file { open read };
 allow priv_app zygote:unix_stream_socket { getopt };
+
+# Dolby
+allow priv_app hal_dms_hwservice:hwservice_manager find;
+binder_call(priv_app, hal_dms_default)
