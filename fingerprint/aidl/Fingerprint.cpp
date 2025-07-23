@@ -14,6 +14,8 @@
 #include <android-base/logging.h>
 #include <android-base/strings.h>
 
+using ::android::base::SetProperty;
+
 namespace aidl::android::hardware::biometrics::fingerprint {
 
 namespace {
@@ -24,14 +26,44 @@ constexpr char FW_VERSION[] = "1.01";
 constexpr char SERIAL_NUMBER[] = "00000001";
 constexpr char SW_COMPONENT_ID[] = "matchingAlgorithm";
 constexpr char SW_VERSION[] = "vendor/version/revision";
+
+typedef struct fingerprint_hal {
+    const char* class_name;
+} fingerprint_hal_t;
+
+static const fingerprint_hal_t kModules[] = {
+        {"fpc"}, {"goodix"},
+};
+
 }  // namespace
 
 static const uint16_t kVersion = HARDWARE_MODULE_API_VERSION(2, 1);
 static Fingerprint* sInstance;
 
 Fingerprint::Fingerprint(std::shared_ptr<FingerprintConfig> config)
-    : mConfig(std::move(config)), mDevice(openHal()) {
+    : mConfig(std::move(config)) {
     sInstance = this;  // keep track of the most recent instance
+
+    if (mDevice) {
+        ALOGI("fingerprint HAL already opened");
+    } else {
+            for (auto& [class_name] : kModules) {
+            mDevice = openHal(class_name);
+            if (!mDevice) {
+            ALOGE("Can't open HAL module, class %s", class_name);
+                continue;
+            }
+
+            ALOGI("Opened fingerprint HAL, class %s", class_name);
+            SetProperty("persist.vendor.sys.fp.vendor", class_name);
+            break;
+            }
+ 
+            if (!mDevice) {
+            ALOGE("Can't open any fingerprint HAL module");
+            SetProperty("persist.vendor.sys.fp.vendor", "none");
+            }
+    }
 
     std::string sensorTypeProp = mConfig->get<std::string>("type");
     if (sensorTypeProp == "side") {
@@ -62,11 +94,11 @@ Fingerprint::~Fingerprint() {
     mDevice = nullptr;
 }
 
-fingerprint_device_t* Fingerprint::openHal() {
+fingerprint_device_t* Fingerprint::openHal(const char* class_name) {
     int err;
     const hw_module_t* hw_mdl = nullptr;
     ALOGD("Opening fingerprint hal library...");
-    if (0 != (err = hw_get_module(FINGERPRINT_HARDWARE_MODULE_ID, &hw_mdl))) {
+    if (0 != (err = hw_get_module_by_class(FINGERPRINT_HARDWARE_MODULE_ID, class_name, &hw_mdl))) {
         ALOGE("Can't open fingerprint HW Module, error: %d", err);
         return nullptr;
     }
