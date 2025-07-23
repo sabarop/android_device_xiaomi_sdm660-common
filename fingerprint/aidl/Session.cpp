@@ -26,7 +26,11 @@ Session::Session(fingerprint_device_t* device, int userId, std::shared_ptr<ISess
     : mDevice(device), mLockoutTracker(lockoutTracker), mUserId(userId), mCb(cb) {
     mDeathRecipient = AIBinder_DeathRecipient_new(onClientDeath);
 
+#ifndef DEVICE_USES_OLD_IMPLEMENTATION
     auto path = std::format("/data/vendor_de/{}/fpdata/", userId);
+#else
+    auto path = std::format("/data/system/users/{}/fpdata", userId);
+#endif
     mDevice->set_active_group(mDevice, mUserId, path.c_str());
 }
 
