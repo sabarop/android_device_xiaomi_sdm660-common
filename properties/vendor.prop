@@ -164,6 +164,9 @@ debug.hwui.target_cpu_time_percent=30
 # Incremental FS
 ro.incremental.enable=true
 
+# Launcher
+ro.launcher.blur.appLaunch=0
+
 # Media
 vidc.enc.dcvs.extra-buff-count=2
 
