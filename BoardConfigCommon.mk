@@ -106,7 +106,6 @@ HWUI_COMPILE_FOR_PERF := true
 USE_OPENGL_RENDERER := true
 
 # Init
-TARGET_INIT_VENDOR_LIB := //$(COMMON_PATH):libinit_sdm660
 TARGET_RECOVERY_DEVICE_MODULES := libinit_sdm660
 
 # Partitions

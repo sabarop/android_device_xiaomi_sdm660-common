@@ -283,6 +283,8 @@ PRODUCT_PACKAGES += \
     ueventd.qcom.rc \
     apex_metadata.rc
 
+$(call soong_config_set,libinit,vendor_init_lib,//$(LOCAL_PATH):libinit_sdm660)
+
 # IPACM
 PRODUCT_PACKAGES += \
     ipacm \
