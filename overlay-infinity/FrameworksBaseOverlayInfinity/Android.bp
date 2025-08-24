@@ -1,0 +1,4 @@
+runtime_resource_overlay {
+    name: "FrameworksBaseSDM660OverlayInfinity",
+    vendor: true
+}
