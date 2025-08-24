@@ -109,12 +109,12 @@ vendor/etc/cne/wqeclient/VZW/VZW_profile5.xml|f76c894f3c6d5b6ed35113a088dc3174c9
 vendor/etc/cne/wqeclient/VZW/VZW_profile6.xml|14d136e7fcc682311757d3edc0b9d3eaeba11815
 vendor/etc/default-permissions/com.qualcomm.qti.cne.xml|c63c37d067e3009735fbc54d4603d43d7d6623e1
 vendor/etc/init/cnd.rc|3a5183df3479500fb729493bc56c71166fc10bce
-vendor/lib64/libcne.so|646dbdf7f6990fb149fb9574f11792375ba1f64e
+vendor/lib64/libcne.so;DISABLE_CHECKELF|646dbdf7f6990fb149fb9574f11792375ba1f64e
 vendor/lib64/libcneapiclient.so|b6479678e5b0e8b46d8df5eb8bd610aa17be00d0
 vendor/lib64/libcneoplookup.so|60d6abe85061de4fa75e5e4f69d477f37f1f8f64
 vendor/lib64/libcneqmiutils.so|c2e2658698eb8b312ca6b28c1a1088a331bb28b9
 vendor/lib64/libwms.so|dec22344895622ed1526e6c8cbb66c96e71e8f69
-vendor/lib64/libwqe.so|212fae71ae5ae83f2d2c92297990e1b725a7e926
+vendor/lib64/libwqe.so;DISABLE_CHECKELF|212fae71ae5ae83f2d2c92297990e1b725a7e926
 vendor/lib64/libxml.so|11c11c2fb6b713855532a3709f78935f8c98a766
 vendor/lib64/vendor.qti.data.factory@2.0.so|748bfbaa57a409b8962e2b1725e1415e423a7315
 vendor/lib64/vendor.qti.data.factory@2.1.so|bb1f3fa22563282ee24bf03ca681fdc45551feef
@@ -169,19 +169,19 @@ system_ext/lib64/vendor.qti.diaghal@1.0.so|abe51fdbdcbf3449012395cf0ade8aa8d267d
 system_ext/priv-app/dpmserviceapp/dpmserviceapp.apk|901da1e070e54e5757874473022df0161ac4818b
 vendor/bin/dpmQmiMgr|b1b5f8a54bc99a2e1cf4b36ba40e58bdf0580178
 vendor/etc/init/dpmQmiMgr.rc|1538743661a5c48c15cd105beaad20f72953885a
-vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so|d9f1aa7f93b928f42499d613d20ccbc60f279097
+vendor/lib64/com.qualcomm.qti.dpm.api@1.0.so;MODULE_SUFFIX=_vendor|d9f1aa7f93b928f42499d613d20ccbc60f279097
 vendor/lib64/libdpmqmihal.so|41eb89e66ba065c43a5eb79cd3c72cef0ee167aa
 
 # Dirac - from Xiaomi
 vendor/etc/diracmobile.config|88fa19095df9e256f0af510df266f749bf60e258
 vendor/etc/diracvdd.bin|b54270d4f44acc2bb2be8e1cdb3e54fb2c6be07b
 vendor/lib/libDiracAPI_SHARED.so|42b49679d38eca93fead05ea06ddbdc8108fd4b1
-vendor/lib/soundfx/libdirac.so|f63826a905b520fa524e4c1b147be7cf65240953
+vendor/lib/soundfx/libdirac.so;DISABLE_CHECKELF|f63826a905b520fa524e4c1b147be7cf65240953
 
 # DRM - from S62Pro
 vendor/bin/qseecomd|97eeb3f297d16e0364e73f8e78ccb7a07e70f093
 vendor/lib/libQSEEComAPI.so|14d85d1661f11fed27a99f618370de21abfbf1b9
-vendor/lib/libsdedrm.so|752fa74723368e6bde29cbf004fe31d6f33ceb97
+vendor/lib/libsdedrm.so;DISABLE_CHECKELF|752fa74723368e6bde29cbf004fe31d6f33ceb97
 vendor/lib64/libGPreqcancel.so|b9efbc8623981e1249ad0a0f8964b2b655d2b334
 vendor/lib64/libGPreqcancel_svc.so|5369bb41c214c0bd3782438c0488cd2dba8cb667
 vendor/lib64/libQSEEComAPI.so|7ad0a71938c1de5dbb54a52fb68285ac08f0a130
@@ -191,7 +191,7 @@ vendor/lib64/libdrmfs.so|d01f7964b64bfabd56afea030a2e874f5b3af266
 vendor/lib64/libdrmtime.so|9aca2a5224378365232933b06a742a2498dd7468
 vendor/lib64/libqisl.so|c79719eebc094c2af9561e8df2c158638b111b70
 vendor/lib64/librpmb.so|eac8411b60e4842b0fee4c9145dd9cdc3e24a67e
-vendor/lib64/libsdedrm.so|f02d7bef5f9fa3f1265b5a8b3b8ab481a4cedee2
+vendor/lib64/libsdedrm.so;DISABLE_CHECKELF|f02d7bef5f9fa3f1265b5a8b3b8ab481a4cedee2
 vendor/lib64/libsecureui_svcsock.so|6af612f057f4f28720d6db9b300b58c883da6539
 vendor/lib64/libssd.so|774488b88c37053067b3cad551ac95360c03edd3
 
@@ -203,11 +203,11 @@ vendor/lib/vendor.qti.hardware.dsp@1.0.so|f902e821229cd1fff50ebfba99b0a068cbf74a
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|223a9268bd92bd80dab3df02fbef38ea86bcbadd
 
 # FM - from S62Pro
-vendor/lib64/vendor.qti.hardware.fm@1.0.so|f6e23f902b7e15232b20af55161a24da93ffe25f
+vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor|f6e23f902b7e15232b20af55161a24da93ffe25f
 
 # GPS - from jasmine
 vendor/bin/loc_launcher|d0d1465a7f8eb24c50b3c616dccaf68b3dc7888a
-vendor/bin/lowi-server|6f11d0315e49aff2d8b24759bf7b2ca12659ac10
+vendor/bin/lowi-server;DISABLE_DEPS|6f11d0315e49aff2d8b24759bf7b2ca12659ac10
 vendor/bin/slim_daemon|46c8844febb57ad741b38b26b26cadbb3b436cc9
 vendor/bin/xtra-daemon|ebcb5645b3f1058f0775a145dc462dc27550919d
 vendor/etc/vintf/manifest/vendor.qti.gnss@3.0-service.xml|9b2f6691d6c224bcb9ab9a0d57adfb9e52f1b53e
@@ -318,8 +318,8 @@ system_ext/lib64/libmmosal.so|d0f37596108fb90b129edec4c6e8ba3648733498
 vendor/lib/libI420colorconvert.so|c8e9a1fb33ae50f5b29c892c6edca2f7d9524af5
 vendor/lib/libdsd2pcm.so|f9d2f26315764c27137bc375bb85b20fabe66ff9
 vendor/lib/libmm-color-convertor.so|063b3772fb4c5b85877c35a50e667540cde0c7d6
-vendor/lib/libmmosal.so|a2203f5be5dc1ee10d2f5da8f167a46acb0a660e
-vendor/lib64/libmmosal.so|595faff0767dc2bd0a344a98ab65a239bed14826
+vendor/lib/libmmosal.so;MODULE_SUFFIX=_vendor|a2203f5be5dc1ee10d2f5da8f167a46acb0a660e
+vendor/lib64/libmmosal.so;MODULE_SUFFIX=_vendor|595faff0767dc2bd0a344a98ab65a239bed14826
 
 # Mlipay - from wayne V11.0.3.0.PDCCNXM
 vendor/bin/mlipayd@1.1|4c30cfd1b32f99ff3043eadca8e7a4b7b9a00c79
@@ -332,7 +332,7 @@ vendor/bin/msm_irqbalance|e917104fbd26c844d27ffb2b7ec4f665fdfb8b78
 
 # Peripheral manager - from jasmine
 vendor/bin/pm-proxy|bc4e972e3fe595b973197efe5114da8ff4339a59
-vendor/bin/pm-service|b0f77edfe04a3cc6284738196c0044e676d5eeb3
+vendor/bin/pm-service;DISABLE_CHECKELF|b0f77edfe04a3cc6284738196c0044e676d5eeb3
 vendor/lib64/libperipheral_client.so|a0dd574c8af3135adae10ef49065fa765906db7a
 
 # Postprocessing - from S62Pro
@@ -446,7 +446,7 @@ vendor/lib64/libril-qc-hal-qmi.so|73cb43f5628dd2536d6c3a3a0ec047225fcbe4cc
 vendor/lib64/libril-qc-logger.so|5622a5aa1eb7fc6c6241c0033e27272084d235c6
 vendor/lib64/libril-qc-ltedirectdisc.so|b3990ccf919b742b9a756654bfaf9d23682ff1db
 vendor/lib64/libril-qc-radioconfig.so|3d5f05676715998eecb3f19642f24d867e4e5f6a
-vendor/lib64/libril-qcril-hook-oem.so|1536b0a3bccdc1dcc06512248c14238a3405aaeb
+vendor/lib64/libril-qcril-hook-oem.so;DISABLE_CHECKELF|1536b0a3bccdc1dcc06512248c14238a3405aaeb
 vendor/lib64/librilqmiservices.so|0e9b4d4f71e2d3d9e2375bff210765ef5a741c70
 vendor/lib64/libsettings.so|9d8b1850e0dc0452b1b96e77045adab2f13270b2
 vendor/lib64/libsystem_health_mon.so|2cc55d78ea00b9fe8af9cd88fd8ef8c31ee5f494
@@ -488,7 +488,7 @@ system_ext/lib64/libimscamera_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/l
 system_ext/lib64/libimsmedia_jni.so;SYMLINK=system_ext/priv-app/ims/lib/arm64/libimsmedia_jni.so|f8be2575f8eaef8bb89a4bc049381ebffe857831
 system_ext/priv-app/ims/ims.apk|91c8e9b96882063769ef0a27ac9ea2627e8a8436
 vendor/bin/ims_rtp_daemon|fbec6a715d54e31c3833799386f8954b1b83b1d1
-vendor/bin/imsdatadaemon|36738383eb8e711adf94f1bc09dee50b78c747f6
+vendor/bin/imsdatadaemon;DISABLE_CHECKELF|36738383eb8e711adf94f1bc09dee50b78c747f6
 vendor/bin/imsqmidaemon|5fde955e71392479b2f3e6aaf6005fa54b618678
 vendor/bin/imsrcsd|bf29aac14856f29268c01599e5f6c7c6ae520685
 vendor/etc/init/ims_rtp_daemon_legacy.rc|104b2a879db4d3dd44e74a3d7f6e69f6972c9129
