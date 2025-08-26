@@ -20,6 +20,17 @@ if [ ! -f "${HELPER}" ]; then
 fi
 source "${HELPER}"
 
+function vendor_imports() {
+    cat <<EOF >>"$1"
+		"device/xiaomi/sdm660-common",
+		"hardware/qcom-caf/msm8996",
+		"hardware/qcom/wlan/legacy",
+		"hardware/xiaomi",
+		"vendor/qcom/opensource/dataservices",
+		"vendor/qcom/opensource/display",
+EOF
+}
+
 # Initialize the helper for common
 setup_vendor "${DEVICE_COMMON}" "${VENDOR}" "${ANDROID_ROOT}" true
 
