@@ -133,23 +133,29 @@ vendor/lib64/vendor.qti.hardware.data.qmi@1.0.so|851db5940d5e9e4330e16221be114ae
 vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so|000e0d2ac4450c0ad8baca06985bc9065e119f1e
 vendor/lib64/vendor.qti.latency@2.0.so|60ab3143325e855f8c72e3f603c28efe2e7227b9
 
-# Dolby
-vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service
-vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc
-vendor/etc/media_codecs_dolby_audio.xml
-vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml
-vendor/lib/libdapparamstorage.so
-vendor/lib/libdeccfg.so
-vendor/lib/libstagefright_soft_ac4dec.so
-vendor/lib/libstagefright_soft_ddpdec.so
+# ConsumerIR (lirc) - from jason V12.0.1.0.PCHCNXM
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.lirc.sdm660.so|2c60e2cfc2ded7335dcd3d294393e4c564d02621
+
+# ConsumerIR (spi) - from jasmine V11.0.28.0.QDIMIXM
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.spi.sdm660.so|f086cf79cff5624554e3bfb67d44386b94578c4b
+
+# Dolby - from nabu_global-user 13 RKQ1.200826.002 V816.0.1.0.TKXMIXM release-keys
+vendor/bin/hw/vendor.dolby.hardware.dms@2.0-service|8135f86a958b701617f1c33f2b5b54b2958aa0db
+vendor/etc/init/vendor.dolby.hardware.dms@2.0-service.rc|29296ebfe89b2697fec573be73cc3757fd97bed6
+vendor/etc/media_codecs_dolby_audio.xml|a794eb15fc198d0285510260025cd99b53fa174f
+vendor/etc/vintf/manifest/manifest_vendor.dolby.hardware.dms.xml|c8095f649de19b80271fb429b4b6b439297a0678
+vendor/lib/libdapparamstorage.so|1f95652cfc889b66a0eb6bc3d71f647851f41c3d
+vendor/lib/libdeccfg.so|7fced6479c0f12d7585b43c9550fdb14e1a3578c
+vendor/lib/libstagefright_soft_ac4dec.so|dfe44b5c576e9bf29e21c0ee8c8519ff3ed92ffd
+vendor/lib/libstagefright_soft_ddpdec.so|b8d55a6362b691b8c1c585ea9ef11f23c653878a
 vendor/lib/soundfx/libswdap.so|810d0e266e4a77f06cba72fe8bdde2e1ede4f9f9
-vendor/lib/soundfx/libswgamedap.so
-vendor/lib/soundfx/libswvqe.so
-vendor/lib/vendor.dolby.hardware.dms@2.0.so
-vendor/lib64/libdapparamstorage.so
-vendor/lib64/libdlbdsservice.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so
-vendor/lib64/vendor.dolby.hardware.dms@2.0.so
+vendor/lib/soundfx/libswgamedap.so|aa7fc2b58c2fdd90d54f38066ce22b0c3df61c5f
+vendor/lib/soundfx/libswvqe.so|53071c6436a3847a539b2bb1afb301cdf068bb7a
+vendor/lib/vendor.dolby.hardware.dms@2.0.so|da5277dbeded94c17cf2cbc0f3412b3fcd475f58
+vendor/lib64/libdapparamstorage.so|85e56a8415e0bd4033fa6b770f8dac580d6983de
+vendor/lib64/libdlbdsservice.so|790f19c8e1ac1d5390ffec4745d0585d84fd3350
+vendor/lib64/vendor.dolby.hardware.dms@2.0-impl.so|837272d231c9a2de863653c486acf8aee1c04d30
+vendor/lib64/vendor.dolby.hardware.dms@2.0.so|0ca0f1a99ea973b4977a60a8a94b8ddd03635531
 
 # DPM - from S62Pro
 system_ext/bin/dpmd|4662a11c5331919cc08d541a298444ffce18cc1b
@@ -203,6 +209,10 @@ vendor/lib/vendor.qti.hardware.dsp@1.0.so|f902e821229cd1fff50ebfba99b0a068cbf74a
 vendor/lib64/vendor.qti.hardware.dsp@1.0.so|223a9268bd92bd80dab3df02fbef38ea86bcbadd
 
 # FM - from S62Pro
+system/lib64/fm_helium.so:system_ext/lib64/fm_helium.so|b2440e4feaae8a7f5e2269525520f9774b6962fc
+system/lib64/libfm-hci.so:system_ext/lib64/libfm-hci.so|758c6e7cfafc964b5cd9d71806ec5455e0d78716
+product/lib64/vendor.qti.hardware.fm@1.0.so:system_ext/lib64/vendor.qti.hardware.fm@1.0.so|5eaf6d5d67361ff6236c1ec4f5225c6185a904a6
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|05931b5d088bd7000b0b002ee650b0953e272cd7
 vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor|f6e23f902b7e15232b20af55161a24da93ffe25f
 
 # GPS - from jasmine
@@ -310,8 +320,8 @@ vendor/lib/liblistensoundmodel2.so|375948b769905112429ae4fb2979be0b1e363950
 vendor/lib/libsmwrapper.so|0fbf611c9a597f7c70bfd2363dfc7f465d1dafd5
 
 # Media - from S62Pro RKQ1.210406.002
-lib/libFileMux.so|22005fb1595b2b76e199b82ff3790c1bc3d54a20
-lib/libOmxMux.so|66ccc804301bccfbd17afb39a60131dd1a3fa9bc
+system/lib/libFileMux.so|22005fb1595b2b76e199b82ff3790c1bc3d54a20
+system/lib/libOmxMux.so|66ccc804301bccfbd17afb39a60131dd1a3fa9bc
 system_ext/lib/libmmosal.so|d6e37a06ba103cd55208d74c32be47cea84d4009
 system_ext/lib/libmmparser_lite.so|bc55c2911e7283992c8c2c67f651577743430fb6
 system_ext/lib64/libmmosal.so|d0f37596108fb90b129edec4c6e8ba3648733498
@@ -332,7 +342,7 @@ vendor/bin/msm_irqbalance|e917104fbd26c844d27ffb2b7ec4f665fdfb8b78
 
 # Peripheral manager - from jasmine
 vendor/bin/pm-proxy|bc4e972e3fe595b973197efe5114da8ff4339a59
-vendor/bin/pm-service;DISABLE_CHECKELF|b0f77edfe04a3cc6284738196c0044e676d5eeb3
+vendor/bin/pm-service;DISABLE_CHECKELF|ea63802cf0483ee4ed2a6611ba7f1d0f36970c06
 vendor/lib64/libperipheral_client.so|a0dd574c8af3135adae10ef49065fa765906db7a
 
 # Postprocessing - from S62Pro
@@ -535,7 +545,7 @@ vendor/lib64/vendor.qti.imsrtpservice@3.0-service-Impl.so|a5f9d28f7adbfbf349e6f5
 vendor/lib64/vendor.qti.imsrtpservice@3.0.so|460e589128fce0b0e83bb3c75aa32f7e1a9494fd
 
 # Soter - from jason V12.0.1.0.PCHCNXM
-app/SoterService/SoterService.apk|c6c6063f83588db6c572779624458a4d1f094213
+system/app/SoterService/SoterService.apk|c6c6063f83588db6c572779624458a4d1f094213
 
 # Soter - from jasmine
 vendor/bin/hw/vendor.qti.hardware.soter@1.0-service|4f7e3c8a6cde9efefd8b9bf440fb1ed442e21fd3
