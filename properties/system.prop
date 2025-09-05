@@ -90,6 +90,7 @@ ro.lmk.thrashing_limit_decay=50
 ro.lmk.lowmem_min_oom_score=801
 ro.lmk.use_psi=true
 ro.lmk.use_minfree_levels=false
+ro.lmk.use_new_strategy=true
 
 # Logs
 persist.log.tag.AnalyticsService=S
