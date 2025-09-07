@@ -73,6 +73,11 @@ DEVICE_FRAMEWORK_COMPATIBILITY_MATRIX_FILE := \
     hardware/xiaomi/vintf/xiaomi_framework_compatibility_matrix.xml \
     vendor/lineage/config/device_framework_matrix.xml
 DEVICE_MANIFEST_FILE := $(COMMON_PATH)/manifest.xml
+ifeq ($(filter clover,$(TARGET_DEVICE)),)
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest-ds.xml
+else
+DEVICE_MANIFEST_FILE += $(COMMON_PATH)/manifest-ss.xml
+endif
 DEVICE_MATRIX_FILE := hardware/qcom-caf/common/compatibility_matrix.xml
 
 # Init
