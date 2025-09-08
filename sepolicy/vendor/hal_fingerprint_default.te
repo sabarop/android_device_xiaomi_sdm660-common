@@ -14,6 +14,7 @@ allow hal_fingerprint_default fingerprintd_data_file:file create_file_perms;
 allow hal_fingerprint_default sysfs_fingerprint:file rw_file_perms;
 
 allow hal_fingerprint_default self:netlink_socket create_socket_perms_no_ioctl;
+allow hal_fingerprint_default sysfs_sectouch:dir search;
 
 allow hal_fingerprint_default hal_perf_hwservice:hwservice_manager find;
 binder_call(hal_fingerprint_default, hal_perf_default)
