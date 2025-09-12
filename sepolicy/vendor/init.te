@@ -1,3 +1,4 @@
 allow init apex_metadata_file:dir { getattr search };
 set_prop(init, bluetooth_prop)
 set_prop(init, vendor_qcom_ims_prop)
+allow init adsprpcd_file:file mounton;
