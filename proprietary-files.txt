@@ -1,4 +1,5 @@
 # jasmine package version: V11.0.28.0.QDIMIXM, unless stated otherwise
+# lavender package version: V12.5.7.0.QFGCNXM, unless stated otherwise
 # Cat S62Pro package version: sdm660_64-user 11 RKQ1.210406.002 1.015.00, unless stated otherwise
 
 # libadsp_hvx_callback_skel and libadsp_hvx_stub depend on device specific camera lib, libmmcamera_dbg
@@ -330,11 +331,11 @@ vendor/lib/libmm-color-convertor.so|063b3772fb4c5b85877c35a50e667540cde0c7d6
 vendor/lib/libmmosal.so;MODULE_SUFFIX=_vendor|a2203f5be5dc1ee10d2f5da8f167a46acb0a660e
 vendor/lib64/libmmosal.so;MODULE_SUFFIX=_vendor|595faff0767dc2bd0a344a98ab65a239bed14826
 
-# Mlipay - from wayne V11.0.3.0.PDCCNXM
-vendor/bin/mlipayd@1.1|4c30cfd1b32f99ff3043eadca8e7a4b7b9a00c79
+# Mlipay - from lavender
+vendor/bin/mlipayd@1.1|a8cd2b8e51a1e8bd1325847b607f81e4f5600f2f
 vendor/etc/init/vendor.xiaomi.hardware.mlipay@1.1-service.rc|b5ab5bcd031fe4d9781b5911c0595eaeac8b80ea
-vendor/lib64/libmlipay.so|c988ff04fcd90621cf46d219bdbc7eef341d1ce6
-vendor/lib64/libmlipay@1.1.so|7d07b19faa36c62babf39a41b2baf8de370d706c
+vendor/lib64/libmlipay.so|c3589fa6bae9a78c622a768e65eac07ac8da6d9c
+vendor/lib64/libmlipay@1.1.so|d56a1f39930bc44891a22fc5490efe6aa0eb4a2c
 
 # Perf - from jasmine
 vendor/bin/msm_irqbalance|e917104fbd26c844d27ffb2b7ec4f665fdfb8b78
