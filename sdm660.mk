@@ -117,8 +117,7 @@ TARGET_BOOTANIMATION_SIZE := 1080p
 PRODUCT_PACKAGES += \
     Aperture \
     android.hardware.camera.device@3.5 \
-    android.hardware.camera.provider@2.4-impl \
-    android.hardware.camera.provider@2.4-service \
+    android.hardware.camera.provider-service_32.lineage \
     android.hardware.camera.provider@2.6 \
     libcamera_metadata.vendor \
     libexif.vendor \
