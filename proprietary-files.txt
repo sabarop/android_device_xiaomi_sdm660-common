@@ -464,7 +464,7 @@ vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so|cfd777100db61dd183e7e4ba644150f
 
 # DRM (Widevine) - from Honeywell/hon660/hon660:13/96.00.01/0022:user/release-keys
 vendor/bin/hw/android.hardware.drm-service.widevine|dbc47d0c8f32fe5a3e37667e8f6dd5ffa6921801
-vendor/etc/init/android.hardware.drm-service.widevine.rc|54c79ef531c9c135fa234a8515b3d37f0e1ccc4d
+vendor/etc/init/android.hardware.drm-service.widevine.rc|54c79ef531c9c135fa234a8515b3d37f0e1ccc4d|54e6d444a863b6401564cd2acd3652f60cae105b
 vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml|7e13b6628572b1cdd76351b744e2805d4e6f2dd9
 vendor/lib64/libwvaidl.so|a9365542ffe4db4578488993c8fc3453f1d8dabd
 
