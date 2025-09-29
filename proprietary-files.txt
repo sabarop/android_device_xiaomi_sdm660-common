@@ -161,11 +161,11 @@ vendor/lib64/libbt-hidlclient.so|4f238bb08d5dbab9c018d03e47d4f2d43e667532
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.0.so|475311f05f103b23654253e1dc86bdc5fcc8809a
 vendor/lib64/vendor.qti.hardware.bluetooth_sar@1.1.so|f191bd8bb067e57a06af89ce2f9a9ea703bb2516
 
-# Capability Configstore - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
-system_ext/framework/vendor.qti.hardware.capabilityconfigstore-V1.0-java.jar|17968ba47efae893689efba17b9d75a8b22bc68c
-vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|a24eb9dbb746b62bcb40e438cf0063dad6ca5f87
+# Capability Configstore - from Honeywell/hon660/hon660:13/96.00.01/0022:user/release-keys
+system_ext/framework/vendor.qti.hardware.capabilityconfigstore-V1.0-java.jar|68e473d8fb0afd2130d49f3ca40f9fd04633740e
+vendor/bin/hw/vendor.qti.hardware.capabilityconfigstore@1.0-service|ce78619dbe258d98ef5d0f124f3a6e857576fe54
 vendor/etc/init/vendor.qti.hardware.capabilityconfigstore@1.0-service.rc|4ede0250585a44b01d351bbc301d7a13cc3d783d
-vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|d73d79009877d54a7f9014d3e0fdc41339b07ef1
+vendor/lib64/hw/vendor.qti.hardware.capabilityconfigstore@1.0-impl.so|b5d6142a9c2ef90c14e269fdf141fbe1afaa9469
 
 # CDSP - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
 vendor/bin/cdsprpcd|258702b84c4496e7021c1d24d20794f6d2fedc11
