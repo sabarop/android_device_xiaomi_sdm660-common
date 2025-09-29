@@ -1117,6 +1117,6 @@ vendor/lib64/libtime_genoff.so|1c2de2c94be03bba76cfcf56637037e680d1785d
 vendor/bin/time_daemon|22bc64c60ba3c60ae91b1dbd68eed75eff6e12e3
 vendor/etc/init/init.time_daemon.rc|b253ca2a498757e14e1d7a051bf504ae09218f51
 
-# Wifi - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
-vendor/bin/cnss-daemon|60f5ddae32675b6f4587f5fc07c1cf0d23fa8611
+# Wifi - from Honeywell/hon660/hon660:13/96.00.01/0022:user/release-keys
+vendor/bin/cnss-daemon|57ebe3ed29759bd3ddc105db29fcf360a56ebc08
 
