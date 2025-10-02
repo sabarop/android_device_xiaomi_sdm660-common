@@ -44,6 +44,8 @@ lib_fixups: lib_fixups_user_type = {
 }
 
 blob_fixups: blob_fixups_user_type = {
+    'vendor/etc/seccomp_policy/imsrtp.policy': blob_fixup()
+        .regex_replace('socket: 1\n', ''),
     ('vendor/lib64/hw/consumerir.lirc.sdm660.so', 'consumerir.spi.sdm660.so'): blob_fixup()
         .fix_soname(),
     'vendor/bin/pm-service': blob_fixup()
