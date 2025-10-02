@@ -193,10 +193,6 @@ PRODUCT_PACKAGES += \
 # Dynamic Partition
 PRODUCT_USE_DYNAMIC_PARTITIONS := true
 
-# Fingerprint
-PRODUCT_PACKAGES += \
-    android.hardware.biometrics.fingerprint-service.xiaomi_sdm660
-
 # Fastbootd
 PRODUCT_PACKAGES += \
     fastbootd
