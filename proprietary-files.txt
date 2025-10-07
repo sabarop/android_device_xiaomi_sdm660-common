@@ -626,19 +626,19 @@ system_ext/lib64/vendor.display.color@1.1.so;MODULE_SUFFIX=_system_ext|6a033c803
 system_ext/lib64/vendor.display.color@1.2.so;MODULE_SUFFIX=_system_ext|21527bf2f63e98ef27f9739804b760c59509b6b2
 system_ext/lib64/vendor.display.postproc@1.0.so;MODULE_SUFFIX=_system_ext|7c89073b693db96036fc18817bbbd2043e90794e
 
-# Graphics (Postprocessing) - from Zebra/helios/helios:13/13-32-14.00-TG-U02-STD-HEL-04/163:user/release-keys
-vendor/bin/hw/vendor.display.color@1.0-service|f21f110b890278b94616b40a83277426c07bfcef
-vendor/bin/mm-pp-dpps|8a3c5968edaf259a982e99455ffd9b34168237a6
+# Graphics (Postprocessing) - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
+vendor/bin/hw/vendor.display.color@1.0-service|fdccaf00679a2cc64e6bf66d323a01ff083ce79e
+vendor/bin/mm-pp-dpps|bf0892746c71592731e0b9ca72cdfe5316f4b13b
 vendor/etc/init/vendor.display.color@1.0-service.rc|5ad673f879b3685a0e79b5633437e5499cb94f48
-vendor/lib/vendor.display.color@1.0.so|4cfc58d5531fe2a8583f9f4057a922cbe7fa553d
-vendor/lib/vendor.display.color@1.1.so|0ee913ec1db6386e0ceca73e1472fd3b16fa7abf
-vendor/lib/vendor.display.color@1.2.so|f8e3c3352dabcf3967ac7a13ca5e378c6e313104
-vendor/lib/vendor.display.postproc@1.0.so|cb6c568f3678154bcf86b24e7e3b11f16da1728b
-vendor/lib64/libdisp-aba.so|9ce877f02ff7fd2b429aebe7c8e95a0c969c395d
-vendor/lib64/vendor.display.color@1.0.so|b502506db34c16d613dc1bcd6d1c5a4098435e21
-vendor/lib64/vendor.display.color@1.1.so|65409342ecea5cfa2103a4ab0b6380ef691e2888
-vendor/lib64/vendor.display.color@1.2.so|ada5c4d7907fe649dda8507c8c6fe63c50ae1e10
-vendor/lib64/vendor.display.postproc@1.0.so|408b4edd234e9da45ab55d64950af8b58ca5e6bf
+vendor/lib/vendor.display.color@1.0.so|5e90bac8dbb027c82f044b33d74e08c66be18691
+vendor/lib/vendor.display.color@1.1.so|80d8951b59e0ebd05dd1d4af821ef7824b331c2d
+vendor/lib/vendor.display.color@1.2.so|5e616097df2189f7196e7170d2543d599c3a26a2
+vendor/lib/vendor.display.postproc@1.0.so|43e373600ca7a6332e8273714c96568741beb840
+vendor/lib64/libdisp-aba.so|e1dc89192ef58160a4b30210345fb8e09e22898e
+vendor/lib64/vendor.display.color@1.0.so|d4bef738354e70dd93196e1c6bc2e523d7b723f2
+vendor/lib64/vendor.display.color@1.1.so|027ec899c7e85b18cdc809d2e71a01fe088429fc
+vendor/lib64/vendor.display.color@1.2.so|f4279bde2b96ed2f3f77af45eb54bc1e8db6be30
+vendor/lib64/vendor.display.postproc@1.0.so|3f2dcc8a1169dd0f1981d2e5d33e3fe26719b7e8
 
 # Graphics (SDM) - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
 system/lib/libsdm-disp-apis.so|369c71b84355d1775cec271b19283721dbfbac63
