@@ -325,9 +325,7 @@ system/lib/libOmxMux.so|66ccc804301bccfbd17afb39a60131dd1a3fa9bc
 system_ext/lib/libmmosal.so|d6e37a06ba103cd55208d74c32be47cea84d4009
 system_ext/lib/libmmparser_lite.so|bc55c2911e7283992c8c2c67f651577743430fb6
 system_ext/lib64/libmmosal.so|d0f37596108fb90b129edec4c6e8ba3648733498
-vendor/lib/libI420colorconvert.so|c8e9a1fb33ae50f5b29c892c6edca2f7d9524af5
 vendor/lib/libdsd2pcm.so|f9d2f26315764c27137bc375bb85b20fabe66ff9
-vendor/lib/libmm-color-convertor.so|063b3772fb4c5b85877c35a50e667540cde0c7d6
 vendor/lib/libmmosal.so;MODULE_SUFFIX=_vendor|a2203f5be5dc1ee10d2f5da8f167a46acb0a660e
 vendor/lib64/libmmosal.so;MODULE_SUFFIX=_vendor|595faff0767dc2bd0a344a98ab65a239bed14826
 
