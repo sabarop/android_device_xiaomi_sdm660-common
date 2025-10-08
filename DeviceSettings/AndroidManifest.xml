@@ -34,7 +34,6 @@
             android:exported="true">
             <intent-filter android:priority="999">
                 <action android:name="android.intent.action.BOOT_COMPLETED" />
-                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
 
                 <category android:name="android.intent.category.DEFAULT" />
                 <action android:name="com.android.settings.action.EXTRA_SETTINGS" />
@@ -70,7 +69,7 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
+        
         <activity
             android:name=".speaker.ClearSpeakerActivity" 
             android:exported="false" 
@@ -98,10 +97,5 @@
                     android:name="android.service.quicksettings.action.QS_TILE"/>
             </intent-filter>
         </service>
-
-        <service
-            android:name=".DiracService"
-            android:enabled="true"
-            android:stopWithTask="false" />
     </application>
 </manifest>
