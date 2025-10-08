@@ -378,6 +378,7 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     CarrierConfigSDM660Overlay \
     CellBroadcastReceiverSDM660Overlay \
+    DeviceAsWebcamSDM660 \
     FrameworksBaseSDM660Overlay \
     SettingsProviderSDM660Overlay \
     SystemUISDM660Overlay \
