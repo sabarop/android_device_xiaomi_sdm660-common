@@ -143,10 +143,6 @@ PRODUCT_COPY_FILES += \
 # DebugFS
 PRODUCT_SET_DEBUGFS_RESTRICTIONS := true
 
-# DeviceSettings
-PRODUCT_PACKAGES += \
-   DeviceSettings
-
 # DeviceDoze
 PRODUCT_PACKAGES += \
     XiaomiDoze
