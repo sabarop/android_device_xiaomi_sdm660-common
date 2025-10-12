@@ -217,6 +217,7 @@ cc_binary {
         "vendor.qti.hardware.display.allocator@4.0",
         "vendor.qti.hardware.display.mapper@3.0",
         "vendor.qti.hardware.display.mapper@4.0",
+        "android.frameworks.sensorservice@1.0",
         "android.hardware.graphics.mapper@4.0",
         "android.hardware.graphics.mapper@3.0",
         "android.hardware.graphics.mapper@2.1",
