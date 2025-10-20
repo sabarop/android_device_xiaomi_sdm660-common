@@ -1,0 +1,8 @@
+# FM - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
+system_ext/lib/fm_helium.so|9dcc6c00773cd148f8503f2e742076b3a430b616
+system_ext/lib64/fm_helium.so|d64573b7a5b567bd9ee605d67b40357d55daf747
+system_ext/lib/libfm-hci.so|1eaa67710031929f9c451d08aa728aab1fa0ea47
+system_ext/lib64/libfm-hci.so|13752c0da7302c0cc4ae4a3006a991f47e3bc509
+system_ext/lib/vendor.qti.hardware.fm@1.0.so|5931d3294918972dce2ebba6be017b953359c890
+system_ext/lib64/vendor.qti.hardware.fm@1.0.so|86c85a52c3a0025c258f5377f15f66788b54a843
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so;MODULE_SUFFIX=_vendor|d4025a178a559d3a72f29d57d2404561cdccf48a

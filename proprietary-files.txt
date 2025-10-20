@@ -362,12 +362,6 @@ vendor/lib64/vendor.qti.hardware.slmadapter@1.0.so;MODULE_SUFFIX=_vendor|250dd0e
 vendor/lib64/vendor.qti.latency@2.0.so;MODULE_SUFFIX=_vendor|adb1c9e473a274828c1c25d1634674be722b2999
 vendor/lib64/vendor.qti.latency@2.1.so;MODULE_SUFFIX=_vendor|89c180755e0b99a5c726f80cdfa083dbed2387f2
 
-# ConsumerIR (lirc) - from jason V12.0.1.0.PCHCNXM
-vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.lirc.sdm660.so|2c60e2cfc2ded7335dcd3d294393e4c564d02621
-
-# ConsumerIR (spi) - from jasmine V11.0.28.0.QDIMIXM
-vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.spi.sdm660.so|f086cf79cff5624554e3bfb67d44386b94578c4b
-
 # DPM - from LA.QISI.16.0.r1-01200-qssi.0
 system/framework/tcmclient.jar|813088785d732feaf5dd66627b8cbc44f0ae4223
 system_ext/bin/dpmd|8d68d3ed507d2e6a6742b04853c6f1ad40c426a4
@@ -477,14 +471,7 @@ vendor/lib64/vendor.qti.esepowermanager@1.0.so|8055d79b9bf871ac33f2bfd5358db0058
 vendor/lib64/vendor.qti.esepowermanager@1.1.so|5a046f91fbbf60818e63be216946225ced0ac288
 
 # FM - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
-system_ext/lib/fm_helium.so|9dcc6c00773cd148f8503f2e742076b3a430b616
-system_ext/lib64/fm_helium.so|d64573b7a5b567bd9ee605d67b40357d55daf747
-system_ext/lib/libfm-hci.so|1eaa67710031929f9c451d08aa728aab1fa0ea47
-system_ext/lib64/libfm-hci.so|13752c0da7302c0cc4ae4a3006a991f47e3bc509
-system_ext/lib/vendor.qti.hardware.fm@1.0.so|5931d3294918972dce2ebba6be017b953359c890
-system_ext/lib64/vendor.qti.hardware.fm@1.0.so|86c85a52c3a0025c258f5377f15f66788b54a843
 vendor/lib/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor|f47f4cc205ac303e745c0acb6c6a1b1cd467e99d
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so;MODULE_SUFFIX=_vendor|d4025a178a559d3a72f29d57d2404561cdccf48a
 vendor/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_vendor|12c1ca37da7c6628f7b09cb3865818f72b8fef68
 
 # Gatekeeper QTI - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
