@@ -19,13 +19,9 @@ from extract_utils.main import (
 
 namespace_imports = [
     'device/xiaomi/sdm660-common',
-    'hardware/qcom-caf/common/libqti-perfd-client',
     'hardware/qcom-caf/sdm660',
     'hardware/qcom-caf/wlan',
     'hardware/xiaomi',
-    'vendor/qcom/opensource/commonsys/display',
-    'vendor/qcom/opensource/commonsys-intf/display',
-    'vendor/qcom/opensource/data-ipa-cfg-mgr-legacy-um',
     'vendor/qcom/opensource/dataservices',
     'vendor/qcom/opensource/display',
 ]
@@ -52,6 +48,8 @@ blob_fixups: blob_fixups_user_type = {
         .fix_soname(),
     'vendor/bin/pm-service': blob_fixup()
         .add_needed('libutils-v33.so'),
+    ('vendor/lib64/hw/consumerir.lirc.sdm660.so', 'consumerir.spi.sdm660.so'): blob_fixup()
+        .fix_soname(),
     'vendor/lib64/libwvhidl.so': blob_fixup()
         .replace_needed('libcrypto.so', 'libcrypto-v33.so'),
 }  # fmt: skip
@@ -62,6 +60,14 @@ module = ExtractUtilsModule(
     blob_fixups=blob_fixups,
     lib_fixups=lib_fixups,
     namespace_imports=namespace_imports,
+)
+
+module.add_proprietary_file('proprietary-files-fm.txt').add_copy_files_guard(
+    'BOARD_HAVE_QCOM_FM', 'true'
+)
+
+module.add_proprietary_file('proprietary-files-ir.txt').add_copy_files_guard(
+    'BOARD_HAVE_IR', 'true'
 )
 
 if __name__ == '__main__':
