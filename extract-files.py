@@ -121,7 +121,6 @@ blob_fixups: blob_fixups_user_type = {
         .fix_soname(),
     'system_ext/lib64/libqxrsplitauxservice.qti.so': blob_fixup()
         .replace_needed('android.media.audio.common.types-V3-cpp.so', 'android.media.audio.common.types-V4-cpp.so')
-        .add_needed('libaudioclient_shim.so')
 }  # fmt: skip
 
 module = ExtractUtilsModule(
