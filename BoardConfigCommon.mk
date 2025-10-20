@@ -181,11 +181,11 @@ TARGET_USES_QCOM_BSP := false
 
 # Recovery
 ifneq ($(filter lavender,$(TARGET_DEVICE)),)
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab_A.qcom
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab_A.qcom
 else ifeq ($(ENABLE_AB), true)
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab_AB.qcom
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab_AB.qcom
 else
-TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/rootdir/etc/fstab.qcom
+TARGET_RECOVERY_FSTAB := $(COMMON_PATH)/init/fstab.qcom
 endif
 
 # Releasetools
