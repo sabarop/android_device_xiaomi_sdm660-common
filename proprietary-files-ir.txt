@@ -1,0 +1,5 @@
+# ConsumerIR (lirc) - from jason V12.0.1.0.PCHCNXM
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.lirc.sdm660.so|2c60e2cfc2ded7335dcd3d294393e4c564d02621
+
+# ConsumerIR (spi) - from jasmine V11.0.28.0.QDIMIXM
+vendor/lib64/hw/consumerir.default.so:vendor/lib64/hw/consumerir.spi.sdm660.so|f086cf79cff5624554e3bfb67d44386b94578c4b
