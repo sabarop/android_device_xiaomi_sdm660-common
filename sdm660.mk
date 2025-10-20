@@ -244,9 +244,7 @@ PRODUCT_PACKAGES += \
     libhidltransport \
     libhidltransport.vendor \
     libhwbinder \
-    libhwbinder.vendor \
-    libhidlbase-v32 \
-    libhidlbase-v32.vendor
+    libhwbinder.vendor
 
 # IDC
 PRODUCT_COPY_FILES += \
