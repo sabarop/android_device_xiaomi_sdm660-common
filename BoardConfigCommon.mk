@@ -141,6 +141,9 @@ BOARD_VNDK_VERSION := current
 # UFFD GC
 OVERRIDE_ENABLE_UFFD_GC := false
 
+# USB
+TARGET_USES_USB_GADGET_HAL := true
+
 # Verity
 # Only needed for signing
 BOARD_AVB_ENABLE := false
