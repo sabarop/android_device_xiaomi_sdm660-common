@@ -667,7 +667,6 @@ PRODUCT_PACKAGES += \
 
 # DeviceSettings
 PRODUCT_PACKAGES += \
-    DeviceSettings \
     XiaomiDolby
 
 # Sign build
