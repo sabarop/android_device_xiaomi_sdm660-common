@@ -105,9 +105,6 @@ vendor/lib64/soundfx/libqcreverb.so|9a0760965c1d1955877befb999733ac4ef07aa2f
 vendor/lib64/soundfx/libqcvirt.so|9733f7123114d1dc3790d63ee70d6228d7f54d66
 vendor/lib64/soundfx/libshoebox.so|c88c36d90d3a54dea8e3ef08114598942810ac28
 
-# Audio FX modules - from lavender QKQ1.190910.002 V12.5.7.0.QFGCNXM
-vendor/lib/soundfx/libmisoundfx.so|569ee2df586e95116b79cfb3d89429f2032a7a76
-
 # Alarm - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
 product/app/PowerOffAlarm/PowerOffAlarm.apk|ec6d75f8cb6c075906a36147a307775a8a9ae856
 system_ext/framework/vendor.qti.hardware.alarm-V1.0-java.jar|2cff0d9993e6f51e7095f43eb71014eea7cd4ea2
