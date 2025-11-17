@@ -803,7 +803,6 @@ if [ "$ProductName" == "msmnile" ] || [ "$ProductName" == "kona" ] || [ "$Produc
       # Enable ZRAM
       # configure_zram_parameters
       configure_read_ahead_kb_values
-      echo 0 > /proc/sys/vm/page-cluster
 else
     arch_type=`uname -m`
 
@@ -888,8 +887,6 @@ else
                 echo 1 > /sys/module/process_reclaim/parameters/enable_process_reclaim
                 echo 50 > /sys/module/process_reclaim/parameters/pressure_min
                 echo 70 > /sys/module/process_reclaim/parameters/pressure_max
-                echo 30 > /sys/module/process_reclaim/parameters/swap_opt_eff
-                echo 512 > /sys/module/process_reclaim/parameters/per_swap_size
                 ;;
             esac
         fi
@@ -900,14 +897,7 @@ else
         echo 1 > /sys/module/process_reclaim/parameters/enable_process_reclaim
         echo 50 > /sys/module/process_reclaim/parameters/pressure_min
         echo 70 > /sys/module/process_reclaim/parameters/pressure_max
-        echo 30 > /sys/module/process_reclaim/parameters/swap_opt_eff
-        echo 0 > /sys/module/process_reclaim/parameters/per_swap_size
-        echo 7680 > /sys/module/process_reclaim/parameters/tsk_nomap_swap_sz
     fi
-
-    # Set allocstall_threshold to 0 for all targets.
-    # Set swappiness to 60 for all targets
-    echo 0 > /sys/module/vmpressure/parameters/allocstall_threshold
 
     # Disable wsf for all targets beacause we are using efk.
     # wsf Range : 1..1000 So set to bare minimum value 1.
