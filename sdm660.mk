@@ -612,8 +612,6 @@ PRODUCT_DEX_PREOPT_BOOT_IMAGE_PROFILE_LOCATION := \
     frameworks/base/boot/boot-image-profile-extra.txt
 
 # Reduce system image size by limiting debug info
-PRODUCT_MINIMIZE_JAVA_DEBUG_INFO := true
-PRODUCT_ART_TARGET_INCLUDE_DEBUG_BUILD := false
 WITH_DEXPREOPT_DEBUG_INFO := false
 USE_DEX2OAT_DEBUG := false
 
