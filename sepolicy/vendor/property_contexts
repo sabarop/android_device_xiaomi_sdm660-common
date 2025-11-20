@@ -113,3 +113,5 @@ vendor.thermal.config                   u:object_r:vendor_thermal_prop:s0
 
 # Thermal
 vendor.thermal.				u:object_r:vendor_thermal_prop:s0
+
+lockscreen.rot_override                 u:object_r:vendor_default_prop:s0
