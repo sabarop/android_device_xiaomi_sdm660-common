@@ -81,7 +81,7 @@ PRODUCT_PACKAGES += \
     libvolumelistener \
     sound_trigger.primary.sdm660
 
-$(call soong_config_set,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
+$(call soong_config_set_bool,android_hardware_audio,skip_speaker_layout_channel_mask_field,true)
 
 # Audio Configs
 PRODUCT_COPY_FILES += \
