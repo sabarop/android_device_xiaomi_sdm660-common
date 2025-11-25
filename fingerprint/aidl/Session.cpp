@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 The LineageOS Project
+ * Copyright (C) 2024-2025 The LineageOS Project
  *
  * SPDX-License-Identifier: Apache-2.0
  */
@@ -21,9 +21,12 @@ void onClientDeath(void* cookie) {
     }
 }
 
-Session::Session(fingerprint_device_t* device, int userId, std::shared_ptr<ISessionCallback> cb,
-                 LockoutTracker lockoutTracker)
-    : mDevice(device), mLockoutTracker(lockoutTracker), mUserId(userId), mCb(cb) {
+Session::Session(fingerprint_device_t* device, int userId,
+                 std::shared_ptr<ISessionCallback> cb, LockoutTracker lockoutTracker)
+    : mDevice(device),
+      mLockoutTracker(lockoutTracker),
+      mUserId(userId),
+      mCb(cb) {
     mDeathRecipient = AIBinder_DeathRecipient_new(onClientDeath);
 
     auto path = std::format("/data/system/users/{}/fpdata", userId);
@@ -123,14 +126,12 @@ ndk::ScopedAStatus Session::resetLockout(const HardwareAuthToken& /*hat*/) {
     return ndk::ScopedAStatus::ok();
 }
 
-ndk::ScopedAStatus Session::onPointerDown(int32_t /*pointerId*/, int32_t /*x*/, int32_t /*y*/,
-                                          float /*minor*/, float /*major*/) {
-    // Not implemented
+ndk::ScopedAStatus Session::onPointerDown(int32_t /*pointerId*/, int32_t x, int32_t y, float minor,
+                                          float major) {
     return ndk::ScopedAStatus::ok();
 }
 
 ndk::ScopedAStatus Session::onPointerUp(int32_t /*pointerId*/) {
-    // Not implemented
     return ndk::ScopedAStatus::ok();
 }
 
@@ -320,7 +321,9 @@ void Session::notify(const fingerprint_msg_t* msg) {
             AcquiredInfo result =
                     VendorAcquiredFilter(msg->data.acquired.acquired_info, &vendorCode);
             ALOGD("onAcquired(%hhd, %d)", result, vendorCode);
-            mCb->onAcquired(result, vendorCode);
+            if (result != AcquiredInfo::VENDOR) {
+                mCb->onAcquired(result, vendorCode);
+            }
         } break;
         case FINGERPRINT_TEMPLATE_ENROLLING: {
             ALOGD("onEnrollResult(fid=%d, gid=%d, rem=%d)", msg->data.enroll.finger.fid,
