@@ -1,5 +1,5 @@
 /*
- * Copyright (C) 2024 The LineageOS Project
+ * Copyright (C) 2024-2025 The LineageOS Project
  *               2024 Paranoid Android
  *
  * SPDX-License-Identifier: Apache-2.0
@@ -8,12 +8,14 @@
 #include "Fingerprint.h"
 
 #include <android-base/properties.h>
-#include <cutils/properties.h>
 #include <fingerprint.sysprop.h>
 #include <util/Util.h>
 
 #include <android-base/logging.h>
+#include <android-base/properties.h>
 #include <android-base/strings.h>
+
+using ::android::base::SetProperty;
 
 namespace aidl::android::hardware::biometrics::fingerprint {
 
@@ -25,14 +27,57 @@ constexpr char FW_VERSION[] = "1.01";
 constexpr char SERIAL_NUMBER[] = "00000001";
 constexpr char SW_COMPONENT_ID[] = "matchingAlgorithm";
 constexpr char SW_VERSION[] = "vendor/version/revision";
+
+typedef struct fingerprint_hal {
+    const char* class_name;
+} fingerprint_hal_t;
+
+static const fingerprint_hal_t kModules[] = {
+        {"fortsense"},  {"fpc"},         {"fpc_fod"}, {"goodix"}, {"goodix:gf_fingerprint"},
+        {"goodix_fod"}, {"goodix_fod6"}, {"silead"},  {"syna"},
+};
+
 }  // namespace
 
 static const uint16_t kVersion = HARDWARE_MODULE_API_VERSION(2, 1);
 static Fingerprint* sInstance;
 
-Fingerprint::Fingerprint(std::shared_ptr<FingerprintConfig> config)
-    : mConfig(std::move(config)), mDevice(openHal()) {
+Fingerprint::Fingerprint(std::shared_ptr<FingerprintConfig> config) : mConfig(std::move(config)) {
     sInstance = this;  // keep track of the most recent instance
+
+    if (mDevice) {
+        ALOGI("fingerprint HAL already opened");
+    } else {
+        for (auto& [module] : kModules) {
+            std::string class_name;
+            std::string class_module_id;
+
+            auto parts = ::android::base::Split(module, ":");
+
+            if (parts.size() == 2) {
+                class_name = parts[0];
+                class_module_id = parts[1];
+            } else {
+                class_name = module;
+                class_module_id = FINGERPRINT_HARDWARE_MODULE_ID;
+            }
+
+            mDevice = openFingerprintHal(class_name.c_str(), class_module_id.c_str());
+            if (!mDevice) {
+                ALOGE("Can't open HAL module, class: %s, module_id: %s", class_name.c_str(),
+                      class_module_id.c_str());
+                continue;
+            }
+            ALOGI("Opened fingerprint HAL, class: %s, module_id: %s", class_name.c_str(),
+                  class_module_id.c_str());
+            SetProperty("persist.vendor.sys.fp.vendor", class_name);
+            break;
+        }
+        if (!mDevice) {
+            ALOGE("Can't open any fingerprint HAL module");
+            SetProperty("persist.vendor.sys.fp.vendor", "none");
+        }
+    }
 
     std::string sensorTypeProp = mConfig->get<std::string>("type");
     if (sensorTypeProp == "side") {
@@ -63,63 +108,39 @@ Fingerprint::~Fingerprint() {
     mDevice = nullptr;
 }
 
-fingerprint_device_t* getDeviceForVendor(const char* class_name) {
-    int err;
+fingerprint_device_t* Fingerprint::openFingerprintHal(const char* class_name,
+                                                      const char* module_id) {
     const hw_module_t* hw_mdl = nullptr;
+
     ALOGD("Opening fingerprint hal library...");
-    if (0 != (err = hw_get_module_by_class(FINGERPRINT_HARDWARE_MODULE_ID, class_name, &hw_mdl))) {
-        ALOGE("Can't open fingerprint HW Module, error: %d", err);
+    if (hw_get_module_by_class(module_id, class_name, &hw_mdl) != 0) {
+        ALOGE("Can't open fingerprint HW Module");
         return nullptr;
     }
 
-    if (hw_mdl == nullptr) {
+    if (!hw_mdl) {
         ALOGE("No valid fingerprint module");
         return nullptr;
     }
 
-    fingerprint_module_t const* module = reinterpret_cast<const fingerprint_module_t*>(hw_mdl);
-    if (module->common.methods->open == nullptr) {
+    auto module = reinterpret_cast<const fingerprint_module_t*>(hw_mdl);
+    if (!module->common.methods->open) {
         ALOGE("No valid open method");
         return nullptr;
     }
 
     hw_device_t* device = nullptr;
-
-    if (0 != (err = module->common.methods->open(hw_mdl, nullptr, &device))) {
-        ALOGE("Can't open fingerprint methods, error: %d", err);
+    if (module->common.methods->open(hw_mdl, nullptr, &device) != 0) {
+        ALOGE("Can't open fingerprint methods");
         return nullptr;
     }
 
-    if (kVersion != device->version) {
-        // enforce version on new devices because of HIDL@2.1 translation layer
-        ALOGE("Wrong fp version. Expected %d, got %d", kVersion, device->version);
+    auto fp_device = reinterpret_cast<fingerprint_device_t*>(device);
+    if (fp_device->set_notify(fp_device, Fingerprint::notify) != 0) {
+        ALOGE("Can't register fingerprint module callback");
         return nullptr;
     }
 
-    fingerprint_device_t* fp_device = reinterpret_cast<fingerprint_device_t*>(device);
-
-    /* Fingerprint::notify is a private member function
-    if (0 != (err = fp_device->set_notify(fp_device, Fingerprint::notify))) {
-        ALOGE("Can't register fingerprint module callback, error: %d", err);
-        return nullptr;
-    }
-    */
-
-    return fp_device;
-}
-
-fingerprint_device_t* Fingerprint::openHal() {
-    int err;
-    fingerprint_device_t* fp_device = getDeviceForVendor("fpc");
-    if (0 != (err = fp_device->set_notify(fp_device, Fingerprint::notify))) {
-        ALOGE("Can't register fingerprint module callback, error: %d", err);
-        fp_device = nullptr;
-    }
-    if (fp_device != nullptr) {
-        property_set("persist.vendor.sys.fp.vendor", "fpc");
-    } else {
-        property_set("persist.vendor.sys.fp.vendor", "none");
-    }
     return fp_device;
 }
 
