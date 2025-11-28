@@ -84,3 +84,6 @@ genfscon sysfs /kernel/fast_charge/force_fast_charge            u:object_r:sysfs
 
 # SchedBoost
 genfscon proc /sys/kernel/sched_boost u:object_r:proc_sched_boost:s0
+
+# ufs
+genfscon sysfs /devices/soc/c0c4000.sdhci/mmc_host/mmc0/mmc0:0001/block/mmcblk0/queue/discard_max_bytes                                 u:object_r:sysfs_mmc_host:s0
