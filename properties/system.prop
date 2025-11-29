@@ -107,6 +107,8 @@ persist.log.tag.TrafficStats=S
 persist.log.tag.ContrastColorUtil=S
 persist.log.tag.OpenGLRenderer=S
 persist.log.tag.HWUI=S
+persist.log.tag.WifiHAL=S
+persist.log.tag.WifiStaIfaceAidlImpl=S
 
 # Media
 media.aac_51_output_enabled=true
