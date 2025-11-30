@@ -1,5 +1,9 @@
-# FM - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
-system_ext/lib64/fm_helium.so|d64573b7a5b567bd9ee605d67b40357d55daf747
-system_ext/lib64/libfm-hci.so|13752c0da7302c0cc4ae4a3006a991f47e3bc509
-system_ext/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_system_ext|86c85a52c3a0025c258f5377f15f66788b54a843
-vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|d4025a178a559d3a72f29d57d2404561cdccf48a
+# FM - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+system_ext/lib/fm_helium.so|4c4d1e86e0ffb02a2808b269c4841e121f61f87d
+system_ext/lib/libfm-hci.so|fa773b18c0081c383ced1f0ce9239929d15bd423
+system_ext/lib/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_system_ext|05b2b5207d7ab6406785af3ea9e38d7a946f8144
+system_ext/lib64/fm_helium.so|917d8aed5dd0f25ebd0e9fa82a60823996fba586
+system_ext/lib64/libfm-hci.so|8911fc8c721338fc64e3a98c299e20162a9b0f53
+system_ext/lib64/vendor.qti.hardware.fm@1.0.so;MODULE_SUFFIX=_system_ext|45cbf1cf97dbd50d5535e9f0318927e661692fdd
+vendor/lib/hw/vendor.qti.hardware.fm@1.0-impl.so|c2a04e7b02ad5d7d1ac4abb7cda6c951468b59c7
+vendor/lib64/hw/vendor.qti.hardware.fm@1.0-impl.so|f3d0cd85c9e0a88eafacbcdeff6d4e2b109b95f9
