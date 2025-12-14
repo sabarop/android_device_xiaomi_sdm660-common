@@ -319,6 +319,7 @@ PRODUCT_PACKAGES += \
     SDM660CarrierConfigOverlay \
     SDM660DeviceAsWebcam \
     SDM660FrameworksOverlay \
+    SDM660NexusLauncherOverlay \
     SDM660RILFrameworksOverlay \
     SDM660RILSettingsOverlay \
     SDM660SettingsOverlay \
