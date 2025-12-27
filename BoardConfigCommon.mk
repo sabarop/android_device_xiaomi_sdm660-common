@@ -11,7 +11,6 @@ COMMON_PATH := device/xiaomi/sdm660-common
 PRODUCT_USES_QCOM_HARDWARE := true
 PRODUCT_BOARD_PLATFORM := sdm660
 TARGET_BOARD_PLATFORM := sdm660
-TARGET_ENFORCES_QSSI := true
 
 # A/B
 ifeq ($(ENABLE_AB), true)
@@ -50,6 +49,8 @@ BOARD_HAS_QCA_FM_SOC := cherokee
 endif
 
 # Audio
+USE_DEVICE_SPECIFIC_AUDIO := true
+DEVICE_SPECIFIC_AUDIO_PATH := $(COMMON_PATH)/qcom-caf/audio
 AUDIO_DISABLE_SWAP_CHANNELS := true
 AUDIO_FEATURE_ENABLED_COMPRESS_VOIP := true
 AUDIO_FEATURE_ENABLED_EXT_AMPLIFIER := false
@@ -72,7 +73,10 @@ TARGET_NO_BOOTLOADER := true
 TARGET_FS_CONFIG_GEN := $(COMMON_PATH)/configs/config.fs
 
 # Display
+USE_DEVICE_SPECIFIC_DISPLAY := true
+DEVICE_SPECIFIC_DISPLAY_PATH := $(COMMON_PATH)/qcom-caf/display
 SOONG_CONFIG_qtidisplay_target_needs_raw10_buffer_fix := true
+SOONG_CONFIG_qtidisplay_gralloc4 := true
 TARGET_USES_ION := true
 
 # GPS
@@ -117,6 +121,10 @@ TARGET_LMKD_STATS_LOG := false
 
 # Keymaster
 TARGET_PROVIDES_KEYMASTER := true
+
+# Media
+USE_DEVICE_SPECIFIC_MEDIA := true
+DEVICE_SPECIFIC_MEDIA_PATH := $(COMMON_PATH)/qcom-caf/media
 
 # Metadata
 BOARD_USES_METADATA_PARTITION := true
