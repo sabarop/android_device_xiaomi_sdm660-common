@@ -26,7 +26,6 @@ import androidx.preference.PreferenceManager;
 import org.lineageos.settings.device.preferences.SecureSettingSwitchPreference;
 import java.lang.Math.*;
 
-import org.lineageos.settings.device.kcal.KcalUtils;
 
 public class BootReceiver extends BroadcastReceiver {
 
@@ -66,8 +65,5 @@ public class BootReceiver extends BroadcastReceiver {
         FileUtils.setValue(DeviceSettings.USB_FASTCHARGE_PATH, Settings.Secure.getInt(context.getContentResolver(),
                 DeviceSettings.PREF_USB_FASTCHARGE, 0));
 
-        // Kcal
-        if (KcalUtils.isKcalSupported())
-             KcalUtils.writeCurrentSettings(sharedPrefs);
-    }
+  }
 }
