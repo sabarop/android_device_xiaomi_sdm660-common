@@ -212,7 +212,7 @@ on early-boot
     chown system system /sys/class/leds/white:status/start_idx
     chown system system /sys/class/leds/white:status/trigger
 
-service vendor.light-default /vendor/bin/hw/android.hardware.light-service.lineage
+service vendor.light-default /vendor/bin/hw/android.hardware.light-service.xiaomi_sdm660
     class hal
     user system
     group system
