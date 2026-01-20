@@ -19,7 +19,7 @@ namespace light {
 
 namespace {
 
-std::vector<std::string> getSubDirs(const std::string& path) {
+[[maybe_unused]] static std::vector<std::string> getSubDirs(const std::string& path) {
     std::vector<std::string> subdirs;
     std::filesystem::path p(path);
 
