@@ -60,6 +60,9 @@
 # IR HAL
 /(vendor|system/vendor)/bin/hw/android\.hardware\.ir@1\.0-service\.xiaomi_sdm660                                                   u:object_r:hal_ir_default_exec:s0
 
+# Lights
+/vendor/bin/hw/android\.hardware\.light-service\.xiaomi_sdm660                                                                     u:object_r:hal_light_default_exec:s0
+
 # Metadata
 /dev/block/platform/soc/c0c4000\.sdhci/by-name/logdump         u:object_r:metadata_block_device:s0
 
