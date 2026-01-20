@@ -37,10 +37,12 @@ namespace {
 }  // namespace
 
 static const std::string kBacklightDevices[] = {
+#ifndef USE_LCD_BACKLIGHT_INTERFACE_ONLY
         "backlight",
         "panel0-backlight",
         "panel0-backlight-ex",
         "sprd_backlight",
+#endif
 };
 
 static std::vector<BacklightDevice> getBacklightDevices() {
