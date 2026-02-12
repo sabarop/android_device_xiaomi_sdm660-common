@@ -106,15 +106,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "KernelBatterySaver",
-      "Path": "/sys/module/battery_saver/parameters/enabled",
-      "Values": [
-        "Y",
-        "N"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
@@ -257,12 +248,6 @@
       "Node": "GPUMaxFreq",
       "Duration": 0,
       "Value": "647000000"
-    },
-    {
-      "PowerHint": "LOW_POWER",
-      "Node": "KernelBatterySaver",
-      "Duration": 0,
-      "Value": "Y"
     },
     {
       "PowerHint": "DOUBLE_TAP_TO_WAKE",
