@@ -252,12 +252,6 @@
     },
     {
       "PowerHint": "INTERACTION",
-      "Node": "CPULittleClusterMinFreq",
-      "Duration": 0,
-      "Value": "1401600"
-    },
-    {
-      "PowerHint": "INTERACTION",
       "Node": "UclampTALatency",
       "Duration": 0,
       "Value": "1"
