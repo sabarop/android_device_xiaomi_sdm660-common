@@ -117,6 +117,16 @@
       "ResetOnInit": true
     },
     {
+      "Name": "UclampDex2oatMax",
+      "Path": "/dev/cpuctl/dex2oat/cpu.uclamp.max",
+      "Values": [
+        "60",
+        "max"
+      ],
+      "DefaultIndex": 1,
+      "ResetOnInit": true
+    },
+    {
       "Name": "GPUMaxFreq",
       "Path": "/sys/class/kgsl/kgsl-3d0/devfreq/max_freq",
       "Values": [
@@ -301,6 +311,12 @@
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 6000,
       "Value": "9999999"
+    },
+    {
+      "PowerHint": "LAUNCH",
+      "Node": "UclampDex2oatMax",
+      "Duration": 5000,
+      "Value": "60"
     },
     {
       "PowerHint": "LAUNCH",
