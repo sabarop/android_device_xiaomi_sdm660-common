@@ -58,9 +58,6 @@ PRODUCT_PACKAGES_DEBUG += \
     update_engine_client
 endif
 
-# Dolby
-$(call inherit-product, hardware/dolby/dolby.mk)
-
 # Audio
 PRODUCT_PACKAGES += \
     android.hardware.audio@7.1-impl \
