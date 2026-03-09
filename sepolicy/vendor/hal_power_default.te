@@ -3,6 +3,7 @@ allow hal_power_default sysfs_battery_saver:dir r_dir_perms;
 allow hal_power_default sysfs_battery_saver:file rw_file_perms;
 allow hal_power_default proc:{ file lnk_file } rw_file_perms;
 allow hal_power_default proc_sched:file rw_file_perms;
+allow hal_power_default proc_sched_boost:file rw_file_perms;
 allow hal_power_default { sysfs_devfreq sysfs_kgsl }:dir search;
 allow hal_power_default { sysfs_devfreq sysfs_kgsl }:{ file lnk_file } rw_file_perms;
 allow hal_power_default sysfs_touchpanel:dir search;
@@ -19,3 +20,4 @@ allow hal_power_default self:capability { sys_nice sys_admin };
 
 # Set scheduling info for system_server (for adpf)
 allow hal_power_default system_server:process setsched;
+
