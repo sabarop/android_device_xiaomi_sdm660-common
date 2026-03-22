@@ -114,21 +114,18 @@
     <!-- Flag indicating if the speed up audio on mt call code should be executed -->
     <bool name="config_speed_up_audio_on_mt_calls">true</bool>
 
-    <!-- Default list of files pinned by the Pinner Service -->
-    <string-array translatable="false" name="config_defaultPinnerServiceFiles">
-        <item>"/system/framework/framework.jar"</item>
-        <item>"/system/framework/services.jar"</item>
-        <item>"/apex/com.android.art/javalib/core-oj.jar"</item>
-        <item>"/apex/com.android.art/javalib/core-libart.jar"</item>
-        <item>"/system_ext/priv-app/SystemUI/SystemUI.apk"</item>
-        <item>"/system/bin/surfaceflinger"</item>
+   <!-- Default files to pin via Pinner Service -->
+    <string-array name="config_defaultPinnerServiceFiles">
+        <item>/apex/com.android.art/javalib/core-oj.jar</item>
+        <item>/apex/com.android.art/javalib/core-libart.jar</item>
+        <item>/system/framework/framework.jar</item>
+        <item>/system/framework/services.jar</item>
+        <item>/system/bin/surfaceflinger</item>
+        <item>/system_ext/priv-app/SystemUI/SystemUI.apk</item>
     </string-array>
 
     <!-- True if camera app should be pinned via Pinner Service -->
     <bool name="config_pinnerCameraApp">true</bool>
-
-    <!-- Bytes that the PinnerService will pin for Home app -->
-    <integer name="config_pinnerHomePinBytes">6291456</integer>
 
     <!-- Feature flag to store TaskSnapshot in 16 bit pixel format to save memory. -->
     <bool name="config_use16BitTaskSnapshotPixelFormat">true</bool>
