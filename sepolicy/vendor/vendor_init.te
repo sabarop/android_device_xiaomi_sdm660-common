@@ -20,3 +20,7 @@ set_prop(vendor_init, vendor_camera_prop)
 set_prop(vendor_init, vendor_freq_prop)
 set_prop(vendor_init, vendor_power_prop)
 set_prop(vendor_init, vendor_ssr_prop)
+
+# Thermal
+allow vendor_init thermal_link_device:dir r_dir_perms;
+allow vendor_init thermal_link_device:lnk_file r_file_perms;
