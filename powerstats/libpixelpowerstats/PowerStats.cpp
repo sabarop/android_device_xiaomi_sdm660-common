@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-#define LOG_TAG "libxiaomipowerstats"
+#define LOG_TAG "libpixelpowerstats"
 
 #include <memory>
 #include <string>
