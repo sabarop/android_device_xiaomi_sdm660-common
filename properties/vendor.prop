@@ -130,16 +130,12 @@ drm.service.enabled=true
 
 # Display
 debug.gralloc.enable_fb_ubwc=1
-debug.sdm.support_writeback=0
 debug.sf.treat_170m_as_sRGB=1
 debug.sf.predict_hwc_composition_strategy=0
 dev.pm.dyn_samplingrate=1
 ro.vendor.display.cabl=2
-debug.hwui.skia_atrace_enabled=false
 vendor.display.disable_skip_validate=1
 vendor.display.enable_default_color_mode=0
-vendor.display.idle_time=32767
-vendor.gralloc.disable_ahardware_buffer=1
 vendor.gralloc.enable_fb_ubwc=1
 video.disable.ubwc=1
 vendor.video.disable.ubwc=1
@@ -158,6 +154,8 @@ ro.vendor.qti.va_aosp.support=1
 ro.hardware.egl=adreno
 ro.hardware.vulkan=adreno
 vendor.opengles.version=196610
+
+# Hwui
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 
@@ -171,10 +169,7 @@ ro.launcher.blur.appLaunch=0
 vidc.enc.dcvs.extra-buff-count=2
 
 # Misc
-keyguard.no_require_sim=true
-persist.vendor.delta_time.enable=true
 qemu.hw.mainkeys=0
-ro.com.android.dataroaming=false
 
 # QCOM
 persist.vendor.qcomsysd.enabled=1
@@ -201,10 +196,6 @@ persist.vendor.radio.sib16_support=1
 ro.telephony.default_cdma_sub=0
 ro.telephony.default_network=22,22
 telephony.lteOnCdmaDevice=1
-
-# Rendering
-debug.enable.sglscale=1
-debug.sf.recomputecrop=0
 
 # Sensors
 ro.vendor.sensors.facing=false
