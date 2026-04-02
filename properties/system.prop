@@ -30,43 +30,19 @@ persist.vendor.data.profile_update=true
 # Dex2oat
 dalvik.vm.dex2oat64.enabled=true
 
-# Disable GC freed lines
-dalvik.vm.debug.alloc=0
-
-# Disable vsync for cpu rendered apps
-debug.cpurend.vsync=false
-
 # Display
-debug.performance.tuning=1
-persist.demo.hdmirotationlock=false
-persist.hwc.enable_vds=1
-ro.qualcomm.cabl=0
-sdm.debug.disable_skip_validate=1
 debug.renderengine.backend=skiaglthreaded
 debug.hwui.renderer=opengl
 
 # DPM
 persist.vendor.dpm.loglevel=0
 
-# Fling
-ro.min.fling_velocity=160
-ro.max.fling_velocity=20000
-
 # GPS
 persist.backup.ntpServer="0.pool.ntp.org"
 persist.vendor.overlay.izat.optin=rro
 
-# HAL1 app list
-camera.hal1.packagelist=com.android.camera,com.android.camera2,com.instagram.android
-
 # IMS
 persist.vendor.ims.disableUserAgent=0
-
-# Iorapd
-ro.iorapd.enable=false
-iorapd.perfetto.enable=false
-iorapd.readahead.enable=false
-persist.device_config.runtime_native_boot.iorap_readahead_enable=false
 
 # LMKD
 ro.lmk.log_stats=false
@@ -110,16 +86,11 @@ vendor.vidc.dec.enable.downscalar=0
 vendor.vidc.enc.disable_bframes=1
 vendor.vidc.enc.disable.pq=false
 
-# Misc
-ro.vendor.qti.sys.fw.bservice_enable=true
-# Netflix
-ro.netflix.bsp_rev=Q660-13149-1
-
 # Multi-Gen LRU
 persist.device_config.mglru_native.lru_gen_config=core
 
-# OEM Unlock reporting
-ro.oem_unlock_supported=1
+# Netflix
+ro.netflix.bsp_rev=Q660-13149-1
 
 # Proximity
 gsm.proximity.enable=true
@@ -139,18 +110,6 @@ persist.vendor.qti.telephony.vt_cam_interface=2
 persist.vendor.radio.enable_temp_dds=true
 persist.vendor.radio.force_on_dc=true
 ril.subscription.types=NV,RUIM
-
-# SELinux
-ro.build.selinux=1
-
-#Storaged
-ro.storaged.event.interval=99999
-
-# System restart
-ro.build.shutdown_timeout=2
-
-# System Server
-persist.arm64.memtag.system_server=off
 
 # Verity
 ro.apk_verity.mode=2
