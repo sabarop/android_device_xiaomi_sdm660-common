@@ -161,9 +161,6 @@ vendor.opengles.version=196610
 debug.hwui.use_hint_manager=true
 debug.hwui.target_cpu_time_percent=30
 
-# Incremental FS
-ro.incremental.enable=true
-
 # Launcher
 ro.launcher.blur.appLaunch=0
 
