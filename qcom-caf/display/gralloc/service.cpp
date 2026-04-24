@@ -38,7 +38,7 @@ using IQtiAllocator4 = vendor::qti::hardware::display::allocator::V4_0::IQtiAllo
 int main(int, char **) {
   android::sp<IQtiAllocator3> service3 =
       new vendor::qti::hardware::display::allocator::V3_0::implementation::QtiAllocator();
-
+  android::hardware::setMinSchedulerPolicy(service3, SCHED_NORMAL, -20);
   configureRpcThreadpool(4, true /*callerWillJoin*/);
   if (service3->registerAsService() != android::OK) {
     ALOGE("Cannot register QTI Allocator 3 service");
@@ -49,6 +49,7 @@ int main(int, char **) {
 #ifdef TARGET_USES_GRALLOC4
   android::sp<IQtiAllocator4> service4 =
       new vendor::qti::hardware::display::allocator::V4_0::implementation::QtiAllocator();
+  android::hardware::setMinSchedulerPolicy(service4, SCHED_NORMAL, -20);
   if (service4->registerAsService() != android::OK) {
     ALOGE("Cannot register QTI Allocator 4 service");
     return -EINVAL;
