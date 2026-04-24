@@ -5,6 +5,7 @@ cc_defaults {
         "-Wconversion",
         "-Wall",
         "-Werror",
+        "-O3",
     ] + select(soong_config_variable("qtidisplay", "headless"), {
         "true": ["-DTARGET_HEADLESS"],
         default: [],
