@@ -9,6 +9,9 @@ cc_defaults {
         "true": ["-DTARGET_HEADLESS"],
         default: [],
     }),
+    lto: {
+        thin: true,
+    },
     shared_libs: [
         "liblog",
         "libcutils",
