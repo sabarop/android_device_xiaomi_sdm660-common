@@ -2,10 +2,9 @@
  * SPDX-FileCopyrightText: 2024 The LineageOS Project
  * SPDX-License-Identifier: Apache-2.0
  */
-
 #pragma once
-
 #include <aidl/android/hardware/ir/BnConsumerIr.h>
+#include <hardware/consumerir.h>
 
 namespace aidl {
 namespace android {
@@ -24,6 +23,9 @@ class ConsumerIr : public BnConsumerIr {
   private:
     std::vector<ConsumerIrFreqRange> kRangeVec;
     bool isInRange(int32_t carrierFreqHz);
+    bool mUseLirc = false;
+    bool mUseSpi = false;
+    consumerir_device_t* mSpiDevice = nullptr;
 };
 
 }  // namespace ir

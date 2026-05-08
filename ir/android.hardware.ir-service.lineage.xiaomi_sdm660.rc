@@ -4,8 +4,9 @@
 #
 
 on early-boot
-    # IR device
+    # IR device (LIRC or SPI)
     chown system system /dev/lirc0
+    chown system system /dev/spidev7.1
 
 service vendor.ir-default /vendor/bin/hw/android.hardware.ir-service.lineage.xiaomi_sdm660
     class hal

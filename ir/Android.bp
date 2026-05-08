@@ -17,6 +17,7 @@ cc_binary {
         "libbase",
         "libbinder_ndk",
         "android.hardware.ir-V1-ndk",
+        "libhardware",
     ],
     static_libs: [
         "libvendor.lineage.xiaomi_sdm660.ir.Props",
