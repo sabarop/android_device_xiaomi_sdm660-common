@@ -54,7 +54,6 @@
 #endif
 
 #define BUF_SIZE                    1024
-char vendor_config_path[VENDOR_CONFIG_PATH_MAX_LENGTH];
 char platform_info_xml_path_file[VENDOR_CONFIG_FILE_MAX_LENGTH];
 
 typedef enum {
@@ -92,6 +91,7 @@ typedef void (* section_process_fn)(const XML_Char **attr);
 
 const char* get_platform_xml_path()
 {
+    char vendor_config_path[VENDOR_CONFIG_PATH_MAX_LENGTH];
     audio_get_vendor_config_path(vendor_config_path, sizeof(vendor_config_path));
     /* Get path for platorm_info_xml_path_name in vendor */
     snprintf(platform_info_xml_path_file, sizeof(platform_info_xml_path_file),

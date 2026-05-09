@@ -248,7 +248,6 @@ enum {
 };
 
 #define PLATFORM_CONFIG_KEY_OPERATOR_INFO "operator_info"
-char vendor_config_path[VENDOR_CONFIG_PATH_MAX_LENGTH];
 char xml_file_path[VENDOR_CONFIG_FILE_MAX_LENGTH];
 
 struct operator_info {
@@ -1700,6 +1699,7 @@ bool is_operator_tmus()
 
 const char* get_xml_file_path(const char* file_name)
 {
+    char vendor_config_path[VENDOR_CONFIG_PATH_MAX_LENGTH];
     audio_get_vendor_config_path(vendor_config_path, sizeof(vendor_config_path));
     snprintf(xml_file_path, sizeof(xml_file_path),
         "%s/%s", vendor_config_path, file_name);
