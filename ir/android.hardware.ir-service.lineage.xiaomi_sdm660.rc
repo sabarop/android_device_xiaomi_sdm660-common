@@ -7,7 +7,7 @@ on early-boot
     # IR device
     chown system system /dev/lirc0
 
-service vendor.ir-default /vendor/bin/hw/android.hardware.ir-service.lineage
+service vendor.ir-default /vendor/bin/hw/android.hardware.ir-service.lineage.xiaomi_sdm660
     class hal
     user system
     group system
