@@ -336,6 +336,12 @@
     },
     {
       "PowerHint": "LAUNCH",
+      "Node": "GPUMinFreq",
+      "Duration": 5000,
+      "Value": "647000000"
+    },
+    {
+      "PowerHint": "LAUNCH",
       "Node": "GPUForceRailOn",
       "Duration": 6000,
       "Value": "1"
