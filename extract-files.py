@@ -122,7 +122,8 @@ blob_fixups: blob_fixups_user_type = {
     ('vendor/lib64/hw/consumerir.lirc.sdm660.so', 'consumerir.spi.sdm660.so'): blob_fixup()
         .fix_soname(),
     'system_ext/lib64/libqxrsplitauxservice.qti.so': blob_fixup()
-        .add_needed('libwfdservice_shim.so'),
+        .add_needed('libwfdservice_shim.so')
+        .replace_needed('android.media.audio.common.types-V4-cpp.so', 'android.media.audio.common.types-V5-cpp.so'),
     "vendor/bin/mm-pp-dpps": blob_fixup()
         .replace_needed('libtinyxml2.so', 'libtinyxml2-v34.so'),
     ('system_ext/lib64/lib-imscamera.so', 'system_ext/lib64/lib-imsvideocodec.so'): blob_fixup()
