@@ -157,8 +157,6 @@ WITH_DEXPREOPT_DEBUG_INFO := false
 
 # Display
 PRODUCT_PACKAGES += \
-    android.frameworks.displayservice@1.0 \
-    android.frameworks.displayservice@1.0.vendor \
     android.hardware.graphics.composer@2.1-service \
     android.hardware.graphics.mapper@3.0-impl-qti-display \
     android.hardware.graphics.mapper@4.0-impl-qti-display \
