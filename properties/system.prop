@@ -163,9 +163,6 @@ ro.build.shutdown_timeout=2
 # System Server
 persist.arm64.memtag.system_server=off
 
-# Verity
-ro.apk_verity.mode=2
-
 # Zygote preforking
 persist.device_config.runtime_native.usap_pool_enabled=true
 
