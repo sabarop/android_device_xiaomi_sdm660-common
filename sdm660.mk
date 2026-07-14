@@ -459,18 +459,9 @@ PRODUCT_COPY_FILES += \
 # Power
 PRODUCT_PACKAGES += \
     android.hardware.power@1.3.vendor \
-    android.hardware.power-service.pixel-libperfmgr \
+    android.hardware.power-service.lineage-libperfmgr \
     android.hardware.power.stats@1.0-service.sdm660 \
     libqti-perfd-client
-
-# sendhint utility
-PRODUCT_PACKAGES += \
-    sendhint
-
-# Enable adpf cpu hint session for SurfaceFlinger and HWUI
-PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
-    debug.sf.enable_adpf_cpu_hint=true \
-    debug.hwui.use_hint_manager=true
 
 # Powerhint
 ifeq ($(EAS_POWERHINT_VARIANT), sdm636)
@@ -579,6 +570,7 @@ PRODUCT_SOONG_NAMESPACES += \
     hardware/google/interfaces \
     hardware/google/pixel \
     hardware/xiaomi \
+    hardware/lineage/interfaces/power-libperfmgr \
     hardware/qcom-caf/common/libqti-perfd-client
 
 QCOM_SOONG_NAMESPACE := \

@@ -31,10 +31,6 @@
 /bt_firmware(/.*)?                                                                                                                u:object_r:bt_firmware_file:s0
 /persist(/.*)?                                                                                                                    u:object_r:persist_file:s0
 
-# HALs
-/vendor/bin/hw/android\.hardware\.power-service\.pixel-libperfmgr          u:object_r:hal_power_default_exec:s0
-/vendor/bin/sendhint                                                       u:object_r:sendhint_vendor_exec:s0
-
 # Hall Switch
 /sys/module/hall/parameters(/.*)?                                                                                           u:object_r:hall_dev:s0
 
