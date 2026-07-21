@@ -60,9 +60,6 @@
 /sys/devices/platform/kcal_ctrl.0(/.*)?                                                                                           u:object_r:kcal_dev:s0
 /sys/bus/platform/drivers/kcal_ctrl(/.*)?                                                                                         u:object_r:kcal_dev:s0
 
-# Lights
-/vendor/bin/hw/android\.hardware\.light-service\.xiaomi_sdm660                                                                     u:object_r:hal_light_default_exec:s0
-
 # Metadata
 /dev/block/platform/soc/c0c4000\.sdhci/by-name/logdump         u:object_r:metadata_block_device:s0
 
