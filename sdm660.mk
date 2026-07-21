@@ -110,6 +110,8 @@ TARGET_BOOTANIMATION_SIZE := 1080p
 PRODUCT_PACKAGES += \
     android.hardware.camera.provider-service_32.lineage
 
+$(call soong_config_set,libcameraservice,ext_lib,//$(COMMON_PATH):libcameraservice_extension.xiaomi_sdm660)
+
 # Control groups and task profiles
 PRODUCT_COPY_FILES += \
     system/core/libprocessgroup/profiles/cgroups.json:$(TARGET_COPY_OUT_VENDOR)/etc/cgroups.json \
