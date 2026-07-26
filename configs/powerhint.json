@@ -479,6 +479,41 @@
       "Value": "750000000"
     },
     {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "CPULittleClusterDownRateLimitUs",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "CPUBigClusterDownRateLimitUs",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Node": "UclampTAMin",
+      "Duration": 0,
+      "Value": "0"
+    },
+    {
+      "PowerHint": "DISPLAY_INACTIVE",
+      "Type": "EndHint",
+      "Value": "DISPLAY_UPDATE_IMMINENT"
+    },
+    {
+      "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+      "Node": "CPULittleClusterDownRateLimitUs",
+      "Duration": 50,
+      "Value": "5000"
+    },
+    {
+      "PowerHint": "DISPLAY_UPDATE_IMMINENT",
+      "Node": "CPUBigClusterDownRateLimitUs",
+      "Duration": 50,
+      "Value": "20000"
+    },
+    {
       "PowerHint": "LOW_POWER",
       "Node": "KernelBatterySaver",
       "Duration": 0,
