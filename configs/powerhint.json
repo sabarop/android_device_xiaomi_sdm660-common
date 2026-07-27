@@ -247,15 +247,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "UClampTopAppBoost",
-      "Path": "/dev/cpuctl/top-app/cpu.uclamp.min",
-      "Values": [
-        "65",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
@@ -352,12 +343,6 @@
       "Value": "0"
     },
     {
-      "PowerHint": "INTERACTION",
-      "Node": "UClampTopAppBoost",
-      "Duration": 1200,
-      "Value": "65"
-    },
-    {
       "PowerHint": "LAUNCH",
       "Node": "UclampBgMax",
       "Duration": 5000,
@@ -452,12 +437,6 @@
       "Node": "UClampForegroundBoost",
       "Duration": 6000,
       "Value": "30"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "UClampTopAppBoost",
-      "Duration": 6000,
-      "Value": "65"
     },
     {
       "PowerHint": "GAME",
