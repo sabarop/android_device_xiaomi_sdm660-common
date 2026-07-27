@@ -238,15 +238,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "UClampForegroundBoost",
-      "Path": "/dev/cpuctl/foreground/cpu.uclamp.min",
-      "Values": [
-        "30",
-        "0"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
@@ -431,12 +422,6 @@
       "Node": "GPUIdleTimer",
       "Duration": 6000,
       "Value": "2000"
-    },
-    {
-      "PowerHint": "LAUNCH",
-      "Node": "UClampForegroundBoost",
-      "Duration": 6000,
-      "Value": "30"
     },
     {
       "PowerHint": "GAME",
