@@ -285,15 +285,6 @@
       "ResetOnInit": true
     },
     {
-      "Name": "KernelBatterySaver",
-      "Path": "/sys/module/battery_saver/parameters/enabled",
-      "Values": [
-        "Y",
-        "N"
-      ],
-      "ResetOnInit": true
-    },
-    {
       "Name": "PowerHALMainState",
       "Path": "vendor.powerhal.state",
       "Values": [
@@ -753,12 +744,6 @@
       "Node": "CPUBigClusterMaxFreq",
       "Duration": 0,
       "Value": "1747200"
-    },
-    {
-      "PowerHint": "LOW_POWER",
-      "Node": "KernelBatterySaver",
-      "Duration": 0,
-      "Value": "Y"
     },
     {
       "PowerHint": "THERMAL_skin-therm-monitor_LIGHT",
