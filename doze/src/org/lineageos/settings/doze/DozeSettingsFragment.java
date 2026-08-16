@@ -1,6 +1,6 @@
 /*
  * Copyright (C) 2015 The CyanogenMod Project
- *               2017-2019,2021 The LineageOS Project
+ *               2017-2023 The LineageOS Project
  *
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
@@ -18,25 +18,28 @@
 package org.lineageos.settings.doze;
 
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.app.Dialog;
+import android.app.DialogFragment;
 import android.content.DialogInterface;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
-
-import androidx.appcompat.app.AlertDialog;
-import androidx.fragment.app.DialogFragment;
+import android.widget.CompoundButton;
+import android.widget.CompoundButton.OnCheckedChangeListener;
 
 import androidx.preference.Preference;
 import androidx.preference.Preference.OnPreferenceChangeListener;
 import androidx.preference.PreferenceCategory;
+import androidx.preference.PreferenceFragment;
 import androidx.preference.SwitchPreferenceCompat;
 
 import com.android.settingslib.widget.MainSwitchPreference;
-import com.android.settingslib.widget.SettingsBasePreferenceFragment;
 
-public class DozeSettingsFragment extends SettingsBasePreferenceFragment
-        implements OnPreferenceChangeListener {
+public class DozeSettingsFragment extends PreferenceFragment
+        implements OnCheckedChangeListener, OnPreferenceChangeListener {
+
+    private MainSwitchPreference mSwitchBar;
 
     private SwitchPreferenceCompat mWakeOnGesturePreference;
     private SwitchPreferenceCompat mPickUpPreference;
@@ -47,7 +50,7 @@ public class DozeSettingsFragment extends SettingsBasePreferenceFragment
 
     @Override
     public void onCreatePreferences(Bundle savedInstanceState, String rootKey) {
-        setPreferencesFromResource(R.xml.doze_settings, rootKey);
+        addPreferencesFromResource(R.xml.doze_settings);
 
         SharedPreferences prefs = getActivity().getSharedPreferences("doze_settings",
                 Activity.MODE_PRIVATE);
@@ -57,9 +60,9 @@ public class DozeSettingsFragment extends SettingsBasePreferenceFragment
 
         boolean dozeEnabled = Utils.isDozeEnabled(getActivity());
 
-        MainSwitchPreference switchBar = findPreference(Utils.DOZE_ENABLE);
-        switchBar.setOnPreferenceChangeListener(this);
-        switchBar.setChecked(dozeEnabled);
+        mSwitchBar = (MainSwitchPreference) findPreference(Utils.DOZE_ENABLE);
+        mSwitchBar.addOnSwitchChangeListener(this);
+        mSwitchBar.setChecked(dozeEnabled);
 
         mWakeOnGesturePreference = (SwitchPreferenceCompat) findPreference(Utils.WAKE_ON_GESTURE_KEY);
         mWakeOnGesturePreference.setEnabled(dozeEnabled);
@@ -88,21 +91,21 @@ public class DozeSettingsFragment extends SettingsBasePreferenceFragment
 
     @Override
     public boolean onPreferenceChange(Preference preference, Object newValue) {
-        boolean isChecked = (Boolean) newValue;
-
-        if (Utils.DOZE_ENABLE.equals(preference.getKey())) {
-            Utils.enableDoze(getActivity(), isChecked);
-
-            mWakeOnGesturePreference.setEnabled(isChecked);
-            mPickUpPreference.setEnabled(isChecked);
-            mHandwavePreference.setEnabled(isChecked);
-            mPocketPreference.setEnabled(isChecked);
-        } else {
-            Utils.enableGesture(getActivity(), preference.getKey(), isChecked);
-        }
-
-        Utils.checkDozeService(getActivity());
+        mHandler.post(() -> Utils.checkDozeService(getActivity()));
         return true;
+    }
+
+    @Override
+    public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+        Utils.enableDoze(getActivity(), isChecked);
+        Utils.checkDozeService(getActivity());
+
+        mSwitchBar.setChecked(isChecked);
+
+        mWakeOnGesturePreference.setEnabled(isChecked);
+        mPickUpPreference.setEnabled(isChecked);
+        mHandwavePreference.setEnabled(isChecked);
+        mPocketPreference.setEnabled(isChecked);
     }
 
     private void showHelp() {
@@ -121,5 +124,4 @@ public class DozeSettingsFragment extends SettingsBasePreferenceFragment
                 .create();
         helpDialog.show();
     }
-
 }

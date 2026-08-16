@@ -28,27 +28,27 @@
 
     <application
         android:label="@string/device_settings_app_name"
-        android:persistent="true"
-        android:defaultToDeviceProtectedStorage="true"
-        android:directBootAware="true"
-	android:theme="@style/Theme.SubSettingsBase.Expressive">
+        android:persistent="true">
+
         <receiver android:name=".BootCompletedReceiver"
-                  android:exported="true"> 
+            android:exported="true">
             <intent-filter>
-                <action android:name="android.intent.action.LOCKED_BOOT_COMPLETED" />
+                <action android:name="android.intent.action.BOOT_COMPLETED" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </receiver>
 
         <service
             android:name=".DozeService"
-            android:permission="XiaomiDozeService">
+            android:permission="XiaomiDozeService"
+            android:exported="true">
         </service>
 
         <activity
             android:name=".DozeSettingsActivity"
-            android:exported="true"
-            android:label="@string/ambient_display_title">
+            android:exported="false"
+            android:label="@string/ambient_display_title"
+            android:theme="@style/Theme.SubSettingsBase">
             <intent-filter>
                 <action android:name="org.lineageos.settings.device.DOZE_SETTINGS" />
                 <category android:name="android.intent.category.DEFAULT" />
