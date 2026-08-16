@@ -112,7 +112,7 @@ TARGET_COMPILE_WITH_MSM_KERNEL := true
 BOARD_RAMDISK_USE_LZ4 := true
 
 # Kernel
-TARGET_KERNEL_CONFIG := vendor/xiaomi/sdm660_defconfig
+TARGET_KERNEL_CONFIG := vendor/sdm660-perf_defconfig vendor/xiaomi/sdm660-common.config
 TARGET_KERNEL_NO_GCC := true
 TARGET_KERNEL_CLANG_VERSION := r563880c
 
