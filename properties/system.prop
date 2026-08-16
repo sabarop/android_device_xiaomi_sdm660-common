@@ -97,9 +97,6 @@ vendor.vidc.dec.enable.downscalar=0
 vendor.vidc.enc.disable_bframes=1
 vendor.vidc.enc.disable.pq=false
 
-# Multi-Gen LRU
-persist.device_config.mglru_native.lru_gen_config=core
-
 # Netflix
 ro.netflix.bsp_rev=Q660-13149-1
 
