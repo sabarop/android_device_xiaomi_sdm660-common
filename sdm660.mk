@@ -523,8 +523,3 @@ PRODUCT_COPY_FILES += \
 # WiFi Firmware Symlinks
 PRODUCT_PACKAGES += \
     firmware_WCNSS_qcom_cfg.ini_symlink
-
-# DeviceSettings
-PRODUCT_PACKAGES += \
-    DeviceSettings
-
