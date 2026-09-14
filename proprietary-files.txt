@@ -444,9 +444,6 @@ vendor/lib/vendor.qti.hardware.tui_comm@1.0.so;MODULE_SUFFIX=_vendor|0564931cf8b
 vendor/lib64/vendor.qti.hardware.tui_comm@1.0.so;MODULE_SUFFIX=_vendor|cfd777100db61dd183e7e4ba644150f7066db389
 
 # DRM (Widevine) - from Zebra/helios/helios:13/13-22-18.00-TG-U02-STD-HEL-04/84:user/release-keys
-vendor/bin/hw/android.hardware.drm@1.4-service.widevine|c77129c2767ceaa55850455c0c80544defd09b5b
-vendor/etc/init/android.hardware.drm@1.4-service.widevine.rc|992f63e9700da29099e0590858a6becaaadb2976
-vendor/etc/vintf/manifest/manifest_android.hardware.drm@1.4-service.widevine.xml|c03636aaf4b8b3e5d2cf56704a4676b8f2920478
 vendor/lib/libcpion.so|c5e659d2bd0ab4c182f1a01047a7bcf95b268c7e
 vendor/lib/libmm-hdcpmgr.so|9703d954ada46e5fbeffc73aa318037f915e088c
 vendor/lib64/mediadrm/libwvdrmengine.so|b45c19f3f113b512f96de3e28a2519373f1da916
@@ -455,7 +452,12 @@ vendor/lib64/libcpion.so|ee9f0c28c3e0cc03fb6f7e4abba7b2f45e6de014
 vendor/lib64/libhdcpsrm.so|9c0943fc4e3e3546900382821786145ae4ca634b
 vendor/lib64/libmm-hdcpmgr.so|a06cea03836085c088b04a2ce39048bf191e9a3f
 vendor/lib64/librmp.so|530fddca962ec88bf683e3999705b44b53deaf89
-vendor/lib64/libwvhidl.so|39a5766f1b64c9bddc2af63421edcc515fe030ea
+
+# Widevine - from Honeywell/hon660/hon660:12/94.00.03/0037:user/release-keys
+vendor/bin/hw/android.hardware.drm-service.widevine|dbc47d0c8f32fe5a3e37667e8f6dd5ffa6921801
+vendor/etc/init/android.hardware.drm-service.widevine.rc|54c79ef531c9c135fa234a8515b3d37f0e1ccc4d
+vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml|7e13b6628572b1cdd76351b744e2805d4e6f2dd9
+vendor/lib64/libwvaidl.so|a9365542ffe4db4578488993c8fc3453f1d8dabd
 
 # DRM - from Miatoll
 vendor/lib64/libops.so|79efbf6cad2617a6d1de6c649cca9ddeb1a0c1e5
