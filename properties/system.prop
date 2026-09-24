@@ -14,9 +14,6 @@ bt.max.hfpclient.connections=1
 vendor.hw.fm.init=0
 ro.bluetooth.wipower=false
 
-# Blur
-ro.surface_flinger.supports_background_blur=1
-
 # Camera
 persist.vendor.camera.privapp.list=org.codeaurora.snapcam
 camera.aux.packagelist=com.google.android.GoogleCamera,com.android.camera,org.codeaurora.snapcam
