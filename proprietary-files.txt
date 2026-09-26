@@ -459,8 +459,9 @@ vendor/etc/init/android.hardware.drm-service.widevine.rc|54c79ef531c9c135fa234a8
 vendor/etc/vintf/manifest/manifest_android.hardware.drm-service.widevine.xml|7e13b6628572b1cdd76351b744e2805d4e6f2dd9
 vendor/lib64/libwvaidl.so|a9365542ffe4db4578488993c8fc3453f1d8dabd
 
-# DRM - from Miatoll
-vendor/lib64/libops.so|79efbf6cad2617a6d1de6c649cca9ddeb1a0c1e5
+# DRM - from Redmi/munch/munch:13/RKQ1.211001.001/V816.0.5.0.ULMCNXM:user/release-keys
+vendor/lib64/liboemcrypto.so|1951f421a230018a800ac32ef0efeca27a305a52
+vendor/lib64/libops.so|17439c5decb8e42b0b6a747bf73c263ec0ea4cb1
 vendor/lib64/libspl.so|e2b3e2dd28b0eee567d72de696cd1e01288ae06f
 
 # DSP - from Zebra/helios/helios:14/14-23-05.00-UG-U05-STD-HEL-04/5:user/release-keys
