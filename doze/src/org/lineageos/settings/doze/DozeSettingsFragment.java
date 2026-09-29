@@ -51,9 +51,6 @@ public class DozeSettingsFragment extends SettingsBasePreferenceFragment
 
         SharedPreferences prefs = getActivity().getSharedPreferences("doze_settings",
                 Activity.MODE_PRIVATE);
-        if (savedInstanceState == null && !prefs.getBoolean("first_help_shown", false)) {
-            showHelp();
-        }
 
         boolean dozeEnabled = Utils.isDozeEnabled(getActivity());
 
@@ -104,22 +101,4 @@ public class DozeSettingsFragment extends SettingsBasePreferenceFragment
         Utils.checkDozeService(getActivity());
         return true;
     }
-
-    private void showHelp() {
-        AlertDialog helpDialog = new AlertDialog.Builder(getActivity())
-                .setTitle(R.string.doze_settings_help_title)
-                .setMessage(R.string.doze_settings_help_text)
-                .setPositiveButton(R.string.dialog_ok,
-                        (dialog, which) -> {
-                            getActivity()
-                                    .getSharedPreferences("doze_settings", Activity.MODE_PRIVATE)
-                                    .edit()
-                                    .putBoolean("first_help_shown", true)
-                                    .commit();
-                            dialog.cancel();
-                        })
-                .create();
-        helpDialog.show();
-    }
-
 }
